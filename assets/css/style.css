@@ -67,3 +67,9 @@ h1 {
 .choice-options:hover {
     cursor: pointer;
 }
+
+.modal-content {
+    text-align: center;
+    padding-top: 5px padding-bottom 5px;
+    display: inline-block;
+}

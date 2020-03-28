@@ -7,11 +7,11 @@ $("#navbar_register_btn").on("click", function(e) {
 //JS for altering width of the description textbox.
 document.getElementById('descript-txt').style.width = "300px";
 
-function sendMail(contactForm) {
-    emailjs.send("gmail", "rosie", {
+function sendMailMessage(contactForm) {
+    emailjs.send("gmail", "emailQM", {
             "from_name": contactForm.name.value,
-            "from_email": contactForm.emailaddress.value,
-            "project_request": contactForm.projectsummary.value
+            "from_email": contactForm.from_email.value,
+            "recommendations": contactForm.recommendations.value
         })
         .then(
             function(response) {

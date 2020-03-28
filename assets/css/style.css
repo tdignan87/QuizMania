@@ -28,3 +28,7 @@ h1 {
 .center-column {
     align-items: center;
 }
+
+.score-area {
+    background-color: orange;
+}

@@ -23,6 +23,7 @@ h1 {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 50px;
 }
 
 .center-column {

@@ -4,8 +4,7 @@ $("#navbar_register_btn").on("click", function(e) {
     $('#contactModal').modal('show');
 })
 
-//JS for altering width of the description textbox.
-document.getElementById('descript-txt').style.width = "300px";
+
 
 function sendMailMessage(contactForm) {
     emailjs.send("gmail", "emailQM", {

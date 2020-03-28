@@ -24,3 +24,7 @@ h1 {
     justify-content: center;
     text-align: center;
 }
+
+.center-column {
+    align-items: center;
+}

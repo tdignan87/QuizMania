@@ -55,20 +55,18 @@
                         <h5 class="modal-title">Contact Us Form</h5>
                     </div>
                     <div class="entry-form">
-                        <form onsubmit="return sendMailMessage(this);">
+                        <form onsubmit="return sendMail(this);">
                             <div class="form-details">
-                                <form onsubmit="return sendMail(this);">
-                                    <input type="text" name="yourname" class="form-control" id="fullname" placeholder="Please enter your name" required/>
-                                    <input type="text" name="youremail" class="form-control" id="emailaddress" placeholder="Please enter your email address" required/>
-                                    <textarea rows="5" name="request" class="form-control" id="projectsummary" placeholder="Please enter your recommendations" required></textarea>
-
-                                </form>
-                            </div>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary" data-dismiss="modal">Send</button>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                                <input type="text" name="yourname" class="form-control" id="name" placeholder="Please enter your name" required/>
+                                <input type="text" name="youremail" class="form-control" id="youremailaddress" placeholder="Please enter your email address" required/>
+                                <textarea rows="5" name="request" class="form-control" id="yourrecomend" placeholder="Please enter your recommendations" required></textarea>
+                                <button type="submit" class="btn btn-primary center-block">Send Project Request</button>
+                        </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                        </div>
+                        <div id="statusMsg" style="display:none;" class="answer_list">Status:</div>
                     </div>
                 </div>
             </div>

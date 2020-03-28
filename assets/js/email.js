@@ -20,6 +20,8 @@ function sendMail(contactForm) {
 
             },
             function(error) {
+                console.log("SUCCESS", response);
+                document.getElementById("statusMsg").style.display = "block";
                 document.getElementById("statusMsg").style.display = "block";
             }
         );

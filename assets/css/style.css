@@ -62,3 +62,7 @@ h1 {
     background-color: orange;
     color: white;
 }
+
+.choice-options:hover {
+    cursor: pointer;
+}

@@ -32,3 +32,9 @@ h1 {
 .score-area {
     background-color: orange;
 }
+
+.btn-primary {
+    background-color: orange;
+    border-style: none;
+    border: black;
+}

@@ -49,3 +49,16 @@ h1 {
     text-align: center;
     padding-top: 30px;
 }
+
+.choice-section {
+    background-color: #fed8b1;
+    margin-bottom: 2px;
+    width: 100%;
+    font-size: 1.8rem;
+}
+
+.choice-options {
+    padding: 1.5rem 2.5rem;
+    background-color: orange;
+    color: white;
+}

@@ -41,15 +41,28 @@
             </ul>
         </div>
 
+        <!-- Contact us modal that appears when contact us button is pressed in navbar-->
         <div class="modal fade" id="contactModal">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">For your Queries</h5>
+                        <h5 class="modal-title">Contact Us Form</h5>
                     </div>
-                    <div class="modal-body">
-                        IF you have any questions, Mess Manager Office number is <strong>+01234567890</strong> or you can email us by <strong>Ouremail@domain.com</strong>>
+                    <div class="entry-form">
+                        <div class="modal-yourname">
+                            <label for="uname"><b>Username</b></label>
+                            <input type="text" placeholder="Your Name" name="yourname" required>
+                        </div>
+                        <div class="modal-youremail">
+                            <label for="uname"><b>Email Address</b></label>
+                            <input type="text" placeholder="Your Email" name="youremail" required>
+                        </div>
+                        <div class="modal-yourrecomend">
+                            <label for="uname"><b>Recommendations</b></label>
+                            <input type="text" placeholder="Please enter your comments" name="youremail" required>
+                        </div>
                     </div>
+
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                     </div>

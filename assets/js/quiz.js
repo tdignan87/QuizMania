@@ -88,17 +88,22 @@ choices.forEach(choice => {
             answerToApply = "correct";
         }
 
+        if (answerToApply == "correct") {
+            incrementScore(CORRECT_BONUS);
+        }
+
         selectedChoice.parentElement.classList.add(answerToApply);
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(answerToApply);
             getNewQuestion();
         }, 1000); // wait for 1 second
 
-
-
-        console.log(answerToApply);
-        getNewQuestion();
     });
 });
+
+incrementScore = num => {
+    score += num;
+    scoreText.innerText = score;
+}
 
 startAgain();

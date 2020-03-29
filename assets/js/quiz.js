@@ -82,6 +82,13 @@ choices.forEach(choice => {
         }
 
         selectedChoice.parentElement.classList.add(answerToApply);
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(answerToApply);
+            getNewQuestion();
+        }, 1000); // wait for 1 second
+
+
+
         console.log(answerToApply);
         getNewQuestion();
     });

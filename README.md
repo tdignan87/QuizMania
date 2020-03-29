@@ -64,7 +64,7 @@ I want a trivia game website that doesn't require registration or is packed with
 * Contact Us form pops out and allows user to complete form.
 * Content isn't overcrowded and visually good on all devices.
 
-## Design Process
+### Design Process
 This project is a simple trivia game for all ages and therefore my design choices are positive stand out colors with minimum page crowding and a stand out text color over the background color.
 
 ##### Fonts
@@ -82,3 +82,30 @@ I did a lot of searching online to find similar games and they all use boldish s
 
 #### Styling
 I used bootstrap 4 for styling the responsive design to the page. 
+
+#### Background Image
+
+#### Wireframes
+I build the wireframes for this project using Balsamiq Mockups 3. I started by creating a wireframe on the browser view and then worked my way to create a tablet and phone desing. My wireframes can be viewed at ??
+
+## Features
+* Interactive trivia questions
+* Slide down navigation bar
+* Responsive
+* Visual progress bar
+
+
+## Techologies Used
+
+### Languages
+* HTML
+* Javascript
+* CSS
+
+### Tools
+* Bootstrap 4
+* Google Fonts
+* Font Awesome
+* Git
+* jQuery
+

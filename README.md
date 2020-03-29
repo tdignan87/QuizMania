@@ -5,8 +5,8 @@
 
 * UX 
     * Project Goals
-    * User Stories
-    * Design Choices 
+    * User & Owner Stories
+    * Design Process
         * Fonts
         * Colours
         * Styling
@@ -36,3 +36,4 @@ I want my 7 year old kid to be able to play this game with ease. I want them to 
 ##### User 4:
 I want a trivia game website that doesn't require registration or is packed with lots of content that doesnt look good on my phone or ipad.  I want a good simple design that looks well on any of my devices.
 
+### Owner Stories

@@ -2,9 +2,19 @@ body {
     font-family: 'Bubblegum Sans', cursive;
 }
 
+.container body {
+    padding-top: 5%;
+    height: 100%;
+}
+
 .jumbotron {
     background-color: orange;
     text-align: center;
+    height: 100px;
+}
+
+.navbar {
+    padding-bottom: 2%
 }
 
 h1 {

@@ -1,5 +1,7 @@
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
+const questionCounterText = document.getElementById("questionCounter");
+const scoreText = document.getElementById("score");
 
 
 let currentQuestion = {};
@@ -54,6 +56,11 @@ getNewQuestion = () => {
         return window.location.assign("/index.html");
     }
     questionCounter++;
+
+    questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
+
+
+
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;

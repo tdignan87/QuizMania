@@ -80,4 +80,5 @@ I did a lot of searching online to find similar games and they all use boldish s
 * ?? 
 * ??
 
-#### 
+#### Styling
+I used bootstrap 4 for styling the responsive design to the page. 

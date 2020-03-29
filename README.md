@@ -67,5 +67,5 @@ I want a trivia game website that doesn't require registration or is packed with
 This project is a simple trivia game for all ages and therefore my design choices are positive stand out colors with minimum page crowding and a stand out text color over the background color.
 
 ##### Fonts
-
+I chose the font Bubble Gums Sans as the font is upbeat and fun which is what i want the user to experience when playing the game. This font is used throughout the whole webpage. <a href="https://fonts.google.com/specimen/Bubblegum+Sans">Click Here!</a> to view on google fonts.
 

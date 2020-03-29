@@ -2,7 +2,11 @@ const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const questionCounterText = document.getElementById("questionCounter");
 const scoreText = document.getElementById("score");
-
+const username = document.getElementById("username");
+const saveScoreBtn = document.getElementById("saveScoreBtn");
+const finalScore = document.getElementById("finalScore");
+const mostRecentScore = localStorage.getItem("mostRecentScore");
+finalScore.innerText = mostRecentScore;
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -58,6 +62,7 @@ getNewQuestion = () => {
     questionCounter++;
 
     questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
+    localStorage.setItem("mostRecentScore", score);
 
 
 
@@ -107,6 +112,16 @@ incrementScore = num => {
 }
 
 
+username.addEventListener("keyup", () => {
+    console.log(username.value);
+    saveScoreBtn.disabled = !username.value;
+})
+
+
+saveHighScore = (e) => {
+    console.log("clicked the save button");
+    e.preventDefault();
+}
 
 
 

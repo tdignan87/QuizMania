@@ -3,13 +3,13 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 
 
 let currentQuestion = {};
-let acceptingAnswers = true;
+let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
 let questions = [{
-        question: "Inside which HTML element do we put Javascript??",
+        question: "Inside which HTML element do we put Javascript?",
         choice1: "<script>",
         choice2: "<javascript>",
         choice3: "<js>",
@@ -51,7 +51,7 @@ startAgain = () => {
 getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         //go to the end page
-        return window.location.assign("/end.html");
+        return window.location.assign("/index.html");
     }
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
@@ -75,7 +75,14 @@ choices.forEach(choice => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
-        console.log(selectedAnswer);
+
+        let answerToApply = "wrong";
+        if (selectedAnswer == currentQuestion.answer) {
+            answerToApply = "correct";
+        }
+
+        selectedChoice.parentElement.classList.add(answerToApply);
+        console.log(answerToApply);
         getNewQuestion();
     });
 });

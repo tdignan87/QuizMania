@@ -86,3 +86,11 @@ h1 {
     padding-top: 5px padding-bottom 5px;
     display: inline-block;
 }
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}

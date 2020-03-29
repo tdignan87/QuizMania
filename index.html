@@ -9,6 +9,9 @@
     <!-- Google fonts Bubblegum Sans-->
     <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font awesome-->
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <title>QuizMania|The Quiz Game</title>
     <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
     <script type="text/javascript">
@@ -21,31 +24,32 @@
 <body>
 
     <!-- Navbar section of page using bootstrap-->
-
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">QuizMania - The fun Quiz Game!</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">QuizMania - The fun Quiz Game!</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Scores</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Play</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="navbar_register_btn" href="">Contact Us</a>
-                </li>
-            </ul>
-        </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Scores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Play</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="navbar_register_btn" href="">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
         <!-- Contact us modal that appears when contact us button is pressed in navbar-->
         <div class="modal fade" id="contactModal">
@@ -71,54 +75,73 @@
                 </div>
             </div>
         </div>
-    </nav>
+        </nav>
 
-    <!-- Jumbotron Section-->
-    <div class="jumbotron">
-        <h1 class="display-4"></h1>
-        <p class="lead">Welcome to QuizMania the trivia quiz game.</p>
+        <!-- Jumbotron Section-->
+        <div class="jumbotron">
+            <h1 class="display-4"></h1>
+            <p class="lead">Welcome to QuizMania the trivia quiz game.</p>
+        </div>
+
+
+
+        <!-- main quiz section container of project.-->
+        <div class="container">
+            <div id="home" class="center-column">
+                <h1>Have Fun!</h1>
+                <button type="button" class="btn btn-primary btn-lg">Play</button>
+                <button type="button" class="btn btn-primary btn-lg">Scores</button>
+
+            </div>
+
+        </div>
+
+
+        <!-- question section of page.-->
+        <section class="question-section">
+            <div id=" question" class="center-column ">
+                <h3 id="question">What is the answer to this question?</h3>
+                <div class="choice-section">
+                    <p class="choice-options">A</p>
+                    <p class="choice-text" data-number="1">Choice 1</p>
+                </div>
+                <div class="choice-section">
+                    <p class="choice-options">B</p>
+                    <p class="choice-text" data-number="2">Choice 2</p>
+                </div>
+                <div class="choice-section">
+                    <p class="choice-options">C</p>
+                    <p class="choice-text" data-number="3">Choice 3</p>
+                </div>
+                <div class="choice-section">
+                    <p class="choice-options">D</p>
+                    <p class="choice-text" data-number="4">Choice 4</p>
+                </div>
+            </div>
     </div>
+    </section>
 
-
-    <!-- main quiz section container of project.-->
-    <div class="container">
-        <div id="home" class="center-column">
-            <h1>Have Fun!</h1>
-            <button type="button" class="btn btn-primary btn-lg">Play</button>
-            <button type="button" class="btn btn-primary btn-lg">Scores</button>
-
-        </div>
-
-    </div>
-    <section class="question-section">
-        <div id=" question" class="center-column ">
-            <h3 id="question">What is the answer to this question?</h3>
-            <div class="choice-section">
-                <p class="choice-options">A</p>
-                <p class="choice-text" data-number="1">Choice 1</p>
-            </div>
-            <div class="choice-section">
-                <p class="choice-options">B</p>
-                <p class="choice-text" data-number="2">Choice 2</p>
-            </div>
-            <div class="choice-section">
-                <p class="choice-options">C</p>
-                <p class="choice-text" data-number="3">Choice 3</p>
-            </div>
-            <div class="choice-section">
-                <p class="choice-options">D</p>
-                <p class="choice-text" data-number="4">Choice 4</p>
-            </div>
-        </div>
-        </div>
+    <!-- Footer section with social media icons-->
+    <footer class="footer">
+        <container class="foot-container">
 
 
 
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
-        <script src="assets/js/quiz.js"></script>
-        <script src="assets/js/email.js"></script>
+        </container>
+
+
+
+
+
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+    <script src="assets/js/quiz.js"></script>
+    <script src="assets/js/email.js"></script>
 </body>
 
 </html>

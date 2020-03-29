@@ -53,7 +53,7 @@ startAgain = () => {
 getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         //go to the end page
-        return window.location.assign("/index.html");
+        return window.location.assign("/index.html"); // needs changed here so it goes to results section of page.
     }
     questionCounter++;
 
@@ -105,5 +105,10 @@ incrementScore = num => {
     score += num;
     scoreText.innerText = score;
 }
+
+
+
+
+
 
 startAgain();

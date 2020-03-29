@@ -69,6 +69,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                     </div>
                     <div id="statusMsg" style="display:none;" class="answer_list">Status:</div>
                 </div>
@@ -128,12 +129,29 @@
                             Score
                         </p>
                         <h1 class="hud-main-text" id="score">
-                            3
+
                         </h1>
                     </div>
                 </div>
         </section>
-        </div>
+        <section class="results-section">
+            <h2 class="results-title"> Results</h2>
+            <div class="container">
+                <div id="result-page" class="flex-center flex-column">
+                    <h1 id="finalScore">0</h1>
+                    <form>
+                        <input type="text" name="username" id="username" placeholder="username" />
+                        <button type="submit" class="btn btn-primary" id="saveScoreBtn" onclick="saveHighScore(event)">Save
+                        </button>
+                    </form>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
 
 
 

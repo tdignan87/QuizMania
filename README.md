@@ -5,7 +5,11 @@
 
 * UX 
     * Project Goals
-    * User & Owner Stories
+      * User Goals
+      * User Stories
+      * Owner Goals
+      * Expectations
+    
     * Design Process
         * Fonts
         * Colours
@@ -23,6 +27,12 @@
 ### Project Goals
 The projects goal is to create a simple to use game, which can be used on any device and can be enjoyed by adults and children. The website needs to be simple with easy functionality and appealing enough to encourage users to stay and play the quiz game.
 
+### User Goals
+* A website that allows us to test our general knowledge by playing the trivia game.
+* Visual interaction of my progress would be good.
+* Ability to view scores to see how i have performed against other family members.
+* A variety of different questions each time i play the trivia game.
+
 ### User Stories
 ##### User 1:
 As a user i want to be able to use this page to play this game easily. The ideal scenario would be a game that you dont need to download from any app store and you can play directly from the browser on any device.
@@ -36,4 +46,13 @@ I want my 7 year old kid to be able to play this game with ease. I want them to 
 ##### User 4:
 I want a trivia game website that doesn't require registration or is packed with lots of content that doesnt look good on my phone or ipad.  I want a good simple design that looks well on any of my devices.
 
-### Owner Stories
+
+### Owner Goals
+
+* As the owner i want to provide a game that is fun for all the family of all ages.
+* As the owner i want easily functionality.
+* As the owner i don't want to overcrowd the site with lots of content.
+* As the owner i would like to eceive improvement ideas through the contact us page.
+
+
+

@@ -62,3 +62,10 @@ I want a trivia game website that doesn't require registration or is packed with
 * Navigation takes user to specific parts of the page.
 * Contact Us form pops out and allows user to complete form.
 * Content isn't overcrowded and visually good on all devices.
+
+## Design Process
+This project is a simple trivia game for all ages and therefore my design choices are positive stand out colors with minimum page crowding and a stand out text color over the background color.
+
+##### Fonts
+
+

@@ -94,3 +94,23 @@ h1 {
 .wrong {
     background-color: red;
 }
+
+
+/* HUD */
+
+#hud {
+    justify-content: space-around;
+}
+
+.hud-prefix {
+    font-size: 70px;
+}
+
+.hud-main-text {
+    font-size: 50px;
+}
+
+.score-section {
+    text-decoration: underline;
+    letter-spacing: 2px;
+}

@@ -73,3 +73,11 @@ I chose the font Bubble Gums Sans as the font is upbeat and fun which is what i 
 ##### Icons
 I chose font awesome icons to display QuizMania's social media pages at the footer of the page. The colors of the icons blended well with the rest of the content on the page. 
 
+#### Colors
+I did a lot of searching online to find similar games and they all use boldish stand out colors. I decided to implement this using a mixture of colors below 
+
+* ??
+* ?? 
+* ??
+
+#### 

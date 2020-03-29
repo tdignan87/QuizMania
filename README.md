@@ -55,4 +55,10 @@ I want a trivia game website that doesn't require registration or is packed with
 * As the owner i would like to eceive improvement ideas through the contact us page.
 
 
-
+### Expectations
+* Can view scores of each game round.
+* Can see progress at any time of how well they are doing.
+* API generates different questions each round of playing.
+* Navigation takes user to specific parts of the page.
+* Contact Us form pops out and allows user to complete form.
+* Content isn't overcrowded and visually good on all devices.

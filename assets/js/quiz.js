@@ -6,6 +6,8 @@ const username = document.getElementById("username");
 const saveScoreBtn = document.getElementById("saveScoreBtn");
 const finalScore = document.getElementById("finalScore");
 const mostRecentScore = localStorage.getItem("mostRecentScore");
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+console.log(highScores);
 finalScore.innerText = mostRecentScore;
 
 let currentQuestion = {};
@@ -43,7 +45,7 @@ let questions = [{
 //CONSTANTS
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 3;
-
+const MAX_HIGH_SCORES = 5;
 
 startAgain = () => {
     questionCounter = 0;
@@ -124,6 +126,16 @@ saveHighScore = (e) => {
 }
 
 
+const scoreArray = {
+    score: mostRecentScore,
+    name: username.value
+};
+highScores.push(score);
+highScores.sort((a, b) => {
+    return b.score - a.score;
+})
+highScores.splice(5);
+console.log(scoreArray);
 
 
 startAgain();

@@ -63,7 +63,7 @@ getNewQuestion = () => {
     }
     questionCounter++;
 
-
+    // Store score in local storage
     questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
     localStorage.setItem("mostRecentScore", score);
 

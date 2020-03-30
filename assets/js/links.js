@@ -1,5 +1,3 @@
-$("#link").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#element_target").offset().top
-    }, 1000);
+$("#score-link").on("click", function(e) {
+    console.log(this.hash);
 });

@@ -97,22 +97,22 @@
         <section class="question-section">
 
             <div id=" question" class="center-column">
-                <h3 id="question">What is the answer to this question?</h3>
+                <h3 id="question"></h3>
                 <div class="choice-section">
                     <p class="choice-options">A</p>
-                    <p class="choice-text" data-number="1">Choice 1</p>
+                    <p class="choice-text" data-number="1"></p>
                 </div>
                 <div class="choice-section">
                     <p class="choice-options">B</p>
-                    <p class="choice-text" data-number="2">Choice 2</p>
+                    <p class="choice-text" data-number="2"></p>
                 </div>
                 <div class="choice-section">
                     <p class="choice-options">C</p>
-                    <p class="choice-text" data-number="3">Choice 3</p>
+                    <p class="choice-text" data-number="3"></p>
                 </div>
                 <div class="choice-section">
                     <p class="choice-options">D</p>
-                    <p class="choice-text" data-number="4">Choice 4</p>
+                    <p class="choice-text" data-number="4"></p>
                 </div>
             </div>
 
@@ -143,7 +143,7 @@
                         <h1 id="finalScore"></h1>
                         <form>
                             <input type="text" name="username" id="username" placeholder="username" />
-                            <button type="submit" class="btn btn-primary" id="saveScoreBtn" onclick="saveHighScore(event)" disabl>Save
+                            <button type="submit" class="btn btn-primary" id="saveScoreBtn" onclick="saveHighScore(event)" disable>Save
                         </button>
                         </form>
 
@@ -152,11 +152,12 @@
                 </div>
 
         </section>
+        <!-- results section of page-->
         <section class="results-section">
             <div class="container">
                 <h2 class="results-title"> Top Results</h2>
                 <div id="scoresList" class="flex-center flex-column">
-                    <h3 id="finalScore">High Scores</h1>
+                    <h3 id="finalScore">High Scores</h1>6
                     </h3>
                     <ul id="highScoresList"></ul>
                     <a class="btn" href="/">Start Again</a>

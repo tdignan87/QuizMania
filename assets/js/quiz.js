@@ -7,16 +7,18 @@ const saveScoreBtn = document.getElementById("saveScoreBtn");
 const finalScore = document.getElementById("finalScore");
 const mostRecentScore = localStorage.getItem("mostRecentScore");
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-console.log(highScores);
 finalScore.innerText = mostRecentScore;
-
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-let questions = [];
+
+console.log(choices);
+
+
+
 
 //open trivia fetch API
 fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple")
@@ -32,7 +34,7 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=mul
 
 
             const answerChoices = [...availableQuestions.incorrect_answers];
-            formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;
+            formattedQuestion.answer = Math.floor(Math.random() * 3) + 0;
             answerChoices.splice(formattedQuestion.answer - 1, 0,
                 answerChoices.correct_answer);
 

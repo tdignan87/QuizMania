@@ -71,18 +71,20 @@ startAgain = () => {
 };
 
 // Once questions reached go back to top of page.
+
 getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         //go to the end page
         return window.location.assign("/index.html"); // needs changed here so it goes to results section of page.
     }
+    // increments counter to 1
     questionCounter++;
 
     // Store score in local storage
     questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
     localStorage.setItem("mostRecentScore", score);
 
-
+    // make interger
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
@@ -91,6 +93,9 @@ getNewQuestion = () => {
         const number = choice.dataset["number"];
         choice.innerText = currentQuestion["choice" + number];
     });
+
+
+
 
     availableQuestions.splice(questionIndex, 1);
     acceptingAnswers = true;

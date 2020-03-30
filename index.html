@@ -115,25 +115,25 @@
                     <p class="choice-text" data-number="4">Choice 4</p>
                 </div>
             </div>
+
+            <!-- Score Section-->
             <h2 class="score-section"> Score Section</h2>
-            <div id="hud">
-                <div id="hud-item">
-                    <p class="hud-prefix">
-                        question
-                    </p>
-                    <h1 class="hud-main-text" id="questionCounter">
+            <div id="hud" h2 class="results-title">
+                </h2>
+                <div class="container">
+                    <div id="result-page" class="flex-center flex-column">
+                        <h1 id="finalScore"></h1>
+                        <form>
+                            <input type="text" name="username" id="username" placeholder="username" />
+                            <button type="submit" class="btn btn-primary" id="saveScoreBtn" onclick="saveHighScore(event)" disabl>Save
+                            </button>
+                        </form>
 
-                    </h1>
-                    <div id="hud-item">
-                        <p class="hud-prefix">
-                            Score
-                        </p>
-                        <h1 class="hud-main-text" id="score">
-
-                        </h1>
                     </div>
                 </div>
         </section>
+
+        <!-- Results section-->
         <section class="results-section">
             <h2 class="results-title"> Results</h2>
             <div class="container">

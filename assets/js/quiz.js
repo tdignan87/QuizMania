@@ -16,31 +16,44 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-let questions = [{
-        question: "Inside which HTML element do we put Javascript?",
-        choice1: "<script>",
-        choice2: "<javascript>",
-        choice3: "<js>",
-        choice4: "<scripting>",
-        answer: 1
-    },
-    {
-        question: "What is the correct syntax for referring to an external script called xxx.js?",
-        Choice1: "<script href=xxx.js'>",
-        Choice2: "<script href=xxx.js'>",
-        Choice3: "<script href=xxx.js'>",
-        Choice4: "<script href=xxx.js'>",
-        answer: 3
-    },
-    {
-        question: "What is my name?",
-        Choice1: "Tom",
-        Choice2: "Ian",
-        Choice3: "Jack",
-        Choice4: "Jill",
-        answer: 4
-    }
-];
+let questions = [];
+
+//open trivia fetch API
+fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple")
+    .then(res => {
+        return res.json();
+    })
+    .then(availableQuestions => {
+        console.log(availableQuestions.results);
+        questions = availableQuestions.results.map(availableQuestions => {
+            const formattedQuestion = {
+                question: availableQuestions.question
+            };
+
+
+            const answerChoices = [...availableQuestions.incorrect_answers];
+            formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;
+            answerChoices.splice(formattedQuestion.answer - 1, 0,
+                answerChoices.correct_answer);
+
+
+            answerChoices.forEach((choice, index) => {
+                formattedQuestion["choice" + (index + 1)] = choice;
+            })
+
+            return formattedQuestion;
+
+        });
+        startAgain();
+        // questions = availableQuestions;
+        //  startAgain();
+    })
+    //log error to console
+    .catch(err => {
+        console.error(err);
+    });
+
+
 
 //CONSTANTS
 const CORRECT_BONUS = 10;
@@ -129,11 +142,6 @@ const scoreArray = {
 };
 highScores.push(score);
 highScores.sort((a, b) => {
-    return b.score - a.score;
-})
-highScores.splice(5);
+        return b.score - a.score;
+    }) // highScores.splice(5);
 localStorage.setItem("highScores", JSON.stringify(highScores));
-
-
-
-startAgain();

@@ -47,6 +47,7 @@ const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 3;
 const MAX_HIGH_SCORES = 5;
 
+// Start again function to reset values
 startAgain = () => {
     questionCounter = 0;
     score = 0;
@@ -54,7 +55,7 @@ startAgain = () => {
     getNewQuestion();
 };
 
-
+// Once questions reached go back to top of page.
 getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         //go to the end page
@@ -62,9 +63,9 @@ getNewQuestion = () => {
     }
     questionCounter++;
 
+
     questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
     localStorage.setItem("mostRecentScore", score);
-
 
 
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
@@ -132,7 +133,7 @@ highScores.sort((a, b) => {
 })
 highScores.splice(5);
 localStorage.setItem("highScores", JSON.stringify(highScores));
-window.location.assign("/");
+//window.location.assign("/");
 
 
 startAgain();

@@ -133,7 +133,7 @@ highScores.sort((a, b) => {
 })
 highScores.splice(5);
 localStorage.setItem("highScores", JSON.stringify(highScores));
-//window.location.assign("/");
+
 
 
 startAgain();

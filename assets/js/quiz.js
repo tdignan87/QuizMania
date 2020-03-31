@@ -11,11 +11,14 @@ let questionCounter = 0;
 let availableQuestions = [];
 
 
-
+const noOfQuestions = 10;
+const noOfSecondQuestions = 20
+const noofThirdQuestions = 30;
 
 
 
 //open trivia fetch API
+
 fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple")
     .then(res => {
         return res.json();

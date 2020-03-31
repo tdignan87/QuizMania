@@ -1,11 +1,10 @@
-//jQuery for displaying modal on navbar
 $("#navbar_register_btn").on("click", function(e) {
     e.preventDefault();
     $("#contactModal").modal("show");
 })
 
 
-//gmail mailJS Javascript API
+
 function sendMail(contactForm) {
     emailjs.send("gmail", "emailQM", {
             "from_name": contactForm.yourname.value,

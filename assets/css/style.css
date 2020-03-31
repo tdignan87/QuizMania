@@ -1,20 +1,24 @@
+/* Font awesome body font */
+
 body {
     font-family: 'Bubblegum Sans', cursive;
     background-color: #c1502e;
 }
 
-.container body {
-    padding-top: 5%;
-    height: 100%;
+
+/* Float navigation bar to left */
+
+.navbar {
+    float: left;
+    size: 100%;
 }
 
 
-/* Jumbotron CSS for styling */
+/* Set background color and align text to center */
 
 .jumbotron {
     background-color: #c1502e;
     text-align: center;
-    color: #fafafa;
     width: 100%;
     height: 100%;
     padding-bottom: 0%;
@@ -22,7 +26,7 @@ body {
 }
 
 
-/* Jumbotron Background Image Display */
+/* Jumbotron settings */
 
 .jumbo-picture-display {
     background-image: url("../images/trivia-background.jpg");
@@ -34,18 +38,14 @@ body {
 }
 
 
-/* Jumbotron main title color to stand out */
+/* Jumbotron title black to stand out over picture */
 
 #jumbo-title {
     color: black;
 }
 
 
-/* Jumbotron paragraph text to stand out */
-
-#jumbo-p {
-    color: black;
-}
+/* H1 header element global styling */
 
 h1 {
     font-size: 4.2rem;
@@ -55,98 +55,55 @@ h1 {
 }
 
 
-/* container section */
+/* Select difficulty text white to stand out with orange */
+
+.select-difficulty {
+    font-size: 60px;
+    margin-top: 5px;
+    color: #fafafa;
+    padding-bottom: 30px;
+}
 
 
-/* Main Container formatting */
+/* container section  Align all to center and show neatly on page.*/
 
 .container {
     width: 100%;
     height: 100%;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     padding: 50px;
 }
 
-.center-column {
-    align-items: center;
-}
 
-.score-area {
-    background-color: orange;
-}
-
-
-/* Main button bootstrap overwrite default styling */
-
-.btn-primary {
-    background-color: orange;
-    border-style: none;
-    border: black;
-}
-
-.btn-primary:hover {
-    cursor: pointer;
-    background-color: black;
-}
-
-.button-main-title {
-    padding-bottom: 0%;
-    padding-top: 0%;
-}
-
-.question-section {
-    align-items: center;
-    text-align: center;
-    padding-bottom: 20%;
-}
+/* Choice styling in the questions grid */
 
 .choice-section {
     background-color: #fed8b1;
     margin-bottom: 2px;
-    width: 100%;
+    width: 50%;
     font-size: 1.8rem;
+    float: left;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
+
+
+/* CSS for choice answers - Color */
 
 .choice-options {
-    padding: 1.5rem 2.5rem;
     background-color: orange;
     color: white;
+    width: 50%;
+    float: right;
 }
 
-.choice-options:hover {
-    cursor: pointer;
-}
 
-
-/* If answer correct button will go green */
+/* Answers Section */
 
 .correct {
     background-color: green;
 }
 
-
-/* If answer incorrect button will go red*/
-
 .wrong {
     background-color: red;
-}
-
-
-/* HUD */
-
-#hud {
-    justify-content: space-around;
-}
-
-
-/* question score text size */
-
-.hud-prefix {
-    font-size: 70px;
-}
-
-.hud-main-text {
-    font-size: 50px;
 }

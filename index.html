@@ -9,9 +9,6 @@
     <!-- Google fonts Bubblegum Sans-->
     <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Font awesome-->
-    <script src="https://use.fontawesome.com/bdc398232e.js"></script>
-
     <script src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
     <script>
         (function() {
@@ -22,27 +19,33 @@
 </head>
 
 <body>
+    <!-- Navbar section of HTML page-->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
+<span class="navbar-toggler-icon"></span>
+    </button>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="fa fa-facebook"></a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Let's Play <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">High Scores <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="navbar_register_btn" href="">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <!-- Navbar section of page using bootstrap-->
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-
-    <span class="navbar-toggler-icon"></span>
-        </button>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="fa fa-facebook"></a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="navbar_register_btn" href="">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
 
         <!-- Contact us modal that appears when contact us button is pressed in navbar-->
         <div class="modal fade" id="contactModal">
@@ -82,6 +85,7 @@
         <div class="container">
             <div id="criteria" class="criteria-section">
                 <div class="dropdown">
+                    <h2 class="select-difficulty">Please Select Difficulty To Begin!</h2>
                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Please Select Difficulty
                     </a>
@@ -96,83 +100,50 @@
             </div>
         </div>
 
-
-
-
-
         <!-- main quiz section container of project.-->
         <div class="container">
             <div id="home" class="center-column">
-                <h1 class="button-main-title">Have Fun!</h1>
-                <h2 class="button-main-sub">Answer the Questions Below!</h2>
 
 
             </div>
 
         </div>
+        <!-- Questions Grid-->
 
-        <!-- question section of page.-->
         <section class="question-section">
 
             <div id="question_section" class="center-column">
-                <h3 id="question">Question</h3>
+                <h3 id="question-main">What is the Capital Of Scotland?</h3>
                 <div class="choice-section">
                     <p class="choice-options">A</p>
-                    <p class="choice-text" data-number="1"></p>
+                    <p class="choice-text" data-number="1">Aberdeen</p>
                 </div>
                 <div class="choice-section">
                     <p class="choice-options">B</p>
-                    <p class="choice-text" data-number="2"></p>
+                    <p class="choice-text" data-number="2">Glasgow</p>
                 </div>
                 <div class="choice-section">
                     <p class="choice-options">C</p>
-                    <p class="choice-text" data-number="3"></p>
+                    <p class="choice-text" data-number="3">Edinburgh</p>
                 </div>
                 <div class="choice-section">
                     <p class="choice-options">D</p>
-                    <p class="choice-text" data-number="4"></p>
+                    <p class="choice-text" data-number="4">Dundee</p>
                 </div>
             </div>
 
-            <!-- Question Counter -->
-            <div id="hud">
-                <div id="hud-item_first">
-                    <p class="hud-prefix">
-                        Question Progress
-                    </p>
-                    <h2 class="hud-main-text" id="questionCounter">Counter
-                    </h2>
-                    <div id="hud-item">
-                        <p class="hud-prefix">
-                        </p>
-
-                    </div>
-                </div>
-
-                <!-- Answer marker section-->
-                <div class="container" id="score-section-container">
-                    <h1 class="answer-score-section"> Score Section</h1>
-                    <div class="container">
-                        <div id="result-page" class="flex-center flex-column">
-                            <h1 class="hud-main-text" id="score">0
-                            </h1>
 
 
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-        </section>
 
 
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
-        <script src="assets/js/quiz.js"></script>
-        <script src="assets/js/email.js"></script>
-        <script src="assets/js/links.js"></script>
+
+
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+            <script src="assets/js/quiz.js"></script>
+            <script src="assets/js/email.js"></script>
+            <script src="assets/js/links.js"></script>
     </div>
 
 </body>

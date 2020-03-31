@@ -29,9 +29,10 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=mul
 
 
             const answerChoices = [...availableQuestions.incorrect_answers];
-
-
+            // console.log(answerChoices);
+            console.log(answerChoices);
             formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;
+            //  console.log(answerChoices);
             answerChoices.splice(formattedQuestion.answer - 1, 0,
                 answerChoices.correct_answer);
 

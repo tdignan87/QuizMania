@@ -64,6 +64,10 @@ h1 {
     padding-bottom: 30px;
 }
 
+.dropdown-menu {
+    background-color: #fed8b1;
+}
+
 
 /* container section  Align all to center and show neatly on page.*/
 
@@ -77,24 +81,23 @@ h1 {
 
 /* Choice styling in the questions grid */
 
-.choice-section {
+#question_grid {
     background-color: #fed8b1;
-    margin-bottom: 2px;
-    width: 50%;
-    font-size: 1.8rem;
-    float: left;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 10px;
+}
+
+#question-main {
+    color: red;
+    padding-bottom: 2px;
 }
 
 
-/* CSS for choice answers - Color */
+/* Clear floats after the columns */
 
-.choice-options {
-    background-color: orange;
-    color: white;
-    width: 50%;
-    float: right;
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 

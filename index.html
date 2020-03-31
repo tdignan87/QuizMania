@@ -89,7 +89,6 @@
                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Please Select Difficulty
                     </a>
-
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                         <a class="dropdown-item" href="#">Easy</a>
                         <a class="dropdown-item" href="#">Medium</a>
@@ -102,48 +101,33 @@
 
         <!-- main quiz section container of project.-->
         <div class="container">
-            <div id="home" class="center-column">
 
 
-            </div>
 
-        </div>
-        <!-- Questions Grid-->
-
-        <section class="question-section">
-
-            <div id="question_section" class="center-column">
+            <!-- Questions Grid Bootstrap equal grid Row-->
+            <div class="container" id="question_grid">
                 <h3 id="question-main">What is the Capital Of Scotland?</h3>
-                <div class="choice-section">
-                    <p class="choice-options">A</p>
-                    <p class="choice-text" data-number="1">Aberdeen</p>
-                </div>
-                <div class="choice-section">
-                    <p class="choice-options">B</p>
-                    <p class="choice-text" data-number="2">Glasgow</p>
-                </div>
-                <div class="choice-section">
-                    <p class="choice-options">C</p>
-                    <p class="choice-text" data-number="3">Edinburgh</p>
-                </div>
-                <div class="choice-section">
-                    <p class="choice-options">D</p>
-                    <p class="choice-text" data-number="4">Dundee</p>
+                <div class="row">
+                    <div class="col-sm">
+                        <p class="choice-options" id="first-option">A</p>
+                        <p class="choice-text" id="first-answer" data-number="1">Aberdeen</p>
+                    </div>
+                    <div class="col-sm">
+                        <p class="choice-options" id="second-option">B</p>
+                        <p class="choice-text" id="second-answer" data-number="1">Glasgow</p>
+                    </div>
+                    <div class="col-sm">
+                        <p class="choice-options" id="third-option">C</p>
+                        <p class="choice-text" id="third-answer" data-number="1">Edinburgh</p>
+                    </div>
                 </div>
             </div>
-
-
-
-
-
-
-
             <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
-            <script src="assets/js/quiz.js"></script>
-            <script src="assets/js/email.js"></script>
-            <script src="assets/js/links.js"></script>
+            </section>
+
+        </div>
     </div>
 
 </body>

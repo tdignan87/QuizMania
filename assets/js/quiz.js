@@ -11,7 +11,7 @@ let questionCounter = 0;
 let availableQuestions = [];
 
 
-
+let questions = [];
 
 //open trivia fetch API
 
@@ -21,6 +21,7 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=mul
     })
     .then(availableQuestions => {
 
+
         questions = availableQuestions.results.map(availableQuestions => {
             const formattedQuestion = {
                 question: availableQuestions.question
@@ -29,13 +30,15 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=mul
 
             const answerChoices = [...availableQuestions.incorrect_answers];
 
-            formattedQuestion.answer = Math.floor(Math.random() * 3) + 0;
+
+            formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;
             answerChoices.splice(formattedQuestion.answer - 1, 0,
                 answerChoices.correct_answer);
 
 
             answerChoices.forEach((choice, index) => {
                 formattedQuestion["choice" + (index + 1)] = choice;
+
             })
 
             return formattedQuestion;
@@ -95,8 +98,6 @@ getNewQuestion = () => {
         choice.innerText = currentQuestion["choice" + number];
     });
 
-
-
     // Dispose of questions already used
     availableQuestions.splice(questionIndex, 1);
     acceptingAnswers = true;
@@ -104,7 +105,7 @@ getNewQuestion = () => {
 
 choices.forEach(choice => {
     choice.addEventListener("click", e => {
-        console.log(e.target);
+
 
         if (!acceptingAnswers) return;
 

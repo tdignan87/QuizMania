@@ -81,6 +81,7 @@ getNewQuestion = () => {
     questionCounter++;
 
     // Store score in local storage
+    // Template literal to show no questions out of how many.
     questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
     localStorage.setItem("mostRecentScore", score);
 

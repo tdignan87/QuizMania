@@ -81,32 +81,39 @@ h1 {
 
 /* Choice styling in the questions grid */
 
+
+/* Style for background grid for questions - Changed color from background */
+
 #question_grid {
     background-color: #fed8b1;
     padding-bottom: 10px;
 }
 
+
+/* Inside questions grid */
+
 #question-main {
-    color: red;
-    padding-bottom: 2px;
+    color: orange;
+    padding-bottom: 8px;
 }
 
+.choice-options {
+    background-color: orange;
+    color: black;
+    float: left;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    ;
+}
 
-/* Clear floats after the columns */
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+.choice-text {
+    background-color: white;
+    width: 100%;
+    height: 100%;
 }
 
 
 /* Answers Section */
 
-.correct {
-    background-color: green;
-}
-
-.wrong {
-    background-color: red;
-}
+#first-answer {}

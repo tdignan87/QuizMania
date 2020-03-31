@@ -119,6 +119,19 @@ h1 {
 }
 
 
-/* Answers Section */
+/* Score Section */
 
-#first-answer {}
+#score-container {
+    padding-bottom: 5px;
+}
+
+#score-result {
+    font-size: 50px;
+    color: green;
+}
+
+#score_grid {
+    background-color: #fed8b1;
+    padding-bottom: 10px;
+    width: 100%;
+}

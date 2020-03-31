@@ -88,7 +88,7 @@ I build the wireframes for this project using Balsamiq Mockups 3. I started by c
 * Interactive trivia questions
 * Slide down navigation bar
 * Responsive
-* Visual progress bar
+* Email features
 
 
 ## Techologies Used
@@ -138,3 +138,6 @@ When configuring my project for Github the following steps were taken
  3. Created a local repo in VS code once git was fully installed.
  4. Source control section of VS code i selected manage, clone and then pasted in my github repository path to clone too.
  5. Double checked after initial setup that the cloning was working successfully and to the correct repository.
+
+ ## Deployment
+

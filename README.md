@@ -110,3 +110,23 @@ Using Jasmine
 HTML Validator
 
 ??
+
+### Bugs
+
+Throughout the project i have encountered a variety of bugs. Please see details below
+
+* Bug
+Once maximum questions reached the game would just continue and not restart.
+* Fix
+Set a constant at max questions and set answered questions to reset once max questions have been reached which was restarting the game successfully.
+
+* Bug
+SendJS was not sending email that it was successful. In Console log nothing was logging
+* Fix
+After double checking my google authentication key i realised i made a typo when copying and pasting. Added a console statement after and checked in console, and also email to see that i have received it successfully.
+
+### Known Bugs
+Occasionally when the screen is refreshed the encoding is not correct and letters are messed up.
+
+
+## Deployment

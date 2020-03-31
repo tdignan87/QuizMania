@@ -90,7 +90,12 @@ I build the wireframes for this project using Balsamiq Mockups 3. I started by c
 * Responsive
 * Email features
 
-
+## Future Features
+Due to time constrants i was unable to add a lot of features into this project. I would like to  add into the project at a later stage.
+1. Ability to view scores stored in local storage.
+2. Ability to store your name.
+3. Ability to set difficulty for the quiz.
+4. Ability to set 10, 20 or 30 questions.
 ## Techologies Used
 
 ### Languages

@@ -9,8 +9,8 @@ body {
 /* Float navigation bar to left */
 
 .navbar {
-    float: left;
-    size: 100%;
+    background-color: #fed8b1;
+    color: red;
 }
 
 
@@ -52,6 +52,24 @@ h1 {
     margin-top: 5px;
     margin-bottom: 5px;
     color: #fafafa;
+}
+
+
+/* Difficulty dropdown Menu item Styling */
+
+#dropdown-options {
+    background-color: #fed8b1;
+    color: black;
+    width: 70%;
+    height: 60px;
+}
+
+#dropdown-choices {
+    background-color: #fed8b1;
+    color: black;
+    width: 70%;
+    height: 100px;
+    text-align: center;
 }
 
 

@@ -8,6 +8,9 @@ body {
     height: 100%;
 }
 
+
+/* Jumbotron CSS for styling */
+
 .jumbotron {
     background-color: #c1502e;
     text-align: center;
@@ -18,6 +21,9 @@ body {
     padding-top: 2px;
 }
 
+
+/* Jumbotron Background Image Display */
+
 .jumbo-picture-display {
     background-image: url("../images/trivia-background.jpg");
     background-repeat: no-repeat;
@@ -27,16 +33,17 @@ body {
     width: 100%;
 }
 
+
+/* Jumbotron main title color to stand out */
+
 #jumbo-title {
     color: black;
 }
 
-#jumbo-p {
-    color: black;
-}
 
-.navbar {
-    padding-bottom: 2%;
+/* Jumbotron paragraph text to stand out */
+
+#jumbo-p {
     color: black;
 }
 
@@ -49,6 +56,9 @@ h1 {
 
 
 /* container section */
+
+
+/* Main Container formatting */
 
 .container {
     width: 100%;
@@ -66,6 +76,9 @@ h1 {
 .score-area {
     background-color: orange;
 }
+
+
+/* Main button bootstrap overwrite default styling */
 
 .btn-primary {
     background-color: orange;
@@ -106,27 +119,18 @@ h1 {
     cursor: pointer;
 }
 
-.modal-content {
-    text-align: center;
-    padding-top: 5px padding-bottom 5px;
-    display: inline-block;
-}
+
+/* If answer correct button will go green */
 
 .correct {
     background-color: green;
 }
 
+
+/* If answer incorrect button will go red*/
+
 .wrong {
     background-color: red;
-}
-
-#saveScoreBtn {
-    height: 100px;
-    width: 135px;
-}
-
-.answer-score-section {
-    color: black;
 }
 
 
@@ -136,39 +140,13 @@ h1 {
     justify-content: space-around;
 }
 
+
+/* question score text size */
+
 .hud-prefix {
     font-size: 70px;
 }
 
 .hud-main-text {
     font-size: 50px;
-}
-
-.score-section {
-    text-decoration: underline;
-    letter-spacing: 2px;
-}
-
-.results-section {
-    text-decoration: underline;
-    letter-spacing: 2px;
-    background-color: #fed8b1;
-    width: 100%;
-}
-
-
-/* FORMS */
-
-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-input {
-    margin-bottom: 1rem;
-    width: 20rem;
-    font-size: 1.8rem;
-    border: none;
 }

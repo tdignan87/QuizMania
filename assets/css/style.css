@@ -25,6 +25,10 @@ body {
     width: 100%;
 }
 
+#jumbo-title {
+    color: black;
+}
+
 .navbar {
     padding-bottom: 2%
 }

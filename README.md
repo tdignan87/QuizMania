@@ -130,3 +130,11 @@ Occasionally when the screen is refreshed the encoding is not correct and letter
 
 
 ## Deployment
+I used VS Code for developing this project using gitHub to hold the repository.
+When configuring my project for Github the following steps were taken
+ 
+ 1. Created new github workspace on my github account.
+ 2. Installed Git on Windows.
+ 3. Created a local repo in VS code once git was fully installed.
+ 4. Source control section of VS code i selected manage, clone and then pasted in my github repository path to clone too.
+ 5. Double checked after initial setup that the cloning was working successfully and to the correct repository.

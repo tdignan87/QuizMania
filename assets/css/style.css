@@ -78,8 +78,10 @@ h1 {
     padding: 50px;
 }
 
-
-/* Choice styling in the questions grid */
+#quiz-container {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
 
 
 /* Style for background grid for questions - Changed color from background */
@@ -87,6 +89,7 @@ h1 {
 #question_grid {
     background-color: #fed8b1;
     padding-bottom: 10px;
+    width: 100%;
 }
 
 
@@ -104,13 +107,15 @@ h1 {
     height: 100%;
     width: 50%;
     text-align: center;
-    ;
+    border-style: double;
 }
 
 .choice-text {
+    padding-right: 10px;
     background-color: white;
     width: 100%;
     height: 100%;
+    border-style: double;
 }
 
 

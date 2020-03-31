@@ -15,13 +15,15 @@
         * Icons
         * Colours
         * Styling
-        * Images
         * Backgrounds
 * Wireframes 
 * Features 
     * Features that have been developed
     *  Features that will be implemented in the future
 * Technologies Used 
+* Testing
+* Bugs
+* Credits
 
 
 ## UX (User Experience) 
@@ -71,22 +73,16 @@ This project is a simple trivia game for all ages and therefore my design choice
 I chose the font Bubble Gums Sans as the font is upbeat and fun which is what i want the user to experience when playing the game. This font is used throughout the whole webpage. <a href="https://fonts.google.com/specimen/Bubblegum+Sans">Click Here!</a> to view on google fonts.
 
 ##### Icons
-I chose font awesome icons to display QuizMania's social media pages at the footer of the page. The colors of the icons blended well with the rest of the content on the page.  
-
+I chose font awesome icons to display the facebook logo page. Once QuizMania is set up with a social media account it will then be set up with the correct link.
 #### Colors
-I did a lot of searching online to find similar games and they all use boldish stand out colors. I decided to implement this using a mixture of colors below 
-
-* ??
-* ?? 
-* ??
+The main text is orange with a lighter orange for the buttons. Text is a contract between black and white and all colors go well with the overall design of the website.
 
 #### Styling
 I used bootstrap 4 for styling the responsive design to the page. 
 
-#### Background Image
 
 #### Wireframes
-I build the wireframes for this project using Balsamiq Mockups 3. I started by creating a wireframe on the browser view and then worked my way to create a tablet and phone desing. My wireframes can be viewed at ??
+I build the wireframes for this project using Balsamiq Mockups 3. I started by creating a wireframe on the browser view and then worked my way to create a tablet and phone desing. My wireframes can be viewed at the following link.
 
 ## Features
 * Interactive trivia questions
@@ -109,3 +105,8 @@ I build the wireframes for this project using Balsamiq Mockups 3. I started by c
 * Git
 * jQuery
 
+### Testing Write Up
+Using Jasmine
+HTML Validator
+
+??

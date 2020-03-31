@@ -11,10 +11,6 @@ let questionCounter = 0;
 let availableQuestions = [];
 
 
-const noOfQuestions = 10;
-const noOfSecondQuestions = 20
-const noofThirdQuestions = 30;
-
 
 
 //open trivia fetch API
@@ -32,6 +28,7 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=mul
 
 
             const answerChoices = [...availableQuestions.incorrect_answers];
+
             formattedQuestion.answer = Math.floor(Math.random() * 3) + 0;
             answerChoices.splice(formattedQuestion.answer - 1, 0,
                 answerChoices.correct_answer);
@@ -43,7 +40,9 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=mul
 
             return formattedQuestion;
 
+
         });
+
         startAgain();
         // questions = availableQuestions;
         //  startAgain();
@@ -71,6 +70,8 @@ startAgain = () => {
 // Once questions reached go back to top of page.
 
 getNewQuestion = () => {
+
+
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score);
         //go to the end page
@@ -96,13 +97,15 @@ getNewQuestion = () => {
 
 
 
-
+    // Dispose of questions already used
     availableQuestions.splice(questionIndex, 1);
     acceptingAnswers = true;
 };
 
 choices.forEach(choice => {
     choice.addEventListener("click", e => {
+        console.log(e.target);
+
         if (!acceptingAnswers) return;
 
         acceptingAnswers = false;

@@ -6,11 +6,11 @@ body {
 }
 
 
-/* Float navigation bar to left */
+/* Float navigation bar to left and add some styling*/
 
 .navbar {
     background-color: #fed8b1;
-    color: red;
+    font-size: large;
 }
 
 
@@ -155,4 +155,15 @@ h1 {
     background-color: #fed8b1;
     padding-bottom: 10px;
     width: 100%;
+}
+
+
+/* Save ScoreButton Styling */
+
+.btn-lg {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 50%;
+    height: 100px;
 }

@@ -71,7 +71,7 @@ This project is a simple trivia game for all ages and therefore my design choice
 I chose the font Bubble Gums Sans as the font is upbeat and fun which is what i want the user to experience when playing the game. This font is used throughout the whole webpage. <a href="https://fonts.google.com/specimen/Bubblegum+Sans">Click Here!</a> to view on google fonts.
 
 ##### Icons
-I chose font awesome icons to display QuizMania's social media pages at the footer of the page. The colors of the icons blended well with the rest of the content on the page. 
+I chose font awesome icons to display QuizMania's social media pages at the footer of the page. The colors of the icons blended well with the rest of the content on the page.  
 
 #### Colors
 I did a lot of searching online to find similar games and they all use boldish stand out colors. I decided to implement this using a mixture of colors below 

@@ -103,7 +103,7 @@ I chose a simple dark orange background for the entire web application.
 I built the wireframes for this project using Balsamiq mockups. I did a basic design for Mobile/Tablets and then a web application prior to designing the UI. I found using Balsamiq very useful as it helped me to structurally arrange the elements on my page.
 
 You can view the wireframes here:
- <a href="https://github.com/Geomint/holiday-destinations-v2/tree/master/wireframes">here.</a>
+ <a href="">Click here for Wireframes</a>
 
 
 

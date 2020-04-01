@@ -135,4 +135,10 @@ This is the first time i have written any software using data from a API. I ensu
 #### Test Planning:
  Prior to doing any coding i knew i had to do the work in "blocks" to achieve my overall goal otherwise I would get overwelmed and skip core things. My wireframes helped greatly as it allowed me to pick a section and then work on that specific area until the functionality and code was all working before moving onto the next.
 
+ In future projects i would like to automatic testing to help me debug and test my work.
 
+### Overall:
+<strong>Responsiveness:</strong>
+*<strong>: Fully responsive and mobile friendly is a requirement for this prodject so i used Bootstrap as the HTML framework. I used chrome developer tools for testing the different break points. </strong>
+*<strong>: Implementation:</strong> Using live server browser in VS code allowed me to work on my project in a practical way alongside the developer tools for testing different things.
+*<strong>: Result:</strong>

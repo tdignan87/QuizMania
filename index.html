@@ -45,17 +45,17 @@
 
         <!-- Jumbotron Section-->
         <div class="jumbotron">
-            <div class="jumbo-picture-display">
+            <div class="jumbo-picture-display" id="jumbo-picture-main">
                 <h1 class="display-4" id="jumbo-title">Welcome to QuizMania</h1>
                 <p class="lead" id="jumbo-p">The trivia quiz game.</p>
             </div>
         </div>
 
         <!-- Options menu for Quiz Criteria-->
-        <div class="container-fluid">
+        <div class="container-fluid" id="options-container-choices">
             <div id="criteria" class="criteria-section">
                 <div class="dropdown">
-                    <h2 class="select-difficulty">Please Select Difficulty To Begin!</h2>
+                    <h2 class="select-difficulty">Please Select Difficulty First!</h2>
                     <a class="btn btn-secondary dropdown-toggle" id="dropdown-options" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Please Select Difficulty
                     </a>
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <h2 class="select-difficulty">Please Select Number Of Questions</h2>
+                    <h2 class="select-difficulty">Then Select Number Of Questions</h2>
                     <a class="btn btn-secondary dropdown-toggle" id="dropdown-options" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       No Of Questions
                     </a>
@@ -85,8 +85,6 @@
         </div>
         <button type="button" onclick="showQuestions()" class="btn btn-warning btn-lg" id="play-submit-btn">Click To Play!</button>
     </div>
-
-
 
     <!-- main quiz section container of project.-->
     <div class="container-fluid" id="quiz-container">

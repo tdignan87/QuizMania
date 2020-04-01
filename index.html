@@ -10,11 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
-    <script>
-        (function() {
-            emailjs.init("user_fef3sF2SKpyWfyzJqOBP4");
-        })();
-    </script>
+
     <title>QuizMania|The Quiz Game</title>
 </head>
 
@@ -87,7 +83,7 @@
             </div>
 
         </div>
-        <button type="button" class="btn btn-warning btn-lg" id="email-submit-btn">Click To Play!</button>
+        <button type="button" onclick="showQuestions()" class="btn btn-warning btn-lg" id="email-submit-btn">Click To Play!</button>
     </div>
 
 
@@ -132,20 +128,20 @@
 
     <div class="container-fluid" id="contact-container">
         <div class="container" id="contactus_grid">
-            <form id="contact-form" onsubmit="return sendMail(this);">
+            <form id="contact-form">
                 <h3> Got any ideas? Please let us know we would love to hear them.</h3>
                 <div class=" form-group ">
-                    <label for="exampleInputEmail1">Please enter your email address:</label>
-                    <input type="email " class="form-control " id="emailInputBox" aria-describedby="emailHelp " placeholder="Enter email ">
+                    <label for="exampleInputEmail1 ">Please enter your email address:</label>
+                    <input type="email " class="form-control " id="emailInputBox " aria-describedby="emailHelp " placeholder="Enter email ">
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Please enter your name:</label>
-                    <input type="text" class="form-control" id="nameInputBox" placeholder="Enter your name ">
+                <div class="form-group ">
+                    <label for="exampleInputPassword1 ">Please enter your name:</label>
+                    <input type="text " class="form-control " id="nameInputBox " placeholder="Enter your name ">
                     <label for="recommendationInput ">Please enter your recommendations</label>
-                    <input type="text" class="form-control" id="recommendationInput" placeholder="Recommendations ">
+                    <input type="text " class="form-control " id="recommendationInput " placeholder="Recommendations ">
                 </div>
 
-                <button type="submit" class="email-btn" id="email-submit-btn">Submit</button>
+                <button type="submit " class="email-btn " id="email-submit-btn ">Submit</button>
             </form>
 
         </div>
@@ -157,7 +153,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
-    <script src="assets/js/controls.js"></script>
+    <script src="assets/js/page-controls.js "></script>
 
 </body>
 

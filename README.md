@@ -5,7 +5,7 @@ Welcome to my project. Please read through and browse my project.
 
 ## Contents ##
 
-UX
+* UX
 *   Project Goals
 *   Target Audience Goals
 *   Developer Goals
@@ -16,16 +16,18 @@ UX
         * Styling
         * Images
         * Backgrounds
-*   Wireframes
-*   Features
+* Wireframes
+* Features
 *       * Features Deployed
 *       * Features that will be implemented in the future
-*   Technologies Used
-*   Testing
-*   Bugs
-*   Deployment
-*   Credits
+* Technologies Used
+* Testing
+* Bugs
+* Deployment
+* Credits
 
+## UX *User Experience)
+### Project Goals 
 
 
 

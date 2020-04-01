@@ -132,4 +132,7 @@ You can view the wireframes here:
 
 This is the first time i have written any software using data from a API. I ensured i tested every line of code and thoroughly went through all my code in blocks to understand the log and test in the console. I have learned a great deal from doing this of how API's work, and how Javascript can collect data from them. Testing was done by myself and also by peers and fellow students.
 
+#### Test Planning:
+ Prior to doing any coding i knew i had to do the work in "blocks" to achieve my overall goal otherwise I would get overwelmed and skip core things. My wireframes helped greatly as it allowed me to pick a section and then work on that specific area until the functionality and code was all working before moving onto the next.
+
 

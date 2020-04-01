@@ -89,7 +89,7 @@ I checked online at other trivia games and came across a variety of bright colou
 * Navigation Colour: #fed8b1<strong> Light Orange</strong>. I chose this secondary colour for my navbar and controls as it blends well with the dark orange.
 * Container Colours: #fed8b1<strong> Light Orange</strong>. I chose this colour for my sections as it blends well with the dark orange background.
 * Dropdown Menu Items: #fed8b1<strong> Light Orange</strong>. I chose this colour as it blends well with the background.
-* Save Score Button: Bootstrap Success Btn<strong>Green</strong>. I chose this colour for my save score button as it easily stands out above all the other colours so the it visually stands out to the user.
+* Save Score Button: Bootstrap Success Btn <strong>Green</strong>. I chose this colour for my save score button as it easily stands out above all the other colours so the it visually stands out to the user.
 
 ##### Styling:
 

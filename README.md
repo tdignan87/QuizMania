@@ -114,4 +114,20 @@ You can view the wireframes here:
 
 ### Languages:
 
+* HTML
+* CSS
+* Javascript
+
+### Scripting Languages:
+* JSON
+
+### Tools & Libraries:
+
+* jQuery
+* Git
+* Bootstrap
+* OpenTrivia API
+
+
+
 

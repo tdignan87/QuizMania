@@ -13,7 +13,8 @@ window.onload = function() {
  * @function called showQuestions will show the questions container grid when the play button is pressed.
  */
 
-var showQuestions = function() {
-    document.getElementById("question_grid").style.display = "visible";
-    console.log("hello world");
+let showQuestions = function() {
+    document.getElementById("question_grid").style.display = "block";
+    document.getElementById("score_grid").style.display = "block";
+
 };

@@ -47,7 +47,7 @@ The goal of this project is to create a simple to use trivia quiz game for kids 
 <em>"The key for this game is ease of use with minimal content on the page. Most trivia or quiz websites are packed with content not suitable for my tablet or mobile. This site does exactly what it's suppost to do with no annoying pop-ups". </em>
 
 ##### Josh Dignan:
-<em>"As a 12 year old i like the colors of this page as they make the site look fun.It's good to play a game like this i don't need to register or download an app". </em>
+<em>"As a 12 year old i like the colours of this page as they make the site look fun.It's good to play a game like this i don't need to register or download an app". </em>
 
 
 #### Site Owner Goals:
@@ -63,7 +63,7 @@ The goal of this project is to create a simple to use trivia quiz game for kids 
 * Site will display my score and add it to the top scores.
 * Pop out nav appears when on tablet or mobile device.
 * Form works correctly for submitting ideas to the owner.
-* Answer buttons will change color if wrong or correct answer is selected.
+* Answer buttons will change colours if wrong or correct answer is selected.
 
 #### Expectations:
 
@@ -71,10 +71,20 @@ The goal of this project is to create a simple to use trivia quiz game for kids 
 * Site to allow user to select difficulty.
 * Can click answers and site will respond with correct color for wrong (red) or green (correct).
 * Fully responsive design for all devices.
-* Content and colors are visually appealing.
+* Content and colours are visually appealing.
 
 ## Design Choices:
 
+The theme of this project is a trivia quiz game, so my design choices are heavily influenced by a choice of positive colours.
 
+##### Fonts:
+
+I chose the font <a href="https://fonts.google.com/specimen/Bubblegum+Sans">Bubblegum Sans</a> as it looks fun and compliments the colour scheme of the game. The decision to use this font is to provide a "fun" experience for the user.
+
+##### Colour:
+
+I checked online at other trivia games and came across a variety of bright coloured websites and dark and dull websites. I decided to go with bright and vibrant colours as they are more appealing to kids as well as adults.
+
+* Background Color: 
 
 

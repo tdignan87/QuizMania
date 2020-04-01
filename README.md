@@ -137,8 +137,14 @@ This is the first time i have written any software using data from a API. I ensu
 
  In future projects i would like to automatic testing to help me debug and test my work.
 
-### Overall:
-<strong>Responsiveness:</strong>
+### Overall Features:
+
+<strong>Site Responsiveness:</strong>
 *<strong>: Fully responsive and mobile friendly is a requirement for this prodject so i used Bootstrap as the HTML framework. I used chrome developer tools for testing the different break points. </strong>
 *<strong>: Implementation:</strong> Using live server browser in VS code allowed me to work on my project in a practical way alongside the developer tools for testing different things.
-*<strong>: Result:</strong>
+*<strong>: Interactive:</strong> Using JS to show and hide specific parts of the page when the user is ready to begin the quiz. This will keep everything on one page when in mobile design. This was checked using chrome developer tools.
+
+
+## Bugs
+
+To be filled in

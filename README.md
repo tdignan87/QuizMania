@@ -11,15 +11,15 @@ Welcome to my project. Please read through and browse my project.
 *   Developer Goals
 *   User Requirements and Expectations
 *   Design Choices
-        * Fonts
-        * Colours
-        * Styling
-        * Images
+        *Fonts
+        *Colours
+        *Styling
+        *Images
         * Backgrounds
 * Wireframes
 * Features
-*       * Features Deployed
-*       * Features that will be implemented in the future
+*       *Features Deployed
+*       *Features that will be implemented in the future
 * Technologies Used
 * Testing
 * Bugs
@@ -28,6 +28,6 @@ Welcome to my project. Please read through and browse my project.
 
 ## UX *User Experience)
 ### Project Goals 
-
+The goal of this project is to create a simple to use trivia quiz game for kids and adults. The project is aimed at 
 
 

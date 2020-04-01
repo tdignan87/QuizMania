@@ -105,5 +105,13 @@ I built the wireframes for this project using Balsamiq mockups. I did a basic de
 You can view the wireframes here:
  <a href="">Click here for Wireframes</a>
 
+## Features:
+
+* Sliding Navigation
+* Interactive questions and answers
+
+## Technologies Used:
+
+### Languages:
 
 

@@ -128,6 +128,8 @@ You can view the wireframes here:
 * Bootstrap
 * OpenTrivia API
 
+## Testing:
 
+This is the first time i have written any software using data from a API. I ensured i tested every line of code and thoroughly went through all my code in blocks to understand the log and test in the console. I have learned a great deal from doing this of how API's work, and how Javascript can collect data from them. Testing was done by myself and also by peers and fellow students.
 
 

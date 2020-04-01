@@ -50,6 +50,13 @@ The goal of this project is to create a simple to use trivia quiz game for kids 
 <em>"As a 10 year old i like the colors of this page as they make the site look fun.It's good to play a game like this i don't need to register or download an app". </em>
 
 
+#### Site Owner Goals
+
+* Create a fun friendly webpage that user's can use to play the trivia game.
+* Ability for users to email any improvements and recommendations.
+* Ability for user to select difficulty and number of questions.
+
+
 
 
 

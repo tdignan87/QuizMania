@@ -1,7 +1,7 @@
 function sendMail(contactForm) {
     emailjs.send("gmail", "emailQM", {
-            "from_name": contactForm.name.value,
-            "from_email": contactForm.emailaddress.value,
+            "from_name": contactForm.nameInputBox.value,
+            "from_email": contactForm.emailInputBox.value,
             "recommendations": contactForm.recommendationInput.value
         })
         .then(

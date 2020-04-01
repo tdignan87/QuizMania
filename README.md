@@ -11,15 +11,15 @@ Welcome to my project. Please read through and browse my project.
 *   Developer Goals
 *   User Requirements and Expectations
 *   Design Choices
-        *Fonts
-        *Colours
-        *Styling
-        *Images
-        * Backgrounds
-* Wireframes
+    * Fonts
+    * Colours
+    * Styling
+    * Images
+    * Backgrounds
+    * Wireframes
 * Features
-*       *Features Deployed
-*       *Features that will be implemented in the future
+       * Features Deployed
+       * Features that will be implemented in the future
 * Technologies Used
 * Testing
 * Bugs

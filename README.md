@@ -38,6 +38,18 @@ The goal of this project is to create a simple to use trivia quiz game for kids 
 * Contact us with improvements via a form.
 * Functionality to chose difficulty and set number of questions.
 
+#### User Stories:
+
+##### Mr.Stonehouse
+<em>"As a user i would like my child to be able to play this game easily."</em>
+
+##### Amanda Black
+<em>"The key for this game is ease of use with minimal content on the page. Most trivia or quiz websites are packed with content not suitable for my tablet or mobile. This site does exactly what it's suppost to do with no annoying pop-ups". </em>
+
+##### Josh Dignan
+<em>"As a 10 year old i like the colors of this page as they make the site look fun.It's good to play a game like this i don't need to register or download an app". </em>
+
+
 
 
 

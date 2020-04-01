@@ -145,6 +145,28 @@ This is the first time i have written any software using data from a API. I ensu
 *<strong>: Interactive:</strong> Using JS to show and hide specific parts of the page when the user is ready to begin the quiz. This will keep everything on one page when in mobile design. This was checked using chrome developer tools.
 
 
-## Bugs
+## Bugs:
 
 To be filled in
+
+#### Bugs During Development:
+
+To be filled in
+
+#### Known Bugs
+
+## Deployment:
+
+QuizMania was developed using VS code, using git and github to host the repository. When i was deploying QuizMania the following steps were made:
+
+* Created folder on local machine for the project
+* Installed GIT on Windows
+* Clicked source control icon on left of VS code panel
+* Created a local repository on my directory
+* Opened command palette (Ctrl+Shift+P) and copied in my remote repository URL
+* Did a small change then pushed to remote repository
+* Checked remote repository to check it was successfully pulling in the changes.
+
+## Closing Notes:
+Creating this project has taught me a lot about how to use API data to display information on a webpage. Working with Javascript and jQuery has been good experience for me as i only have basic experience in C# desktop development. In the future i would like to extend this quiz to be able to select different genre of trivia questions.
+

@@ -76,7 +76,7 @@ h1 {
 /* Select difficulty text white to stand out with orange */
 
 .select-difficulty {
-    font-size: 60px;
+    font-size: 40px;
     margin-top: 5px;
     color: #fafafa;
     padding-bottom: 30px;

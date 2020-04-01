@@ -85,6 +85,25 @@ I chose the font <a href="https://fonts.google.com/specimen/Bubblegum+Sans">Bubb
 
 I checked online at other trivia games and came across a variety of bright coloured websites and dark and dull websites. I decided to go with bright and vibrant colours as they are more appealing to kids as well as adults.
 
-* Background Color: 
+* Background Colours: #c1502e<strong> Dark orange</strong>. I Chose this as the primary colour as it looks like it will blend well with the other colours.
+* Navigation Colour: #fed8b1<strong> Light Orange</strong>. I chose this secondary colour for my navbar and controls as it blends well with the dark orange.
+* Container Colours: #fed8b1<strong> Light Orange</strong>. I chose this colour for my sections as it blends well with the dark orange background.
+* Dropdown Menu Items: #fed8b1<strong> Light Orange</strong>. I chose this colour as it blends well with the background.
+* Save Score Button: Bootstrap Success Btn<strong>Green</strong>. I chose this colour for my save score button as it easily stands out above all the other colours so the it visually stands out to the user.
+
+##### Styling:
+
+I use bootstrap to style my website with a responsive design. This means it was easier to set up the controls for responsive design.
+
+##### Background:
+
+I chose a simple dark orange background for the entire web application.
+
+## Wireframes:
+I built the wireframes for this project using Balsamiq mockups. I did a basic design for Mobile/Tablets and then a web application prior to designing the UI. I found using Balsamiq very useful as it helped me to structurally arrange the elements on my page.
+
+You can view the wireframes here:
+ <a href="https://github.com/Geomint/holiday-destinations-v2/tree/master/wireframes">here.</a>
+
 
 

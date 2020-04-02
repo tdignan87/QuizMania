@@ -6,7 +6,6 @@ window.onload = function() {
     document.getElementById("question_grid").style.display = "none";
     document.getElementById("score_grid").style.display = "none";
     document.getElementById("contactus_grid").style.display = "none";
-
 };
 
 /**
@@ -21,5 +20,12 @@ let showQuestions = function() {
     document.getElementById("options-container-choices").style.display = "none";
     document.getElementById("jumbo-picture-main").style.display = "none";
     document.getElementById("play-submit-btn").style.display = "none";
+};
+
+/**
+ * Show selected value in the dropdown titles using jQuery
+ * 
+ */
+let dropDownSelect = function() {
 
 };

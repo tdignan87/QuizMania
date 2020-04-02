@@ -19,9 +19,8 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" id="navbar-section" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-
-<span class="navbar-toggler-icon"></span>
-    </button>
+        <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -38,6 +37,10 @@
                 </li>
             </ul>
         </div>
+    </nav>
+
+
+
     </nav>
     <!-- Navbar section of page using bootstrap-->
     <div class="container">
@@ -59,7 +62,7 @@
                     <a class="btn btn-secondary dropdown-toggle" id="dropdown-options" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Please Select Difficulty
                     </a>
-                    <div class="dropdown-menu" id="dropdown-choices" aria-labelledby="dropdownMenuLink">
+                    <div class="dropdown-menu" id="dropdown-choices" aria-labelledby="dropdownMenuLink" onclick="dropDownSelect()">
                         <a class="dropdown-item" href="#">Easy</a>
                         <a class="dropdown-item" href="#">Medium</a>
                         <a class="dropdown-item" href="#">Hard</a>

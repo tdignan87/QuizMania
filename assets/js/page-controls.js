@@ -28,7 +28,7 @@ let showQuestions = function() {
  * 
  */
 let dropDownSelect = function() {
-    if (document.getElementById("dropdown-choices").selectedIndex = "1")
+    if (document.getElementById("easy-drop-down").selectedIndex = "0")
         console.log("first selected");
     else
         console.log("second selected or other");

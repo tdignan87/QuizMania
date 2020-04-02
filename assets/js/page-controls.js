@@ -28,8 +28,8 @@ let showQuestions = function() {
  * 
  */
 let dropDownSelect = function() {
-    if (document.getElementById("easy-drop-down").value == "Easy") {
-        console.log("easy selected");
-
-    };
+    if (document.getElementById("dropdown-choices").selectedIndex = "1")
+        console.log("first selected");
+    else
+        console.log("second selected or other");
 }

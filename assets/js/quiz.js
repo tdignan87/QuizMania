@@ -18,4 +18,4 @@ fetch("https://opentdb.com/api.php?amount=" + tenQuestions + "&category=9&diffic
 
 
         }
-    })
+    });

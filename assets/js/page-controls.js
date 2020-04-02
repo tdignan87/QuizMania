@@ -28,6 +28,8 @@ let showQuestions = function() {
  * 
  */
 let dropDownSelect = function() {
+    if (document.getElementById("easy-drop-down").value == "Easy") {
+        console.log("easy selected");
 
-
-};
+    };
+}

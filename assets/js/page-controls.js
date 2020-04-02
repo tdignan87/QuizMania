@@ -20,6 +20,6 @@ let showQuestions = function() {
 
     document.getElementById("options-container-choices").style.display = "none";
     document.getElementById("jumbo-picture-main").style.display = "none";
-
+    document.getElementById("play-submit-btn").style.display = "none";
 
 };

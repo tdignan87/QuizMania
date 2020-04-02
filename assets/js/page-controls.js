@@ -6,6 +6,7 @@ window.onload = function() {
     document.getElementById("question_grid").style.display = "none";
     document.getElementById("score_grid").style.display = "none";
     document.getElementById("contactus_grid").style.display = "none";
+
 };
 
 /**
@@ -27,5 +28,6 @@ let showQuestions = function() {
  * 
  */
 let dropDownSelect = function() {
+
 
 };

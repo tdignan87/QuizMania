@@ -57,7 +57,21 @@ h1 {
 
 /* Difficulty dropdown Menu item Styling */
 
-#dropdown-options {
+#dropdown-choices-difficulty {
+    background-color: #fed8b1;
+    color: black;
+    width: 70%;
+    height: 60px;
+}
+
+#dropdown-choices-category {
+    background-color: #fed8b1;
+    color: black;
+    width: 70%;
+    height: 60px;
+}
+
+#dropdown-choices-questions {
     background-color: #fed8b1;
     color: black;
     width: 70%;

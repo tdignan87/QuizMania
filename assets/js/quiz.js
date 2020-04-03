@@ -4,16 +4,18 @@
 
 let noOfQuestions = [10, 20, 30];
 
-window.onload = function retrieveQuestions() {
-    fetch(`https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`
 
-        ).then(response => response.json())
+function getQuestions(difficulty, questionAmount, category) {
+    fetch(
+            `https://opentdb.com/api.php?amount=${questionAmount}&category=${category}&difficulty=${difficulty}&type=multiple`
+        )
+        .then(response => response.json())
         .then(rawData => {
             console.log(rawData.results);
+            generateQuestions(rawData)
         })
         .catch(error => console.log(error));
 }
-
 
 
 $(document).ready(function generateCategories() {
@@ -21,8 +23,9 @@ $(document).ready(function generateCategories() {
         .then(res => res.json())
         .then(data => {
             data.trivia_categories.forEach(category => {
-                $("#category-options").append(`<option value="${category.id}">${category.name}</option>`)
-                console.log(`test`);
+                $("#dropdown-choices-category").append(`<option value="${category.id}">${category.name}</option>`)
+                console.log(category);
+
             })
         })
 })

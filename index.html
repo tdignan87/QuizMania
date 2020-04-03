@@ -57,7 +57,7 @@
             <div id="criteria" class="criteria-section">
                 <div class="dropdown">
                     <h2 class="select-difficulty">Please Select Difficulty First!</h2>
-                    <select class="custom-select custom-select-lg mb-3" id="dropdown-choices">
+                    <select class="custom-select custom-select-lg mb-3" id="dropdown-choices-difficulty">
                         <option selected>Please Select Difficulty</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -65,8 +65,8 @@
                       </select>
                 </div>
                 <div class="dropdown">
-                    <h2 class="select-difficulty" onclick="getNoOfQuestions()">Then Select Number Of Questions</h2>
-                    <select class="custom-select custom-select-lg mb-3" id="dropdown-choices">
+                    <h2 class="select-difficulty fluid" onclick="getNoOfQuestions()">Then Select Number Of Questions</h2>
+                    <select class="custom-select custom-select-lg mb-3" id="dropdown-choices-questions">
                         <option selected id="no_of_q">Please Select No Of Questions</option>
                         <option value="1"></option>
                         <option value="2"></option>
@@ -76,14 +76,15 @@
                 </div>
 
                 <div class="dropdown">
-                    <h2 class="select-difficulty">Please Select Category</h2>
-                    <select class="custom-select custom-select-lg mb-3" id="dropdown-choices">
+                    <h2 class="select-difficulty fluid">Please Select Category</h2>
+
+                    <select class="custom-select custom-select-lg mb-3" id="dropdown-choices-category">
                         <option selected id="category-options";>Please Select Category</option>
                       
+                         <option value="g"></option>
                          <option value=""></option>
                          <option value=""></option>
-                         <option value=""></option>
-                       </div>
+                       
                     
                         </select>
 

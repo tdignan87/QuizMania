@@ -7,6 +7,10 @@ window.onload = function() {
     document.getElementById("score_grid").style.display = "none";
     document.getElementById("contactus_grid").style.display = "none";
 
+
+    // $("#question_grid").css({ "width": "0", "height": "0" });
+    //  $("#score_grid").css({ "width": "0", "height": "0" });
+    //  $("#contactus_grid").css({ "width": "0", "height": "0" });
 };
 
 /**

@@ -31,9 +31,14 @@ $(document).ready(function generateCategories() {
 
 
     $(document).ready(function generateQuestions() {
-        noOfQuestions.forEach(questionAmount => {
-            $("#dropdown-choices-questions").append(`<option value="${questionAmount}"></option>`)
-            console.log(questionAmount);
-        })
+        $.each(noOfQuestions, function(val, text) {
+            $('#dropdown-choices-questions').append($('<option></option>').val(val).html(text))
+        });
+    })
+
+    $(document).ready(function generateDifficulty() {
+        $.each(difficultySetting, function(val, text) {
+            $('#dropdown-choices-difficulty').append($('<option></option>').val(val).html(text))
+        });
     })
 })

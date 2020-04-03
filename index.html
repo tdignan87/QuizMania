@@ -40,8 +40,6 @@
     </nav>
 
 
-
-    </nav>
     <!-- Navbar section of page using bootstrap-->
     <div class="container">
 
@@ -59,35 +57,45 @@
             <div id="criteria" class="criteria-section">
                 <div class="dropdown">
                     <h2 class="select-difficulty">Please Select Difficulty First!</h2>
-                    <a class="btn btn-secondary dropdown-toggle" id="dropdown-options" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Please Select Difficulty
-                    </a>
-                    <div class="dropdown-menu" id="dropdown-choices" aria-labelledby="dropdownMenuLink" onclick="dropDownSelect()">
-                        <a class="dropdown-item" id="easy-drop-down" href="#">Easy</a>
-                        <a class="dropdown-item" href="#">Medium</a>
-                        <a class="dropdown-item" href="#">Hard</a>
-                    </div>
+                    <select class="custom-select custom-select-lg mb-3" id="dropdown-choices">
+                        <option selected>Please Select Difficulty</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
                 </div>
                 <div class="dropdown">
                     <h2 class="select-difficulty">Then Select Number Of Questions</h2>
-                    <a class="btn btn-secondary dropdown-toggle" id="dropdown-options" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      No Of Questions
-                    </a>
-                    <div class="dropdown-menu" id="dropdown-choices" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">10</a>
-                        <a class="dropdown-item" href="#">20</a>
-                        <a class="dropdown-item" href="#">30</a>
-                    </div>
+                    <select class="custom-select custom-select-lg mb-3" id="dropdown-choices">
+                        <option selected>Please Select No Of Questions</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
 
                 </div>
 
-
+                <div class="dropdown">
+                    <h2 class="select-difficulty">Please Select Category</h2>
+                    <select class="custom-select custom-select-lg mb-3" id="dropdown-choices">
+                        <option selected>Please Select Category</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                </div>
 
             </div>
+
+
+
+
 
         </div>
         <button type="button" class="btn btn-warning btn-lg" onclick="showQuestions()" id="play-submit-btn">Click To Play!</button>
     </div>
+
+
 
     <!-- main quiz section container of project.-->
     <div class="container-fluid" id="quiz-container">

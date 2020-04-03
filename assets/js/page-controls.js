@@ -7,6 +7,8 @@ window.onload = function() {
     document.getElementById("score_grid").style.display = "none";
     document.getElementById("contactus_grid").style.display = "none";
 
+
+
 };
 
 /**

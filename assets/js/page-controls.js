@@ -7,8 +7,6 @@ window.onload = function() {
     document.getElementById("score_grid").style.display = "none";
     document.getElementById("contactus_grid").style.display = "none";
 
-
-
 };
 
 /**
@@ -29,9 +27,3 @@ let showQuestions = function() {
  * Show selected value in the dropdown titles using jQuery
  * 
  */
-let dropDownSelect = function() {
-    if (document.getElementById("easy-drop-down").selectedIndex = "0")
-        console.log("first selected");
-    else
-        console.log("second selected or other");
-}

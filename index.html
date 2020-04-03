@@ -65,12 +65,12 @@
                       </select>
                 </div>
                 <div class="dropdown">
-                    <h2 class="select-difficulty">Then Select Number Of Questions</h2>
+                    <h2 class="select-difficulty" onclick="getNoOfQuestions()">Then Select Number Of Questions</h2>
                     <select class="custom-select custom-select-lg mb-3" id="dropdown-choices">
-                        <option selected>Please Select No Of Questions</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option selected id="no_of_q">Please Select No Of Questions</option>
+                        <option value="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
                       </select>
 
                 </div>
@@ -78,14 +78,23 @@
                 <div class="dropdown">
                     <h2 class="select-difficulty">Please Select Category</h2>
                     <select class="custom-select custom-select-lg mb-3" id="dropdown-choices">
-                        <option selected>Please Select Category</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
+                        <option selected id="category-options";>Please Select Category</option>
+                      
+                         <option value=""></option>
+                         <option value=""></option>
+                         <option value=""></option>
+                       </div>
+                    
+                        </select>
+
+
+
                 </div>
 
+
             </div>
+
+
 
 
 
@@ -164,6 +173,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
     <script src="assets/js/page-controls.js"></script>
     <script src="assets/js/quiz.js"></script>
+
+
 
 </body>
 

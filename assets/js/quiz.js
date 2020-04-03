@@ -32,13 +32,22 @@ $(document).ready(function generateCategories() {
 
     $(document).ready(function generateQuestions() {
         $.each(noOfQuestions, function(val, text) {
-            $('#dropdown-choices-questions').append($('<option></option>').val(val).html(text))
+            $('#dropdown-choices-questions').append($(`<option>${text}</option>`))
         });
     })
 
     $(document).ready(function generateDifficulty() {
         $.each(difficultySetting, function(val, text) {
-            $('#dropdown-choices-difficulty').append($('<option></option>').val(val).html(text))
+            $('#dropdown-choices-difficulty').append($(`<option>${text}</option>`))
         });
     })
-})
+
+    $("play-submit-btn").click(function() {
+        document.getElementById("question_grid").style.display = "block";
+        document.getElementById("score_grid").style.display = "block";
+
+        document.getElementById("options-container-choices").style.display = "none";
+        document.getElementById("jumbo-picture-main").style.display = "none";
+        document.getElementById("play-submit-btn").style.display = "none";
+    })
+});

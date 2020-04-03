@@ -8,7 +8,8 @@ window.onload = function() {
     document.getElementById("contactus_grid").style.display = "none";
 
 
-    // $("#question_grid").css({ "width": "0", "height": "0" });
+    // const newLocal = "#question_grid";
+    //  $(newLocal).css({ "width": "0", "height": "0" });
     //  $("#score_grid").css({ "width": "0", "height": "0" });
     //  $("#contactus_grid").css({ "width": "0", "height": "0" });
 };
@@ -18,14 +19,7 @@ window.onload = function() {
  * The jumbotron display will also not be visible.
  */
 
-let showQuestions = function() {
-    document.getElementById("question_grid").style.display = "block";
-    document.getElementById("score_grid").style.display = "block";
 
-    document.getElementById("options-container-choices").style.display = "none";
-    document.getElementById("jumbo-picture-main").style.display = "none";
-    document.getElementById("play-submit-btn").style.display = "none";
-};
 
 /**
  * Show selected value in the dropdown titles using jQuery

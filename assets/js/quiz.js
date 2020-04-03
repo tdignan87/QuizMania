@@ -2,7 +2,8 @@
  ** then if we get a response, we are converting it to JSON format and then logging the raw data into the console.
  */
 
-let noOfQuestions = [10, 20, 30];
+var noOfQuestions = [10, 20, 30];
+let difficultySetting = ["Easy", "Medium", "Hard"];
 
 
 function getQuestions(difficulty, questionAmount, category) {
@@ -24,8 +25,15 @@ $(document).ready(function generateCategories() {
         .then(data => {
             data.trivia_categories.forEach(category => {
                 $("#dropdown-choices-category").append(`<option value="${category.id}">${category.name}</option>`)
-                console.log(category);
 
             })
         })
+
+
+    $(document).ready(function generateQuestions() {
+        noOfQuestions.forEach(questionAmount => {
+            $("#dropdown-choices-questions").append(`<option value="${questionAmount}"></option>`)
+            console.log(questionAmount);
+        })
+    })
 })

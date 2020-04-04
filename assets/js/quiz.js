@@ -24,21 +24,21 @@ $("#play-submit-btn").click(function() {
     getQuestions();
 })
 
+/** Function which takes the data from the API and filters out on the questions and the returns a value to the HTML quesiton-main ID.  
+ **
+ */
 
 function generateQuestions(data) {
     data.results.forEach(singleQuestion => {
         $("#question-main").append(`<h3 id="question-main">${singleQuestion.question}</h3>`);
-        singleQuestion.Math.floor(Math.random() * singleQuestion.length);
-        console.log(singleQuestion);
+        var resultsQuestion = singleQuestion.filter(function(question) {
+            return question == "question";
+        })
+        console.log(resultsQuestion);
     });
     return;
 }
 
-//function generateIncorrectAnswer(data) {
-//data.results.forEach(Incorrect_answers => {
-
-//})
-//}
 
 
 $(document).ready(function generateCategories() {

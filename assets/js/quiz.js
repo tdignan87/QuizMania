@@ -4,18 +4,20 @@
 
 var noOfQuestions = [10, 20, 30];
 let difficultySetting = ["Easy", "Medium", "Hard"];
+let IncorrectAnswers = [""];
+let correctAnswers = [];
 
 
 function getQuestions(difficulty, questionAmount, category) {
     fetch(
-            //`https://opentdb.com/api.php?amount=${questionAmount}&category=${category}&difficulty=${difficulty}&type=multiple`
+            //  `https://opentdb.com/api.php?amount=${questionAmount}&category=${category}&difficulty=${difficulty}&type=multiple`
             `https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`
         )
         .then(response => response.json())
         .then(rawData => {
             //    console.log(rawData.results);
             generateQuestions(rawData)
-                //    generateIncorrectAnswer(rawData)
+
         })
         .catch(error => console.log(error));
 }
@@ -24,22 +26,20 @@ $("#play-submit-btn").click(function() {
     getQuestions();
 })
 
-/** Function which takes the data from the API and filters out on the questions and the returns a value to the HTML quesiton-main ID.  
- **
- */
-
 function generateQuestions(data) {
     data.results.forEach(singleQuestion => {
         $("#question-main").append(`<h3 id="question-main">${singleQuestion.question}</h3>`);
-        var resultsQuestion = singleQuestion.filter(function(question) {
-            return question == "question";
-        })
-        console.log(resultsQuestion);
-    });
+        singleQuestion.Math.floor(Math.random() * singleQuestion.length);
+        console.log(singleQuestion);
+
+    })
+
     return;
 }
 
+function generateAnswers() {
 
+}
 
 $(document).ready(function generateCategories() {
     fetch(`https://opentdb.com/api_category.php`)

@@ -10,7 +10,12 @@
     <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_fef3sF2SKpyWfyzJqOBP4");
+        })();
+    </script>
     <title>QuizMania|The Quiz Game</title>
 </head>
 
@@ -33,7 +38,7 @@
                     <a class="nav-link" href="#">High Scores <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="navbar_register_btn" href="">Contact Us</a>
+                    <a class="nav-link" id="navbar_register_btn">Contact Us</a>
                 </li>
             </ul>
         </div>
@@ -128,16 +133,16 @@
                 <h3> Got any ideas? Please let us know we would love to hear them.</h3>
                 <div class=" form-group ">
                     <label for="exampleInputEmail1 ">Please enter your email address:</label>
-                    <input type="email " class="form-control " id="emailInputBox " aria-describedby="emailHelp " placeholder="Enter email ">
+                    <input type="email " name="emailaddress" class="form-control " id="emailInputBox " aria-describedby="emailHelp " placeholder="Enter email ">
                 </div>
                 <div class="form-group ">
                     <label for="exampleInputPassword1 ">Please enter your name:</label>
-                    <input type="text " class="form-control " id="nameInputBox " placeholder="Enter your name ">
+                    <input type="text " name="name" class="form-control" id="nameInputBox " placeholder="Enter your name ">
                     <label for="recommendationInput ">Please enter your recommendations</label>
-                    <input type="text " class="form-control " id="recommendationInput " placeholder="Recommendations ">
+                    <input type="text " name="recommendations" class="form-control " id="recommendationInput " placeholder="Recommendations ">
                 </div>
 
-                <button type="submit " class="email-btn " id="email-submit-btn ">Submit</button>
+                <button type="button " class="email-btn " id="email-submit-btn ">Submit</button>
             </form>
         </div>
 
@@ -149,6 +154,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="assets/js/page-controls.js"></script>
     <script src="assets/js/quiz.js"></script>
+    <script src="assets/js/contact.js"></script>
 
 
 

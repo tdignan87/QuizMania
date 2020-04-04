@@ -4,23 +4,20 @@
 
 var noOfQuestions = [10, 20, 30];
 let difficultySetting = ["Easy", "Medium", "Hard"];
-let questions = [""];
+
 
 function getQuestions(difficulty, questionAmount, category) {
     fetch(
-            //  `https://opentdb.com/api.php?amount=${questionAmount}&category=${category}&difficulty=${difficulty}&type=multiple`
+            //`https://opentdb.com/api.php?amount=${questionAmount}&category=${category}&difficulty=${difficulty}&type=multiple`
             `https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`
         )
         .then(response => response.json())
         .then(rawData => {
             //    console.log(rawData.results);
             generateQuestions(rawData)
-
+                //    generateIncorrectAnswer(rawData)
         })
         .catch(error => console.log(error));
-
-
-
 }
 
 $("#play-submit-btn").click(function() {
@@ -37,6 +34,11 @@ function generateQuestions(data) {
     return;
 }
 
+//function generateIncorrectAnswer(data) {
+//data.results.forEach(Incorrect_answers => {
+
+//})
+//}
 
 
 $(document).ready(function generateCategories() {

@@ -7,7 +7,6 @@ window.onload = function() {
     document.getElementById("score_grid").style.display = "none";
     document.getElementById("contactus_grid").style.display = "none";
 
-
     //  const newLocal = "#question_grid";
     //  $("#question_grid").css({ "width": "0", "height": "0", "padding": "0" })
     //  $("quiz-container").css({ "width": "0", "height": "0", "padding": "0" })

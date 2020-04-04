@@ -8,8 +8,9 @@ window.onload = function() {
     document.getElementById("contactus_grid").style.display = "none";
 
 
-    // const newLocal = "#question_grid";
-    //  $(newLocal).css({ "width": "0", "height": "0" });
+    //  const newLocal = "#question_grid";
+    //  $("#question_grid").css({ "width": "0", "height": "0", "padding": "0" })
+    //  $("quiz-container").css({ "width": "0", "height": "0", "padding": "0" })
     //  $("#score_grid").css({ "width": "0", "height": "0" });
     //  $("#contactus_grid").css({ "width": "0", "height": "0" });
 };

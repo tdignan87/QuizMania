@@ -15,14 +15,22 @@ window.onload = function() {
     //  $("#contactus_grid").css({ "width": "0", "height": "0" });
 };
 
-/**
- * @function called showQuestions will show the questions container grid when the play button is pressed. 
- * The jumbotron display will also not be visible.
- */
+$("#play-submit-btn").click(function() {
+    document.getElementById("question_grid").style.display = "block";
+    document.getElementById("score_grid").style.display = "block";
 
+    document.getElementById("options-container-choices").style.display = "none";
+    document.getElementById("jumbo-picture-main").style.display = "none";
+    document.getElementById("play-submit-btn").style.display = "none";
 
+})
 
 /**
  * Show selected value in the dropdown titles using jQuery
  * 
  */
+$("#navbar_register_btn").click(function() {
+    document.getElementById("contactus_grid").style.display = "block";
+
+
+})

@@ -4,20 +4,36 @@
 
 var noOfQuestions = [10, 20, 30];
 let difficultySetting = ["Easy", "Medium", "Hard"];
-
+let questions = [""];
 
 function getQuestions(difficulty, questionAmount, category) {
     fetch(
-            `https://opentdb.com/api.php?amount=${questionAmount}&category=${category}&difficulty=${difficulty}&type=multiple`
-
+            //  `https://opentdb.com/api.php?amount=${questionAmount}&category=${category}&difficulty=${difficulty}&type=multiple`
+            `https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`
         )
         .then(response => response.json())
         .then(rawData => {
-            console.log(rawData.results);
+            //    console.log(rawData.results);
             generateQuestions(rawData)
 
         })
         .catch(error => console.log(error));
+
+
+
+}
+
+$("#play-submit-btn").click(function() {
+    getQuestions();
+})
+
+
+function generateQuestions(data) {
+    data.results.forEach(singleQuestion => {
+        $("#question-main").append(`<h3 id="question-main">${singleQuestion.question}</h3>`);
+        console.log(singleQuestion);
+    });
+    return;
 }
 
 
@@ -32,8 +48,7 @@ $(document).ready(function generateCategories() {
             })
         })
 
-
-    $(document).ready(function generateQuestions() {
+    $(document).ready(function questionsAmount() {
         $.each(noOfQuestions, function(val, text) {
             $('#dropdown-choices-questions').append($(`<option>${text}</option>`))
         });
@@ -45,22 +60,7 @@ $(document).ready(function generateCategories() {
         });
     })
 
-    $("#play-submit-btn").click(function() {
-        document.getElementById("question_grid").style.display = "block";
-        document.getElementById("score_grid").style.display = "block";
-
-        document.getElementById("options-container-choices").style.display = "none";
-        document.getElementById("jumbo-picture-main").style.display = "none";
-        document.getElementById("play-submit-btn").style.display = "none";
-
-
-
-
-
-    })
-
-
-
-
-
+    /** Generate question from API and display in the form
+     ** 
+     */
 });

@@ -31,6 +31,7 @@ $("#play-submit-btn").click(function() {
 function generateQuestions(data) {
     data.results.forEach(singleQuestion => {
         $("#question-main").append(`<h3 id="question-main">${singleQuestion.question}</h3>`);
+        singleQuestion.Math.floor(Math.random() * singleQuestion.length);
         console.log(singleQuestion);
     });
     return;

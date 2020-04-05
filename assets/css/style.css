@@ -98,6 +98,7 @@
         height: 100%;
         text-align: center;
         padding: 50px;
+        display: block;
     }
     
     #quiz-container {
@@ -110,6 +111,7 @@
         background-color: #fed8b1;
         padding-bottom: 10px;
         width: 100%;
+        display: block;
     }
     /* Inside questions grid */
     

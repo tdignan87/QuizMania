@@ -5,16 +5,17 @@
 let noOfQuestions = [10, 20, 30];
 let difficultySetting = ["Easy", "Medium", "Hard"];
 let allQuestions = [];
-let Answers = [];
+let correctAnswer = [];
 let incorrectAnswers = [];
 let score = 0;
 let counter = 0;
 let availableQuestions = []
 
 
-
+/** Fetches API and converts to JSON format.
+ */
 function getQuestions(difficulty, questionAmount, category) {
-    loadingWheel(true);
+    //loadingWheel(true);
     fetch(
             //`https://opentdb.com/api.php?amount=${questionAmount}&category=${category}&difficulty=${difficulty}&type=multiple`
             `https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`
@@ -22,7 +23,8 @@ function getQuestions(difficulty, questionAmount, category) {
         .then(response => response.json())
         .then(rawData => {
             generateQuestionsAnswers(rawData)
-            loadingWheel(false);
+                // loadingWheel(false);
+            console.log(rawData.results);
         })
         .catch(error => console.log(error));
 }
@@ -35,16 +37,24 @@ function generateQuestionsAnswers(data) {
         let questionsOnly = {
             question: data.question
         };
+        questionsOnly.answer = Math.floor(Math.random() * 3) + 1;
         allQuestions = allQuestions[Math.floor(Math.random() * allQuestions.length)];
         $("#question-main").append(`<h3 id="question-main">${data.question}</h3>`);
         console.log(questionsOnly);
-        let answersOnly = {
-            answer: data.answer
-        }
+        incorrectAnswers = data.incorrect_answers;
+        correctAnswer = data.correct_answer;
+        console.log(incorrectAnswers)
+        console.log(correctAnswer);
 
-
+        /** Pushes the incorrect answers into the correct answers Array.
+         */
+        incorrectAnswers.push(correctAnswer);
+        console.log(incorrectAnswers);
 
     })
+
+
+
 
 
     return;
@@ -59,7 +69,8 @@ $(document).ready(function generateCategories() {
         .then(data => {
             data.trivia_categories.forEach(category => {
                 $("#dropdown-choices-category").append(`<option value="${category.id}">${category.name}</option>`)
-            })
+            });
+
         })
 
     $(document).ready(function questionsAmount() {

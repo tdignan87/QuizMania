@@ -45,21 +45,21 @@ function generateQuestionsAnswers(data) {
         correctAnswer = data.correct_answer;
         console.log(incorrectAnswers)
         console.log(correctAnswer);
-
-        /** Pushes the incorrect answers into the correct answers Array.
-         */
+        /** Pushes the incorrect answers into the correct answers Array.*/
         incorrectAnswers.push(correctAnswer);
         console.log(incorrectAnswers);
-
+        populateAnswers(incorrectAnswers);
     })
-
-
-
-
-
     return;
 }
 
+function populateAnswers(answers) {
+    answers.forEach(function(item) {
+        $(".choice-answer").append(`<p class="choice-text" id="first-answer" data-number="1">${item}</p>`)
+
+    });
+
+}
 /** Retrieves category list from API and passes to dropdown on homepage.
  ** 
  */
@@ -72,7 +72,6 @@ $(document).ready(function generateCategories() {
             });
 
         })
-
     $(document).ready(function questionsAmount() {
         $.each(noOfQuestions, function(val, text) {
             $('#dropdown-choices-questions').append($(`<option>${text}</option>`))
@@ -86,7 +85,6 @@ $(document).ready(function generateCategories() {
     })
 
     /** When user clicks play button call getQuestions function **/
-
     $("#play-submit-btn").click(function() {
         getQuestions();
 

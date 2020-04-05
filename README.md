@@ -146,16 +146,21 @@ This is the first time i have written any software using data from a API. I ensu
 
 *<strong>Interactive:</strong> Using JS to show and hide specific parts of the page when the user is ready to begin the quiz. This will keep everything on one page when in mobile design. This was checked using chrome developer tools.
 
+## Bugs During Development:
 
-## Bugs:
+#### Bugs:
 
-To be filled in
+* I could not load the choices category in the categories options dropdown. Console was logging the data from API ok but results were not showing in the dropdown.
 
-#### Bugs During Development:
+### Fix:
 
-To be filled in
+* I was not calling the category in the  function so my dropdown was not loading the API data. The category function was being called which loads the API data.
+
+
 
 #### Known Bugs
+
+* TypeError: canot read propery 'length' of undefined at JS:41 at Array.map(<anonymous>) at generateQuestionsAnswers
 
 ## Deployment:
 

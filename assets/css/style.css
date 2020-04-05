@@ -204,3 +204,7 @@ h1 {
     background-color: orange;
     color: white;
 }
+
+.choice-text:hover {
+    cursor: pointer;
+}

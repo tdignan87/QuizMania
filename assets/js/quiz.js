@@ -34,10 +34,18 @@ function generateQuestionsAnswers(data) {
         let questionsOnly = {
             question: data.question
         };
-        console.log(allQuestions);
         allQuestions = allQuestions[Math.floor(Math.random() * allQuestions.length)];
         $("#question-main").append(`<h3 id="question-main">${data.question}</h3>`);
+        console.log(questionsOnly);
+        let answersOnly = {
+            answer: data.answer
+        }
+
+
+
     })
+
+
     return;
 }
 

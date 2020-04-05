@@ -1,210 +1,185 @@
-/* Font awesome body font */
-
-body {
-    font-family: 'Bubblegum Sans', cursive;
-    background-color: #c1502e;
-}
-
-
-/* Float navigation bar to left and add some styling*/
-
-.navbar {
-    background-color: #fed8b1;
-    font-size: large;
-}
-
-
-/* Set background color and align text to center */
-
-.jumbotron {
-    background-color: #c1502e;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    padding-bottom: 0%;
-    padding-top: 2px;
-}
-
-
-/* Jumbotron settings */
-
-.jumbo-picture-display {
-    background-image: url("../images/trivia-background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    height: 400px;
-    width: 100%;
-}
-
-
-/* Jumbotron title black to stand out over picture */
-
-#jumbo-title {
-    color: black;
-}
-
-
-/* H1 header element global styling */
-
-h1 {
-    font-size: 4.2rem;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    color: #fafafa;
-}
-
-
-/* Difficulty dropdown Menu item Styling */
-
-#dropdown-choices-difficulty {
-    background-color: #fed8b1;
-    color: black;
-    width: 70%;
-    height: 60px;
-}
-
-#dropdown-choices-category {
-    background-color: #fed8b1;
-    color: black;
-    width: 70%;
-    height: 60px;
-}
-
-#dropdown-choices-questions {
-    background-color: #fed8b1;
-    color: black;
-    width: 70%;
-    height: 60px;
-}
-
-#dropdown-choices {
-    background-color: #fed8b1;
-    color: black;
-    width: 70%;
-    height: 100px;
-    text-align: center;
-}
-
-
-/* Select difficulty text white to stand out with orange */
-
-.select-difficulty {
-    font-size: 40px;
-    margin-top: 5px;
-    color: #fafafa;
-    padding-bottom: 30px;
-}
-
-
-/* Dropdown menu CSS color */
-
-.dropdown-menu {
-    background-color: #fed8b1;
-}
-
-
-/* Play button styling */
-
-
-/* container section  Align all to center and show neatly on page.*/
-
-.container {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    padding: 50px;
-}
-
-#quiz-container {
-    padding-top: 10px;
-    padding-bottom: 50px;
-}
-
-
-/* Style for background grid for questions - Changed color from background */
-
-#question_grid {
-    background-color: #fed8b1;
-    padding-bottom: 10px;
-    width: 100%;
-}
-
-
-/* Inside questions grid */
-
-#question-main {
-    color: orange;
-    padding-bottom: 8px;
-}
-
-.choice-options {
-    background-color: orange;
-    color: black;
-    float: left;
-    height: 100%;
-    width: 50%;
-    text-align: center;
-    border-style: double;
-}
-
-.choice-text {
-    padding-right: 10px;
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    border-style: double;
-}
-
-
-/* Score Section */
-
-#score-container {
-    padding-bottom: 5px;
-}
-
-#score-result {
-    font-size: 50px;
-    color: green;
-}
-
-#score_grid {
-    background-color: #fed8b1;
-    padding-bottom: 10px;
-    width: 100%;
-}
-
-#contactus_grid {
-    background-color: #fed8b1;
-    padding-top: 10px;
-    padding-bottom: 50px;
-    width: 100%;
-}
-
-
-/* Save ScoreButton Styling */
-
-.btn-lg {
-    padding: 10px 20px;
-    font-size: 20px;
-    border-radius: 10px;
-    width: 50%;
-    height: 100px;
-}
-
-
-/* Email button styling */
-
-.email-btn {
-    padding: 10px 20px;
-    font-size: 20px;
-    border-radius: 10px;
-    width: 50%;
-    height: 100px;
-    background-color: orange;
-    color: white;
-}
-
-.choice-text:hover {
-    cursor: pointer;
-}
+    /* Font awesome body font */
+    
+    body {
+        font-family: 'Bubblegum Sans', cursive;
+        background-color: #c1502e;
+    }
+    /* Float navigation bar to left and add some styling*/
+    
+    #loading {
+        border: 1rem solid #e6a11c;
+        border-top: 1rem solid white;
+        border-radius: 50%;
+        width: 20rem;
+        height: 20rem;
+        animation: spin 2s linear infinite;
+    }
+    /* Set background color and align text to center */
+    
+    .jumbotron {
+        background-color: #c1502e;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 0%;
+        padding-top: 2px;
+    }
+    /* Jumbotron settings */
+    
+    .jumbo-picture-display {
+        background-image: url("../images/trivia-background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        height: 400px;
+        width: 100%;
+    }
+    /* Jumbotron title black to stand out over picture */
+    
+    #jumbo-title {
+        color: black;
+    }
+    /* H1 header element global styling */
+    
+    h1 {
+        font-size: 4.2rem;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        color: #fafafa;
+    }
+    /* Difficulty dropdown Menu item Styling */
+    
+    #dropdown-choices-difficulty {
+        background-color: #fed8b1;
+        color: black;
+        width: 70%;
+        height: 60px;
+    }
+    
+    #dropdown-choices-category {
+        background-color: #fed8b1;
+        color: black;
+        width: 70%;
+        height: 60px;
+    }
+    
+    #dropdown-choices-questions {
+        background-color: #fed8b1;
+        color: black;
+        width: 70%;
+        height: 60px;
+    }
+    
+    #dropdown-choices {
+        background-color: #fed8b1;
+        color: black;
+        width: 70%;
+        height: 100px;
+        text-align: center;
+    }
+    /* Select difficulty text white to stand out with orange */
+    
+    .select-difficulty {
+        font-size: 40px;
+        margin-top: 5px;
+        color: #fafafa;
+        padding-bottom: 30px;
+    }
+    /* Dropdown menu CSS color */
+    
+    .dropdown-menu {
+        background-color: #fed8b1;
+    }
+    /* Play button styling */
+    /* container section  Align all to center and show neatly on page.*/
+    
+    .container {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 50px;
+    }
+    
+    #quiz-container {
+        padding-top: 10px;
+        padding-bottom: 50px;
+    }
+    /* Style for background grid for questions - Changed color from background */
+    
+    #question_grid {
+        background-color: #fed8b1;
+        padding-bottom: 10px;
+        width: 100%;
+    }
+    /* Inside questions grid */
+    
+    #question-main {
+        color: orange;
+        padding-bottom: 8px;
+    }
+    
+    .choice-options {
+        background-color: orange;
+        color: black;
+        float: left;
+        height: 100%;
+        width: 50%;
+        text-align: center;
+        border-style: double;
+    }
+    
+    .choice-text {
+        padding-right: 10px;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        border-style: double;
+    }
+    /* Score Section */
+    
+    #score-container {
+        padding-bottom: 5px;
+    }
+    
+    #score-result {
+        font-size: 50px;
+        color: green;
+    }
+    
+    #score_grid {
+        background-color: #fed8b1;
+        padding-bottom: 10px;
+        width: 100%;
+    }
+    
+    #contactus_grid {
+        background-color: #fed8b1;
+        padding-top: 10px;
+        padding-bottom: 50px;
+        width: 100%;
+    }
+    /* Save ScoreButton Styling */
+    
+    .btn-lg {
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 10px;
+        width: 50%;
+        height: 100px;
+    }
+    /* Email button styling */
+    
+    .email-btn {
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 10px;
+        width: 50%;
+        height: 100px;
+        background-color: orange;
+        color: white;
+    }
+    
+    .choice-text:hover {
+        cursor: pointer;
+        background-color: #fed8b1;
+    }

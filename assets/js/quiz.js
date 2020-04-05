@@ -14,6 +14,7 @@ let availableQuestions = []
 
 
 function getQuestions(difficulty, questionAmount, category) {
+    loadingWheel(true);
     fetch(
             //`https://opentdb.com/api.php?amount=${questionAmount}&category=${category}&difficulty=${difficulty}&type=multiple`
             `https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`
@@ -21,7 +22,7 @@ function getQuestions(difficulty, questionAmount, category) {
         .then(response => response.json())
         .then(rawData => {
             generateQuestionsAnswers(rawData)
-
+            loadingWheel(false);
         })
         .catch(error => console.log(error));
 }

@@ -148,14 +148,19 @@ This is the first time i have written any software using data from a API. I ensu
 
 ## Bugs During Development:
 
-#### Bugs:
+### Bug
 
 * I could not load the choices category in the categories options dropdown. Console was logging the data from API ok but results were not showing in the dropdown.
 
-### Fix:
+#### Fix:
 
 * I was not calling the category in the  function so my dropdown was not loading the API data. The category function was being called which loads the API data.
 
+### Bug:
+
+* Available answers is not combining properly across my four abswer choices. 
+
+#### Fix:
 
 
 #### Known Bugs

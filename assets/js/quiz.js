@@ -30,37 +30,25 @@ $("#play-submit-btn").click(function() {
     // callQuestions();
 })
 
+
+/** Takes the allquestions array and adds the API data results and filters out on questions only. 
+ ** Display the questions only in the DOM.
+ */
+
 function generateQuestions(data) {
-
-    //   data.results.forEach(singleQuestion => {
-    //      $("#question-main").append(`<h3 id="question-main">${singleQuestion.question}</h3>`);
-    //     singleQuestion.Math.floor(Math.random() * singleQuestion.length);
-    //  allQuestions = data.results
     allQuestions = data.results.map(data => {
-        const questionsOnly = {
+        let questionsOnly = {
             question: data.question
-
-
         };
-        var lucky = allQuestions.filter(function(question) {
-            return question == "question",
-                console.log(lucky);
 
-        })
-
-
-        $("#question-main").append(`<h3 id="question-main">${data.question}</h3>`);
         console.log(questionsOnly);
+        $("#question-main").append(`<h3 id="question-main">${data.question}</h3>`);
+
     })
-
-
-
-
 
 
     return;
 }
-
 
 
 /** Retrieves category list from API and passes to dropdown on homepage.

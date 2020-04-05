@@ -4,42 +4,68 @@
 
 var noOfQuestions = [10, 20, 30];
 let difficultySetting = ["Easy", "Medium", "Hard"];
-let IncorrectAnswers = [""];
-let correctAnswers = [];
+let allQuestions = [];
+var correctAnswers = [];
+var incorrectAnswers = [];
+let score = 0;
+let counter = 0;
+let availableQuestions = []
+
 
 
 function getQuestions(difficulty, questionAmount, category) {
     fetch(
-            //  `https://opentdb.com/api.php?amount=${questionAmount}&category=${category}&difficulty=${difficulty}&type=multiple`
+            //`https://opentdb.com/api.php?amount=${questionAmount}&category=${category}&difficulty=${difficulty}&type=multiple`
             `https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`
         )
         .then(response => response.json())
         .then(rawData => {
-            //    console.log(rawData.results);
             generateQuestions(rawData)
-
         })
         .catch(error => console.log(error));
 }
 
 $("#play-submit-btn").click(function() {
     getQuestions();
+    // callQuestions();
 })
 
 function generateQuestions(data) {
-    data.results.forEach(singleQuestion => {
-        $("#question-main").append(`<h3 id="question-main">${singleQuestion.question}</h3>`);
-        singleQuestion.Math.floor(Math.random() * singleQuestion.length);
-        console.log(singleQuestion);
 
+    //   data.results.forEach(singleQuestion => {
+    //      $("#question-main").append(`<h3 id="question-main">${singleQuestion.question}</h3>`);
+    //     singleQuestion.Math.floor(Math.random() * singleQuestion.length);
+    //  allQuestions = data.results
+    allQuestions = data.results.map(data => {
+        const questionsOnly = {
+            question: data.question
+
+
+        };
+        var lucky = allQuestions.filter(function(question) {
+            return question == "question",
+                console.log(lucky);
+
+        })
+
+
+        $("#question-main").append(`<h3 id="question-main">${data.question}</h3>`);
+        console.log(questionsOnly);
     })
+
+
+
+
+
 
     return;
 }
 
-function generateAnswers() {
 
-}
+
+/** Retrieves category list from API and passes to dropdown on homepage.
+ ** 
+ */
 
 $(document).ready(function generateCategories() {
     fetch(`https://opentdb.com/api_category.php`)
@@ -47,7 +73,6 @@ $(document).ready(function generateCategories() {
         .then(data => {
             data.trivia_categories.forEach(category => {
                 $("#dropdown-choices-category").append(`<option value="${category.id}">${category.name}</option>`)
-
             })
         })
 

@@ -2,11 +2,11 @@
  ** then if we get a response, we are converting it to JSON format and then logging the raw data into the console.
  */
 
-var noOfQuestions = [10, 20, 30];
+let noOfQuestions = [10, 20, 30];
 let difficultySetting = ["Easy", "Medium", "Hard"];
 let allQuestions = [];
-var correctAnswers = [];
-var incorrectAnswers = [];
+let Answers = [];
+let incorrectAnswers = [];
 let score = 0;
 let counter = 0;
 let availableQuestions = []
@@ -20,40 +20,30 @@ function getQuestions(difficulty, questionAmount, category) {
         )
         .then(response => response.json())
         .then(rawData => {
-            generateQuestions(rawData)
+            generateQuestionsAnswers(rawData)
+
         })
         .catch(error => console.log(error));
 }
-
-$("#play-submit-btn").click(function() {
-    getQuestions();
-    // callQuestions();
-})
-
-
 /** Takes the allquestions array and adds the API data results and filters out on questions only. 
  ** Display the questions only in the DOM.
  */
 
-function generateQuestions(data) {
+function generateQuestionsAnswers(data) {
     allQuestions = data.results.map(data => {
         let questionsOnly = {
             question: data.question
-
         };
+        console.log(allQuestions);
         allQuestions = allQuestions[Math.floor(Math.random() * allQuestions.length)];
-
-        console.log(questionsOnly),
-            $("#question-main").append(`<h3 id="question-main">${data.question}</h3>`);
-
+        $("#question-main").append(`<h3 id="question-main">${data.question}</h3>`);
     })
-
     return;
 }
+
 /** Retrieves category list from API and passes to dropdown on homepage.
  ** 
  */
-
 $(document).ready(function generateCategories() {
     fetch(`https://opentdb.com/api_category.php`)
         .then(res => res.json())
@@ -75,7 +65,10 @@ $(document).ready(function generateCategories() {
         });
     })
 
-    /** Generate question from API and display in the form
-     ** 
-     */
+    /** When user clicks play button call getQuestions function **/
+
+    $("#play-submit-btn").click(function() {
+        getQuestions();
+
+    })
 });

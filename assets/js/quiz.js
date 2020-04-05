@@ -39,18 +39,17 @@ function generateQuestions(data) {
     allQuestions = data.results.map(data => {
         let questionsOnly = {
             question: data.question
-        };
 
-        console.log(questionsOnly);
-        $("#question-main").append(`<h3 id="question-main">${data.question}</h3>`);
+        };
+        allQuestions = allQuestions[Math.floor(Math.random() * allQuestions.length)];
+
+        console.log(questionsOnly),
+            $("#question-main").append(`<h3 id="question-main">${data.question}</h3>`);
 
     })
 
-
     return;
 }
-
-
 /** Retrieves category list from API and passes to dropdown on homepage.
  ** 
  */

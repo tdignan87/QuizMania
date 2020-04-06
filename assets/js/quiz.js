@@ -1,7 +1,3 @@
-/** function loads on Index load event. Using function to fetch the open trivia API.
- ** then if we get a response, we are converting it to JSON format and then logging the raw data into the console.
- */
-
 let noOfQuestions = [10, 20, 30];
 let difficultySetting = ["Easy", "Medium", "Hard"];
 let allQuestions = [];
@@ -10,14 +6,14 @@ let incorrectAnswers = [];
 let score = 0;
 let counter = 0;
 let availableQuestions = []
-
+let catChoice = document.getElementById("dropdown-choices-category");
 
 /** Fetches API and converts to JSON format.
  */
 function getQuestions(difficulty, questionAmount, category) {
     //loadingWheel(true);
     fetch(
-            //`https://opentdb.com/api.php?amount=${questionAmount}&category=${category}&difficulty=${difficulty}&type=multiple`
+            // `https://opentdb.com/api.php?amount=${questionAmount}&category=${category}&difficulty=${difficulty}&type=multiple`
             `https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`
         )
         .then(response => response.json())
@@ -31,7 +27,6 @@ function getQuestions(difficulty, questionAmount, category) {
 /** Takes the allquestions array and adds the API data results and filters out on questions only. 
  ** Display the questions only in the DOM.
  */
-
 function generateQuestionsAnswers(data) {
     allQuestions = data.results.map(data => {
         let questionsOnly = {
@@ -40,14 +35,10 @@ function generateQuestionsAnswers(data) {
         questionsOnly.answer = Math.floor(Math.random() * 3) + 1;
         allQuestions = allQuestions[Math.floor(Math.random() * allQuestions.length)];
         $("#question-main").append(`<h3 id="question-main">${data.question}</h3>`);
-        console.log(questionsOnly);
         incorrectAnswers = data.incorrect_answers;
         correctAnswer = data.correct_answer;
-        console.log(incorrectAnswers)
-        console.log(correctAnswer);
         /** Pushes the incorrect answers into the correct answers Array.*/
         incorrectAnswers.push(correctAnswer);
-        console.log(incorrectAnswers);
         populateAnswers(incorrectAnswers);
     })
     return;
@@ -55,10 +46,10 @@ function generateQuestionsAnswers(data) {
 
 function populateAnswers(answers) {
     answers.forEach(function(item) {
-        $(".choice-answer").append(`<p class="choice-text" id="first-answer" data-number="1">${item}</p>`)
-
+        let AnswerSeperation = answers.indexOf(answers.id);
+        $(".choice-answer").append(`<p class="choice-text" id="option-answer" data-number="${AnswerSeperation}">${item}</p>`)
+            //  $("#dropdown-choices-category").append(`<option value="${category.id}">${category.name}</option>`)
     });
-
 }
 /** Retrieves category list from API and passes to dropdown on homepage.
  ** 
@@ -84,9 +75,15 @@ $(document).ready(function generateCategories() {
         });
     })
 
-    /** When user clicks play button call getQuestions function **/
     $("#play-submit-btn").click(function() {
+
+        // category = catChoice.options[catChoice.selectedIndex].id;
+        // difficulty = difficultySetting.options[difficultySetting.selectedIndex].id;
+        //questionAmount = noOfQuestions.options[noOfQuestions.selectedIndex].id;
         getQuestions();
 
     })
-});
+
+
+
+})

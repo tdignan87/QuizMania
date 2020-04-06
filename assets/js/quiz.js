@@ -8,6 +8,7 @@ let score = 0;
 let counter = 0;
 let availableQuestions = []
 let catChoice = document.getElementById("dropdown-choices-category");
+const questionCounter = document.getElementById("questionCount");
 
 /** Fetches API and converts to JSON format.
  */
@@ -94,6 +95,17 @@ $(document).ready(function generateCategories() {
         getQuestions();
 
     })
+
+
+    /** Starts game
+     */
+
+
+    function startGame() {
+        questionCount = 0;
+        score = 0;
+        generateQuestionsAnswers();
+    }
 
 
 

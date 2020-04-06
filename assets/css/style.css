@@ -186,3 +186,8 @@
         cursor: pointer;
         background-color: #fed8b1;
     }
+    
+    #main-status {
+        font-size: 100px;
+        color: white;
+    }

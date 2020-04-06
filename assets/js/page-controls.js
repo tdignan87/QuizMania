@@ -6,14 +6,11 @@ window.onload = function() {
     document.getElementById("score_grid").style.display = "none";
     document.getElementById("contactus_grid").style.display = "none";
     document.getElementById("loading").style.display = "none";
+    document.getElementById("main-status").style.display = "none";
 };
 $("#play-submit-btn").click(function() {
-        document.getElementById("question_grid").style.display = "block";
-        document.getElementById("score_grid").style.display = "block";
 
-        document.getElementById("options-container-choices").style.display = "none";
-        document.getElementById("jumbo-picture-main").style.display = "none";
-        document.getElementById("play-submit-btn").style.display = "none";
+
     })
     /**
      * Show selected value in the dropdown titles using jQuery

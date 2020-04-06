@@ -1,6 +1,7 @@
 const noOfQuestions = [10, 20, 30];
 const difficultySetting = ["Easy", "Medium", "Hard"];
 const choiceOptions = ["A", "B", "C", "D"];
+const questionCounter = document.getElementById("questionCount");
 let allQuestions = [];
 let correctAnswer = [];
 let incorrectAnswers = [];
@@ -8,7 +9,9 @@ let score = 0;
 let counter = 0;
 let availableQuestions = []
 let catChoice = document.getElementById("dropdown-choices-category");
-const questionCounter = document.getElementById("questionCount");
+let answers = Array.from(document.getElementsByClassName("choice-answer"));
+
+
 
 /** Fetches API and converts to JSON format.
  */
@@ -42,6 +45,7 @@ function generateQuestionsAnswers(data) {
         /** Pushes the incorrect answers into the correct answers Array.*/
         incorrectAnswers.push(correctAnswer);
         populateAnswers(incorrectAnswers);
+        startGame();
     })
     return;
 }
@@ -96,11 +100,16 @@ $(document).ready(function generateCategories() {
 
     })
 
+    function newQuestion() {
+        if (totalQuestions.length == 0) {
+            finalscore.innerHTM = (`Congrats you scored ${score} / ${quant}`);
+        }
+    }
+
+
 
     /** Starts game
      */
-
-
     function startGame() {
         questionCount = 0;
         score = 0;

@@ -74,7 +74,6 @@ function populateAnswers(answers) {
 
     });
 }
-
 /** Retrieves category list from API and passes to dropdown on homepage.
  */
 $(document).ready(function generateCategories() {
@@ -103,20 +102,26 @@ $(document).ready(function generateCategories() {
         difficulty = difficultyOptions.options[difficultyOptions.selectedIndex].value;
         questions = questionOptions.options[questionOptions.selectedIndex].value;
 
-        if ($(`#dropdown-choices-difficulty`).index() > 0) {
+        if ($(`#dropdown-choices-difficulty option:selected`).index() > 0) {
 
             document.getElementById("question_grid").style.display = "block";
             document.getElementById("score_grid").style.display = "block";
             document.getElementById("options-container-choices").style.display = "none";
             document.getElementById("jumbo-picture-main").style.display = "none";
             document.getElementById("play-submit-btn").style.display = "none";
+            console.log(difficulty);
             getQuestions();
 
         } else {
             document.getElementById("main-status").style.display = "block";
+            //console.log(difficulty);
+
+
+
+
+
         }
 
-        console.log(difficulty);
 
     })
 

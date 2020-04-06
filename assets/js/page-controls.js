@@ -8,14 +8,3 @@ window.onload = function() {
     document.getElementById("loading").style.display = "none";
     document.getElementById("main-status").style.display = "none";
 };
-$("#play-submit-btn").click(function() {
-
-
-    })
-    /**
-     * Show selected value in the dropdown titles using jQuery
-     * 
-     */
-$("#navbar_register_btn").click(function() {
-    document.getElementById("contactus_grid").style.display = "block";
-})

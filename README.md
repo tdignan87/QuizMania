@@ -137,6 +137,9 @@ This is the first time i have written any software using data from a API. I ensu
 
  In future projects i would like to automatic testing to help me debug and test my work.
 
+ #### Test Example:
+
+
 ### Overall Features:
 
 <strong>Site Responsiveness:</strong>
@@ -148,7 +151,7 @@ This is the first time i have written any software using data from a API. I ensu
 
 ## Bugs During Development:
 
-### Bug
+### Bug:
 
 * I could not load the choices category in the categories options dropdown. Console was logging the data from API ok but results were not showing in the dropdown.
 
@@ -158,14 +161,18 @@ This is the first time i have written any software using data from a API. I ensu
 
 ### Bug:
 
-* Available answers is not combining properly across my four abswer choices. 
+* Available answers is not combining properly across my four answer choices. 
 
 #### Fix:
+
+* <p> tags were remaining in HTML so the JS append was not populating the data correctly. The template literals should also have contained a +1 for incrementing in the Array.
 
 
 #### Known Bugs
 
 * TypeError: canot read propery 'length' of undefined at JS:41 at Array.map(<anonymous>) at generateQuestionsAnswers
+* API key with values for the dropdown options is not working. For testing and getting the application running i have left the default key in for now.
+
 
 ## Deployment:
 

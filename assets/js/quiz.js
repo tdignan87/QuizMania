@@ -7,6 +7,7 @@ let correctAnswer = [];
 let incorrectAnswers = [];
 let score = 0;
 let counter = 0;
+let acceptingInput = false;
 let availableQuestions = []
 let catChoice = document.getElementById("dropdown-choices-category");
 let answers = Array.from(document.getElementsByClassName("choice-answer"));
@@ -18,7 +19,7 @@ let answers = Array.from(document.getElementsByClassName("choice-answer"));
 function getQuestions(difficulty, questionAmount, category) {
     //loadingWheel(true);
     fetch(
-            // `https://opentdb.com/api.php?amount=${questionAmount}&category=${category}&difficulty=${difficulty}&type=multiple`
+            //   `https://opentdb.com/api.php?amount=${questionAmount}&category=${category}&difficulty=${difficulty}&type=multiple`
             `https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`
         )
         .then(response => response.json())
@@ -49,6 +50,7 @@ function generateQuestionsAnswers(data) {
     })
     return;
 }
+
 
 function populateAnswers(answers) {
     answers.forEach(function(item, index) {
@@ -93,28 +95,16 @@ $(document).ready(function generateCategories() {
 
     $("#play-submit-btn").click(function() {
 
-        // category = catChoice.options[catChoice.selectedIndex].id;
-        // difficulty = difficultySetting.options[difficultySetting.selectedIndex].id;
-        //questionAmount = noOfQuestions.options[noOfQuestions.selectedIndex].id;
+        //categoryTwo = catChoice.options[catChoice.selectedIndex].id;
+        //  difficultyTwo = difficultySetting.options[difficultySetting.selectedIndex].id;
+        //   questionAmount = noOfQuestions.options[noOfQuestions.selectedIndex].id;
         getQuestions();
 
     })
 
-    function newQuestion() {
-        if (totalQuestions.length == 0) {
-            finalscore.innerHTM = (`Congrats you scored ${score} / ${quant}`);
-        }
-    }
-
-
-
     /** Starts game
      */
-    function startGame() {
-        questionCount = 0;
-        score = 0;
-        generateQuestionsAnswers();
-    }
+
 
 
 

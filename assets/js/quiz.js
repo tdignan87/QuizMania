@@ -1,5 +1,5 @@
 const noOfQuestions = [10, 20, 30];
-const difficultySetting = ["Easy", "Medium", "Hard"];
+const difficultySetting = ["easy", "medium", "hard"];
 const choiceOptions = ["A", "B", "C", "D"];
 const questionCounter = document.getElementById("questionCount");
 let allQuestions = [];
@@ -10,23 +10,29 @@ let counter = 0;
 let acceptingInput = false;
 let availableQuestions = []
 let catChoice = document.getElementById("dropdown-choices-category");
-let answers = Array.from(document.getElementsByClassName("choice-answer"));
+let difficultyOptions = document.getElementById("dropdown-choices-difficulty");
+let questionOptions = document.getElementById("dropdown-choices-questions");
+let answers = Array.from(document.getElementsByClassName(""));
 
 
 
 /** Fetches API and converts to JSON format.
+ * 
  */
-function getQuestions(difficulty, questionAmount, category) {
+function getQuestions() {
     //loadingWheel(true);
     fetch(
-            //   `https://opentdb.com/api.php?amount=${questionAmount}&category=${category}&difficulty=${difficulty}&type=multiple`
-            `https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple`
-        )
-        .then(response => response.json())
+        // `https://opentdb.com/api.php?amount=${questionAmount}&category=${category}&difficulty=${difficulty}&type=multiple`
+        `https://opentdb.com/api.php?amount=${questions}&category=${category}&difficulty=${difficulty}&type=multiple`
+
+    )
+
+    .then(response => response.json())
         .then(rawData => {
             generateQuestionsAnswers(rawData)
-                // loadingWheel(false);
             console.log(rawData.results);
+            // loadingWheel(false);
+
         })
         .catch(error => console.log(error));
 }
@@ -94,10 +100,10 @@ $(document).ready(function generateCategories() {
     })
 
     $("#play-submit-btn").click(function() {
-
-        //categoryTwo = catChoice.options[catChoice.selectedIndex].id;
-        //  difficultyTwo = difficultySetting.options[difficultySetting.selectedIndex].id;
-        //   questionAmount = noOfQuestions.options[noOfQuestions.selectedIndex].id;
+        category = catChoice.options[catChoice.selectedIndex].id;
+        difficulty = difficultyOptions.options[difficultyOptions.selectedIndex].value;
+        questions = questionOptions.options[questionOptions.selectedIndex].value;
+        console.log(difficulty);
         getQuestions();
 
     })

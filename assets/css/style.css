@@ -182,7 +182,7 @@
         color: white;
     }
     
-    .choice-text:hover {
+    .choice-answer :hover {
         cursor: pointer;
         background-color: #fed8b1;
     }

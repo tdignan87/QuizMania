@@ -1,5 +1,6 @@
-let noOfQuestions = [10, 20, 30];
-let difficultySetting = ["Easy", "Medium", "Hard"];
+const noOfQuestions = [10, 20, 30];
+const difficultySetting = ["Easy", "Medium", "Hard"];
+const choiceOptions = ["A", "B", "C", "D"];
 let allQuestions = [];
 let correctAnswer = [];
 let incorrectAnswers = [];
@@ -45,14 +46,24 @@ function generateQuestionsAnswers(data) {
 }
 
 function populateAnswers(answers) {
-    answers.forEach(function(item) {
-        let AnswerSeperation = answers.indexOf(answers.id);
-        $(".choice-answer").append(`<p class="choice-text" id="option-answer" data-number="${AnswerSeperation}">${item}</p>`)
-            //  $("#dropdown-choices-category").append(`<option value="${category.id}">${category.name}</option>`)
+    answers.forEach(function(item, index) {
+        $(`#available-answers`).append(`<div class="col-sm">
+        <p class="choice-options">${choiceOptions[index]}</p>
+         <p class="choice-answer" data-number="${index +1}">${item}</p>
+     </div>`)
+
+    });
+
+    choiceOptions.forEach(value, index => {
+        let html = `
+        <p>${value}<p>
+        `
+        $(`<p class="choice-options>"${index}</p`).append(html)
+
     });
 }
+
 /** Retrieves category list from API and passes to dropdown on homepage.
- ** 
  */
 $(document).ready(function generateCategories() {
     fetch(`https://opentdb.com/api_category.php`)

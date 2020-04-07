@@ -8,7 +8,7 @@ let incorrectAnswers = [];
 let score = 0;
 let counter = 0;
 let acceptingInput = false;
-let availableQuestions = []
+let availableQuestions = [];
 let catChoice = document.getElementById("dropdown-choices-category");
 let difficultyOptions = document.getElementById("dropdown-choices-difficulty");
 let questionOptions = document.getElementById("dropdown-choices-questions");
@@ -47,15 +47,12 @@ function generateQuestionsAnswers(data) {
         /** Pushes the incorrect answers into the correct answers Array.*/
         incorrectAnswers.push(correctAnswer);
         populateAnswers(incorrectAnswers);
-        startGame();
 
+        startGame();
     })
     return;
 
 }
-
-
-
 
 function populateAnswers(answers) {
     answers.forEach(function(item, index) {
@@ -96,6 +93,9 @@ $(document).ready(function generateCategories() {
             $('#dropdown-choices-difficulty').append($(`<option>${text}</option>`))
         });
     })
+
+    /** Play submit function IF statements to ensure criteria is selected before game will allow to play.
+     */
 
     $("#play-submit-btn").click(function() {
         category = catChoice.options[catChoice.selectedIndex].id;

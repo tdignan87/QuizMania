@@ -102,7 +102,7 @@ $(document).ready(function generateCategories() {
         difficulty = difficultyOptions.options[difficultyOptions.selectedIndex].value;
         questions = questionOptions.options[questionOptions.selectedIndex].value;
 
-        if ($(`#dropdown-choices-difficulty option:selected`).index() > 0) {
+        if ($(`#dropdown-choices-difficulty option:selected`).index() > 0 || ($(`#dropdown-choices-category option:selected`).index() > 0 || ($(`#dropdown-choices-questions option:selected`).index() > 0))) {
 
             document.getElementById("question_grid").style.display = "block";
             document.getElementById("score_grid").style.display = "block";
@@ -112,15 +112,15 @@ $(document).ready(function generateCategories() {
             console.log(difficulty);
             getQuestions();
 
+
         } else {
             document.getElementById("main-status").style.display = "block";
             //console.log(difficulty);
-
-
-
-
-
         }
+
+
+
+
 
 
     })

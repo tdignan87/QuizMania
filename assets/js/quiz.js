@@ -20,16 +20,19 @@ let answers = Array.from(document.getElementsByClassName(""));
 function getQuestions() {
     //loadingWheel(true);
     fetch(
-        `https://opentdb.com/api.php?amount=${questions}&category=${category}&difficulty=${difficulty}&type=multiple`
+            `https://opentdb.com/api.php?amount=${questions}&category=${category}&difficulty=${difficulty}&type=multiple`
 
-    )
 
-    .then(response => response.json())
+        )
+        .then(response => response.json())
         .then(rawData => {
-            generateQuestionsAnswers(rawData)
-
+            generateQuestionsAnswers(rawData);
+            console.log(rawData);
         })
         .catch(error => console.log(error));
+
+
+
 }
 /** Takes the allquestions array and adds the API data results and filters out on questions only. 
  ** Display the questions only in the DOM.
@@ -63,9 +66,9 @@ function populateAnswers(answers) {
 
     });
 
-    choiceOptions.forEach(value, index => {
+    choiceOptions.forEach(index => {
         let html = `
-        <p>${value}<p>
+        
         `
         $(`<p class="choice-options>"${index}</p`).append(html)
 
@@ -123,9 +126,6 @@ $(document).ready(function generateCategories() {
 })
 
 function startGame() {
-    console.log("test");
-    document.getElementsByClassName("choice-answer").addEventListener("click", function() {
-        // document.getElementById("demo").innerHTML = "Hello World";
-        console.log("selected message");
-    })
+
+
 }

@@ -12,6 +12,7 @@ let availableQuestions = [];
 let catChoice = document.getElementById("dropdown-choices-category");
 let difficultyOptions = document.getElementById("dropdown-choices-difficulty");
 let questionOptions = document.getElementById("dropdown-choices-questions");
+let answers = Array.from(document.getElementsByClassName("choice-answer"));
 
 /** Fetches API and converts to JSON format.
  * 
@@ -29,9 +30,6 @@ function getQuestions() {
             console.log(rawData);
         })
         .catch(error => console.log(error));
-
-
-
 }
 /** Takes the allquestions array and adds the API data results and filters out on questions only. 
  ** Display the questions only in the DOM.
@@ -41,6 +39,7 @@ function generateQuestionsAnswers(data) {
         let questionsOnly = {
             question: data.question
         };
+        questionCount = 0;
         allQuestions = allQuestions[Math.floor(Math.random() * allQuestions.length)];
         questionsOnly.answer = Math.floor(Math.random() * 3) + 1;
         questionsOnly.answer - 1, 0, data.correct_answer
@@ -50,7 +49,7 @@ function generateQuestionsAnswers(data) {
         /** Pushes the incorrect answers into the correct answers Array.*/
         incorrectAnswers.push(correctAnswer);
         populateAnswers(incorrectAnswers);
-
+        questionCounter.innerText = (`Question:${questionCount}/${questions}`)
         startGame();
     })
     return;
@@ -124,8 +123,22 @@ $(document).ready(function generateCategories() {
 })
 
 function startGame() {
+
     $(`[id="answer-opt"]`).click(function() {
-        // do something
-        console.log("testing click");
+        answers.forEach(answer => {
+            answer.addEventListener('click', () => {
+                if (!acceptingInput) return;
+                acceptingInput = false;
+                let selection = event.target;
+                let selectedAnswer = selection.dataset["answer"];
+
+                if (selectedAnswer == data.correct_answer) {
+                    console.log("Correct answer has been selected");
+                } else {
+                    console.log("Wrong answer selected");
+                }
+            })
+        })
+
     });
 }

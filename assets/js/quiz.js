@@ -14,8 +14,6 @@ let difficultyOptions = document.getElementById("dropdown-choices-difficulty");
 let questionOptions = document.getElementById("dropdown-choices-questions");
 let answers = Array.from(document.getElementsByClassName(""));
 
-
-
 /** Fetches API and converts to JSON format.
  * 
  */
@@ -29,8 +27,6 @@ function getQuestions() {
     .then(response => response.json())
         .then(rawData => {
             generateQuestionsAnswers(rawData)
-            console.log(rawData.results);
-            // loadingWheel(false);
 
         })
         .catch(error => console.log(error));
@@ -52,9 +48,13 @@ function generateQuestionsAnswers(data) {
         incorrectAnswers.push(correctAnswer);
         populateAnswers(incorrectAnswers);
         startGame();
+
     })
     return;
+
 }
+
+
 
 
 function populateAnswers(answers) {
@@ -102,14 +102,13 @@ $(document).ready(function generateCategories() {
         difficulty = difficultyOptions.options[difficultyOptions.selectedIndex].value;
         questions = questionOptions.options[questionOptions.selectedIndex].value;
 
-        if ($(`#dropdown-choices-difficulty option:selected`).index() > 0 || ($(`#dropdown-choices-category option:selected`).index() > 0 || ($(`#dropdown-choices-questions option:selected`).index() > 0))) {
+        if (($(`#dropdown-choices-difficulty option:selected`).index() > 0 || ($(`#dropdown-choices-category option:selected`).index() > 0 || ($(`#dropdown-choices-questions option:selected`).index() > 0)))) {
 
             document.getElementById("question_grid").style.display = "block";
             document.getElementById("score_grid").style.display = "block";
             document.getElementById("options-container-choices").style.display = "none";
             document.getElementById("jumbo-picture-main").style.display = "none";
             document.getElementById("play-submit-btn").style.display = "none";
-            console.log(difficulty);
             getQuestions();
 
 
@@ -118,17 +117,15 @@ $(document).ready(function generateCategories() {
             //console.log(difficulty);
         }
 
-
-
-
-
-
     })
 
 
-
-
-
-
-
 })
+
+function startGame() {
+    console.log("test");
+    document.getElementsByClassName("choice-answer").addEventListener("click", function() {
+        // document.getElementById("demo").innerHTML = "Hello World";
+        console.log("selected message");
+    })
+}

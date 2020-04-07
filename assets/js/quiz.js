@@ -96,7 +96,7 @@ $(document).ready(function generateCategories() {
         });
     })
 
-    /** Play submit function IF statements to ensure criteria is selected before game will allow to play.
+    /** Play submit function IF statements to ensure criteria is selected before game will allow to play. All options must be selected before questions will be generated.
      */
 
     $("#play-submit-btn").click(function() {

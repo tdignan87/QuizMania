@@ -12,7 +12,10 @@ let availableQuestions = [];
 let catChoice = document.getElementById("dropdown-choices-category");
 let difficultyOptions = document.getElementById("dropdown-choices-difficulty");
 let questionOptions = document.getElementById("dropdown-choices-questions");
-let answers = Array.from(document.getElementsByClassName(""));
+
+
+
+
 
 /** Fetches API and converts to JSON format.
  * 
@@ -42,8 +45,9 @@ function generateQuestionsAnswers(data) {
         let questionsOnly = {
             question: data.question
         };
-        questionsOnly.answer = Math.floor(Math.random() * 3) + 1;
         allQuestions = allQuestions[Math.floor(Math.random() * allQuestions.length)];
+        questionsOnly.answer = Math.floor(Math.random() * 3) + 1;
+        questionsOnly.answer - 1, 0, data.correct_answer
         $("#question-main").append(`<h3 id="question-main">${data.question}</h3>`);
         incorrectAnswers = data.incorrect_answers;
         correctAnswer = data.correct_answer;
@@ -60,15 +64,14 @@ function generateQuestionsAnswers(data) {
 function populateAnswers(answers) {
     answers.forEach(function(item, index) {
         $(`#available-answers`).append(`<div class="col-sm">
-        <p class="choice-options">${choiceOptions[index]}</p>
-         <p class="choice-answer" data-number="${index +1}">${item}</p>
+        <p class="choice-options" >${choiceOptions[index]}</p>
+         <p class="choice-answer" id="answer-opt"  data-number="${index +1}">${item}</p>
      </div>`)
 
     });
 
     choiceOptions.forEach(index => {
         let html = `
-        
         `
         $(`<p class="choice-options>"${index}</p`).append(html)
 
@@ -126,6 +129,8 @@ $(document).ready(function generateCategories() {
 })
 
 function startGame() {
+    document.getElementById("answer-opt").addEventListener('click', () => {
+        console.log("You have selected an Answer");
 
-
+    });
 }

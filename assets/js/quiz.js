@@ -125,12 +125,11 @@ $(document).ready(function generateCategories() {
 
     })
 
-
 })
 
 function startGame() {
-    document.getElementById("answer-opt").addEventListener('click', () => {
-        console.log("You have selected an Answer");
-
+    $(`[id="answer-opt"]`).click(function() {
+        // do something
+        console.log("testing click");
     });
 }

@@ -21,13 +21,10 @@ function getQuestions() {
 
     fetch(
             `https://opentdb.com/api.php?amount=${questions}&category=${category}&difficulty=${difficulty}&type=multiple`
-
-
         )
         .then(response => response.json())
         .then(rawData => {
             generateQuestionsAnswers(rawData);
-
         })
         .catch(error => console.log(error));
 }
@@ -41,8 +38,8 @@ function generateQuestionsAnswers(data) {
         };
         questionCount = 0;
         allQuestions = allQuestions[Math.floor(Math.random() * allQuestions.length)];
-        questionsOnly.answer = Math.floor(Math.random() * 3) + 1;
-        questionsOnly.answer - 1, 0, data.correct_answer
+        //   questionsOnly.answer = Math.floor(Math.random() * 3) + 1;
+        //  questionsOnly.answer - 1, 0, data.correct_answer
         $("#question-main").append(`<h3 id="question-main">${data.question}</h3>`);
         incorrectAnswers = data.incorrect_answers;
         correctAnswer = data.correct_answer;
@@ -115,7 +112,7 @@ $(document).ready(function generateCategories() {
 
         } else {
             document.getElementById("main-status").style.display = "block";
-            //console.log(difficulty);
+
         }
 
     })
@@ -125,20 +122,18 @@ $(document).ready(function generateCategories() {
 function startGame() {
 
     $(`[id="answer-opt"]`).click(function() {
-        answers.forEach(answer => {
-            answer.addEventListener('click', () => {
-                if (!acceptingInput) return;
-                acceptingInput = false;
-                let selection = event.target;
-                let selectedAnswer = selection.dataset["answer"];
 
-                if (selectedAnswer == data.correct_answer) {
-                    console.log("Correct answer has been selected");
-                } else {
-                    console.log("Wrong answer selected");
-                }
-            })
-        })
+        $.each(noOfQuestions, function(index, question) {
+            question.Enabled = false; {
+                if (question.correct_answer == question.UserSelectedOption)
+                    score++;
+                console.log("You have selected correct answer");
+            }
+        });
+        document.getElementById("score-result").innerText = `${score}`;
 
-    });
+    })
+
+
+
 }

@@ -88,7 +88,7 @@
         height: 100%;
         text-align: center;
         display: block;
-        padding-top: 5px;
+        padding-top: 0px;
         padding-bottom: 10px;
     }
     
@@ -190,4 +190,8 @@
         font-size: 24px;
         background-color: orange;
         color: black;
+    }
+    
+    @media only screen and (max-width: 840px) {
+        #next-btn {}
     }

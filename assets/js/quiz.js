@@ -6,23 +6,28 @@ let questions = null;
 let allQuestions = [];
 let userScore = 0;
 
-/** Fetches API and converts to JSON format.
+
+/** Fetches the API Categories if successful connection to API. Simen gave me this part of the code
  * 
  */
-function getQuestions() {
+$(document).ready(function generateCategories() {
+    fetch(`https://opentdb.com/api_category.php`)
+        .then(res => res.json())
+        .then(data => {
+            data.trivia_categories.forEach(category => {
+                $("#dropdown-choices-category").append(`<option value="${category.id}">${category.name}</option>`);
+            });
+        });
+    $.each(noOfQuestions, function(val, text) {
+        $('#dropdown-choices-questions').append($(`<option>${text}</option>`));
+    });
 
-    fetch(
-            `https://opentdb.com/api.php?amount=${questions}&category=${category}&difficulty=${difficulty}&type=multiple`
-        )
-        .then(response => response.json())
-        .then(rawData => {
-            generateQuestionsAnswers(rawData);
-        })
-        .catch(error => console.log(error));
-}
-/** Takes the allquestions array and adds the API data results and filters out on questions only. 
- ** Display the questions only in the DOM.
- */
+    $.each(difficultySetting, function(val, text) {
+        $('#dropdown-choices-difficulty').append($(`<option>${text}</option>`));
+    });
+});
+
+
 function generateQuestionsAnswers(data) {
     allQuestions = data.results.map(data => {
         let questionsOnly = {

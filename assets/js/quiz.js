@@ -18,7 +18,7 @@ let answers = Array.from(document.getElementsByClassName("choice-answer"));
  * 
  */
 function getQuestions() {
-    //loadingWheel(true);
+
     fetch(
             `https://opentdb.com/api.php?amount=${questions}&category=${category}&difficulty=${difficulty}&type=multiple`
 
@@ -27,7 +27,7 @@ function getQuestions() {
         .then(response => response.json())
         .then(rawData => {
             generateQuestionsAnswers(rawData);
-            console.log(rawData);
+
         })
         .catch(error => console.log(error));
 }

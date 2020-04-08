@@ -4,16 +4,6 @@
         font-family: 'Bubblegum Sans', cursive;
         background-color: #c1502e;
     }
-    /* Float navigation bar to left and add some styling*/
-    
-    #loading {
-        border: 1rem solid #e6a11c;
-        border-top: 1rem solid white;
-        border-radius: 50%;
-        width: 20rem;
-        height: 20rem;
-        animation: spin 2s linear infinite;
-    }
     /* Set background color and align text to center */
     
     .jumbotron {

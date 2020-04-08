@@ -37,9 +37,11 @@ $("#play-submit-btn").click(function() {
         questions = $("#dropdown-choices-questions option:selected").text();
         document.getElementById("question_grid").style.display = "block";
         document.getElementById("score_grid").style.display = "block";
+        document.getElementById("startover-btn").style.display = "block";
         document.getElementById("options-container-choices").style.display = "none";
         document.getElementById("jumbo-picture-main").style.display = "none";
         document.getElementById("play-submit-btn").style.display = "none";
+
         getQuestions();
     } else {
         document.getElementById("main-status").style.display = "block";

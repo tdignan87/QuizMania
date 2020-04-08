@@ -64,6 +64,50 @@ function getQuestions() {
         .catch(error => console.log(error));
 }
 
+/** create options and answers array using the API's correct_answer and incorrect_answers. Data index is stored. Selected value is null until value is selected.  */
+
+function generateQuestionsAnswers(data) {
+    $.each(data.results, function(index, item) {
+        let question = {};
+        question.Question = item.question;
+        let randomNumber = Math.floor(Math.random() * 3) + 1;
+        switch (randomNumber) {
+            case 1:
+                question.OptionA = item.correct_answer;
+                question.OptionB = item.incorrect_answers[0];
+                question.OptionC = item.incorrect_answers[1];
+                question.OptionD = item.incorrect_answers[2];
+                question.CorrectOption = 'A';
+                break;
+            case 2:
+                question.OptionB = item.correct_answer;
+                question.OptionA = item.incorrect_answers[0];
+                question.OptionC = item.incorrect_answers[1];
+                question.OptionD = item.incorrect_answers[2];
+                question.CorrectOption = 'B';
+                break;
+            case 3:
+                question.OptionC = item.correct_answer;
+                question.OptionA = item.incorrect_answers[0];
+                question.OptionB = item.incorrect_answers[1];
+                question.OptionD = item.incorrect_answers[2];
+                question.CorrectOption = 'C';
+                break;
+            case 4:
+                question.OptionD = item.correct_answer;
+                question.OptionA = item.incorrect_answers[0];
+                question.OptionB = item.incorrect_answers[1];
+                question.OptionC = item.incorrect_answers[2];
+                question.CorrectOption = 'D';
+                break;
+        }
+        question.UserSelectedOption = '';
+        question.Enabled = true;
+        allQuestions.push(question);
+    });
+    populateQuestion(0);
+}
+
 
 function startGame() {
 

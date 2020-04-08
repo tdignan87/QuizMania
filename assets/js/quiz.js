@@ -10,67 +10,7 @@ let userScore = 0;
 /** Fetches the API Categories if successful connection to API. Simen gave me this part of the code
  * 
  */
-$(document).ready(function generateCategories() {
-    fetch(`https://opentdb.com/api_category.php`)
-        .then(res => res.json())
-        .then(data => {
-            data.trivia_categories.forEach(category => {
-                $("#dropdown-choices-category").append(`<option value="${category.id}">${category.name}</option>`);
-            });
-        });
-    $.each(noOfQuestions, function(val, text) {
-        $('#dropdown-choices-questions').append($(`<option>${text}</option>`));
-    });
-
-    $.each(difficultySetting, function(val, text) {
-        $('#dropdown-choices-difficulty').append($(`<option>${text}</option>`));
-    });
-});
-
-
-function generateQuestionsAnswers(data) {
-    allQuestions = data.results.map(data => {
-        let questionsOnly = {
-            question: data.question
-
-        };
-        questionCount = 0;
-        allQuestions = allQuestions[Math.floor(Math.random() * allQuestions.length)];
-        //   questionsOnly.answer = Math.floor(Math.random() * 3) + 1;
-        //  questionsOnly.answer - 1, 0, data.correct_answer
-        $("#question-main").append(`<h3 id="question-main">${data.question}</h3>`);
-        incorrectAnswers = data.incorrect_answers;
-        correctAnswer = data.correct_answer;
-        /** Pushes the incorrect answers into the correct answers Array.*/
-        incorrectAnswers.push(correctAnswer);
-        incorrectAnswers = shuffleArray(incorrectAnswers)
-        populateAnswers(incorrectAnswers);
-        questionCounter.innerText = (`Question:${questionCount}/${questions}`)
-        startGame();
-    })
-    return;
-
-}
-
-function populateAnswers(answers) {
-    answers.forEach(function(item, index) {
-        $(`#available-answers`).append(`<div class="col-sm">
-        <p class="choice-options" >${choiceOptions[index]}</p>
-         <p class="choice-answer" id="answer-opt" onclick="verifyAnswer()"  data-number="${index +1}">${item}</p>
-     </div>`)
-
-    });
-
-    choiceOptions.forEach(index => {
-        let html = `
-        `
-        $(`<p class="choice-options>"${index}</p`).append(html)
-
-    });
-}
-/** Retrieves category list from API and passes to dropdown on homepage.
- */
-(document).ready(function generateCategories() { // this is your code
+(document).ready(function generateCategories() {
     fetch(`https://opentdb.com/api_category.php`)
         .then(res => res.json())
         .then(data => {
@@ -111,6 +51,19 @@ $("#success-btn").click(function() {
     localStorage.setItem("userScore", userScore);
     alert("Score saved as " + localStorage.getItem("userScore") + "!"); //aw
 });
+
+
+/** Retrieve API and convert response data into JSON format. Any errors are logged to console */
+function getQuestions() {
+    fetch(`https://opentdb.com/api.php?amount=${questions}&category=${category}&difficulty=${difficulty}&type=multiple`)
+        .then(response => response.json())
+        .then(rawData => {
+            generateQuestionsAnswers(rawData);
+            console.log(rawData);
+        })
+        .catch(error => console.log(error));
+}
+
 
 function startGame() {
 

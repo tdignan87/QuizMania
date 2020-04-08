@@ -196,3 +196,12 @@ QuizMania was developed using VS code, using git and github to host the reposito
 ## Closing Notes:
 Creating this project has taught me a lot about how to use API data to display information on a webpage. Working with Javascript and jQuery has been good experience for me as i only have basic experience in C# desktop development. In the future i would like to extend this quiz to be able to select different genre of trivia questions.
 
+## Credits:
+
+* Simen Daehlin (Code Institute Mentor)
+LinkedIn: <a href="https://www.linkedin.com/in/simendaehlin/">Click for LinkedIn</a>
+
+* Code institute tutor support
+
+* Stack Overflow
+

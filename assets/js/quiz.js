@@ -35,6 +35,7 @@ function generateQuestionsAnswers(data) {
     allQuestions = data.results.map(data => {
         let questionsOnly = {
             question: data.question
+
         };
         questionCount = 0;
         allQuestions = allQuestions[Math.floor(Math.random() * allQuestions.length)];
@@ -45,6 +46,7 @@ function generateQuestionsAnswers(data) {
         correctAnswer = data.correct_answer;
         /** Pushes the incorrect answers into the correct answers Array.*/
         incorrectAnswers.push(correctAnswer);
+        incorrectAnswers = shuffleArray(incorrectAnswers)
         populateAnswers(incorrectAnswers);
         questionCounter.innerText = (`Question:${questionCount}/${questions}`)
         startGame();
@@ -136,4 +138,24 @@ function startGame() {
 
 
 
+}
+
+function shuffleArray(array) {
+    let currentIndex = array.length,
+        temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
 }

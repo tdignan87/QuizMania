@@ -167,8 +167,15 @@ This is the first time i have written any software using data from a API. I ensu
 
 * <p> tags were remaining in HTML so the JS append was not populating the data correctly. The template literals should also have contained a +1 for incrementing in the Array.
 
+### Bug:
 
-#### Known Bugs
+* If statement on the play button submit was only working for one of the if statements and not all the nested statements. 
+
+#### Fix: 
+
+* I changed the || operator to the && operator which means all conditions in the if statements must be true. The || operator means if only one condition is true.
+
+### Known Bugs
 
 * TypeError: canot read propery 'length' of undefined at JS:41 at Array.map(<anonymous>) at generateQuestionsAnswers
 * API key with values for the dropdown options is not working. For testing and getting the application running i have left the default key in for now.

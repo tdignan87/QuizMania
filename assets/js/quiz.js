@@ -1,6 +1,6 @@
-const noOfQuestions = [10, 20, 30];
-const difficultySetting = ["easy", "medium", "hard"];
-const category = null;
+let noOfQuestions = [10, 20, 30];
+let difficultySetting = ["easy", "medium", "hard"];
+let category = null;
 let difficulty = null;
 let questions = null;
 let allQuestions = [];
@@ -10,7 +10,7 @@ let userScore = 0;
 /** Fetches the API Categories if successful connection to API. Simen gave me this part of the code
  * 
  */
-(document).ready(function generateCategories() {
+$(document).ready(function generateCategories() {
     fetch(`https://opentdb.com/api_category.php`)
         .then(res => res.json())
         .then(data => {
@@ -108,39 +108,93 @@ function generateQuestionsAnswers(data) {
     populateQuestion(0);
 }
 
+/**
+ * Take populated question and insert into the DOM.
+ * 
+ */
 
-function startGame() {
+function populateQuestion(index) {
+    if (index >= 0 && index < allQuestions.length) {
+        $("#question-main").empty();
+        $(`#available-answers`).empty();
+        let question = allQuestions[index];
 
-    $(`[id="answer-opt"]`).click(function() {
+        $("#question-main").append(`<h3 id="question-main">${question.Question}</h3>`);
 
-        $.each(noOfQuestions, function(index, question) {
-            question.Enabled = false; {
-                if (question.correct_answer == question.UserSelectedOption)
-                    score++ * 10;
-                console.log("You have selected correct answer");
-            }
-        });
-        document.getElementById("score-result").innerText = `${score}`;
+        let optionA = "<div class='col-sm'><p class='choice-options'>A</p><p class='choice-answer' id='answer-opt' onclick=\"showAnswer(" + index + ", 'A')\">" + question.OptionA + "</p></div>";
+        $("#available-answers").append(optionA);
 
-    })
+        let optionB = "<div class='col-sm'><p class='choice-options'>B</p><p class='choice-answer' id='answer-opt' onclick=\"showAnswer(" + index + ", 'B')\">" + question.OptionB + "</p></div>";
+        $("#available-answers").append(optionB);
+
+        let optionC = "<div class='col-sm'><p class='choice-options'>C</p><p class='choice-answer' id='answer-opt' onclick=\"showAnswer(" + index + ", 'C')\">" + question.OptionC + "</p></div>";
+        $("#available-answers").append(optionC);
+
+        let optionD = "<div class='col-sm'><p class='choice-options'>D</p><p class='choice-answer' id='answer-opt' onclick=\"showAnswer(" + index + ", 'D')\">" + question.OptionD + "</p></div>";
+        $("#available-answers").append(optionD);
+
+        if (index < allQuestions.length - 1) {
+            $('#available-answers').append("<div class='col-sm'><input type='button' id='next-btn' value='Next Question' onclick=\"navigateQuestion(" + index + ")\" /></div>");
+        }
+
+        document.getElementById("questionCount").innerText = `Question:${index + 1}/${allQuestions.length}`;
+    }
 }
 
-function shuffleArray(array) {
-    let currentIndex = array.length,
-        temporaryValue, randomIndex;
 
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
 
-        // Pick a remaining element...
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
+function showAnswer(index, option) {
+    if (index >= 0 && index < allQuestions.length) {
+        var question = allQuestions[index];
+        question.UserSelectedOption = option;
+        switch (question.CorrectOption) {
+            case 'A':
+                $(".choice-answer:eq(0)").css("background-color", "green");
+                break;
+            case 'B':
+                $(".choice-answer:eq(1)").css("background-color", "green");
+                break;
+            case 'C':
+                $(".choice-answer:eq(2)").css("background-color", "green");
+                break;
+            case 'D':
+                $(".choice-answer:eq(3)").css("background-color", "green");
+                break;
+        }
 
-        // And swap it with the current element.
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
+        /**
+         * if correctOption in API doesnt match user input background color will go red
+         * 
+         */
+
+        if (question.CorrectOption != question.UserSelectedOption) {
+            switch (question.UserSelectedOption) {
+                case 'A':
+                    $(".choice-answer:eq(0)").css("background-color", "red");
+                    break;
+                case 'B':
+                    $(".choice-answer:eq(1)").css("background-color", "red");
+                    break;
+                case 'C':
+                    $(".choice-answer:eq(2)").css("background-color", "red");
+                    break;
+                case 'D':
+                    $(".choice-answer:eq(3)").css("background-color", "red");
+                    break;
+            }
+        } else {
+            userScore = userScore + 10;
+            document.getElementById("score-result").innerText = userScore;
+        }
     }
+}
 
-    return array;
+/**
+ * Gets next question and displays it to user
+ */
+
+function navigateQuestion(index) {
+    if (index >= 0 && index < allQuestions.length) {
+        populateQuestion(index + 1);
+    }
 }

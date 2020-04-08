@@ -107,12 +107,10 @@ function generateQuestionsAnswers(data) {
     });
     populateQuestion(0);
 }
-
 /**
  * Take populated question and insert into the DOM.
  * 
  */
-
 function populateQuestion(index) {
     if (index >= 0 && index < allQuestions.length) {
         $("#question-main").empty();

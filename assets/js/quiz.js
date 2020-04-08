@@ -44,6 +44,8 @@ $("#play-submit-btn").click(function() {
     } else {
         document.getElementById("main-status").style.display = "block";
     }
+
+
 });
 
 /** click function for play submit button. Once pressed the score is saved to local storage */
@@ -195,4 +197,8 @@ function navigateQuestion(index) {
     if (index >= 0 && index < allQuestions.length) {
         populateQuestion(index + 1);
     }
+}
+
+function startAgain() {
+
 }

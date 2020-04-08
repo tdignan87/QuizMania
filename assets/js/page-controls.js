@@ -4,7 +4,6 @@
 window.onload = function() {
     document.getElementById("question_grid").style.display = "none";
     document.getElementById("score_grid").style.display = "none";
-    document.getElementById("contactus_grid").style.display = "none";
     document.getElementById("loading").style.display = "none";
     document.getElementById("main-status").style.display = "none";
 };

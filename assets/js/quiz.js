@@ -63,6 +63,7 @@ function getQuestions() {
         .then(response => response.json())
         .then(rawData => {
             generateQuestionsAnswers(rawData);
+            console.log(rawData.results);
 
         })
         .catch(error => console.log(error));

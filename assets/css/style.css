@@ -101,7 +101,7 @@
     #question_grid {
         background-color: #fed8b1;
         width: 100%;
-        display: block;
+        display: inline-block;
         top: 50px;
     }
     /* Inside questions grid */
@@ -186,13 +186,14 @@
     }
     
     #next-btn {
-        padding-top: 10px;
-        padding-bottom: 5px;
-        font-size: 24px;
-        background-color: orange;
-        color: black;
-    }
-    
-    @media only screen and (max-width: 840px) {
-        #next-btn {}
+        background-color: #4CAF50;
+        /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        display: inline-block;
+        position: relative;
     }

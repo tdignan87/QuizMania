@@ -196,3 +196,7 @@
                                                         display: inline-block;
                                                         position: relative;
                                                     }
+                                                    
+                                                    #success-btn {
+                                                        width: 20%;
+                                                    }

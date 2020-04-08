@@ -87,32 +87,30 @@ function populateAnswers(answers) {
     });
 });
 
-/** Play submit function IF statements to ensure criteria is selected before game will allow to play. All options must be selected before questions will be generated.
+/** Play submit function IF statements to ensure criteria is selected before game will allow to play. All options must be selected before questions will be generated. DOM items 
+ * Will show depending on what items are selected.
  */
-
 $("#play-submit-btn").click(function() {
-category = catChoice.options[catChoice.selectedIndex].id;
-difficulty = difficultyOptions.options[difficultyOptions.selectedIndex].value;
-questions = questionOptions.options[questionOptions.selectedIndex].value;
+    if (($(`#dropdown-choices-difficulty option:selected`).index() > 0) && ($(`#dropdown-choices-category option:selected`).index() > 0) && ($(`#dropdown-choices-questions option:selected`).index() > 0)) {
+        category = $("#dropdown-choices-category option:selected").val();
+        difficulty = $("#dropdown-choices-difficulty option:selected").text();
+        questions = $("#dropdown-choices-questions option:selected").text();
+        document.getElementById("question_grid").style.display = "block";
+        document.getElementById("score_grid").style.display = "block";
+        document.getElementById("options-container-choices").style.display = "none";
+        document.getElementById("jumbo-picture-main").style.display = "none";
+        document.getElementById("play-submit-btn").style.display = "none";
+        getQuestions();
+    } else {
+        document.getElementById("main-status").style.display = "block";
+    }
+});
 
-if (($(`#dropdown-choices-difficulty option:selected`).index() > 0) && ($(`#dropdown-choices-category option:selected`).index() > 0) && ($(`#dropdown-choices-questions option:selected`).index() > 0)) {
-
-    document.getElementById("question_grid").style.display = "block";
-    document.getElementById("score_grid").style.display = "block";
-    document.getElementById("options-container-choices").style.display = "none";
-    document.getElementById("jumbo-picture-main").style.display = "none";
-    document.getElementById("play-submit-btn").style.display = "none";
-    getQuestions();
-
-
-} else {
-    document.getElementById("main-status").style.display = "block";
-
-}
-
-})
-
-})
+/** click function for play submit button. Once pressed the score is saved to local storage */
+$("#success-btn").click(function() {
+    localStorage.setItem("userScore", userScore);
+    alert("Score saved as " + localStorage.getItem("userScore") + "!"); //aw
+});
 
 function startGame() {
 
@@ -128,9 +126,6 @@ function startGame() {
         document.getElementById("score-result").innerText = `${score}`;
 
     })
-
-
-
 }
 
 function shuffleArray(array) {

@@ -126,7 +126,7 @@ function startGame() {
         $.each(noOfQuestions, function(index, question) {
             question.Enabled = false; {
                 if (question.correct_answer == question.UserSelectedOption)
-                    score++;
+                    score++ * 10;
                 console.log("You have selected correct answer");
             }
         });

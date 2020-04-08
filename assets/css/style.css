@@ -87,8 +87,9 @@
         width: 100%;
         height: 100%;
         text-align: center;
-        padding: 50px;
         display: block;
+        padding-top: 5px;
+        padding-bottom: 10px;
     }
     
     #quiz-container {
@@ -99,9 +100,9 @@
     
     #question_grid {
         background-color: #fed8b1;
-        padding-bottom: 10px;
         width: 100%;
         display: block;
+        top: 50px;
     }
     /* Inside questions grid */
     
@@ -141,7 +142,7 @@
     
     #score_grid {
         background-color: #fed8b1;
-        padding-bottom: 10px;
+        padding-bottom: 15px;
         width: 100%;
     }
     

@@ -7,5 +7,4 @@ window.onload = function() {
     document.getElementById("contactus_grid").style.display = "none";
     document.getElementById("loading").style.display = "none";
     document.getElementById("main-status").style.display = "none";
-    document.getElementById("startover-btn").style.display = "none";
 };

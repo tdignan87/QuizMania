@@ -37,7 +37,6 @@ $("#play-submit-btn").click(function() {
         questions = $("#dropdown-choices-questions option:selected").text();
         document.getElementById("question_grid").style.display = "block";
         document.getElementById("score_grid").style.display = "block";
-        document.getElementById("startover-btn").style.display = "block";
         document.getElementById("options-container-choices").style.display = "none";
         document.getElementById("jumbo-picture-main").style.display = "none";
         document.getElementById("play-submit-btn").style.display = "none";
@@ -53,7 +52,8 @@ $("#play-submit-btn").click(function() {
 /** click function for play submit button. Once pressed the score is saved to local storage */
 $("#success-btn").click(function() {
     localStorage.setItem("userScore", userScore);
-    alert("Score saved as " + localStorage.getItem("userScore") + "!"); //aw
+    alert("Score saved as " + localStorage.getItem("userScore") + "!");
+    window.location.replace("index.html");
 });
 
 
@@ -63,7 +63,7 @@ function getQuestions() {
         .then(response => response.json())
         .then(rawData => {
             generateQuestionsAnswers(rawData);
-            console.log(rawData);
+
         })
         .catch(error => console.log(error));
 }
@@ -137,6 +137,9 @@ function populateQuestion(index) {
 
         if (index < allQuestions.length - 1) {
             $('#available-answers').append("<div class='col-sm'><input type='button' id='next-btn' value='Next Question' onclick=\"navigateQuestion(" + index + ")\" /></div>");
+
+
+
         }
 
         document.getElementById("questionCount").innerText = `Question:${index + 1}/${allQuestions.length}`;
@@ -147,7 +150,8 @@ function populateQuestion(index) {
 
 function showAnswer(index, option) {
     if (index >= 0 && index < allQuestions.length) {
-        var question = allQuestions[index];
+        ("+index +") + navigateQuestion()
+        let question = allQuestions[index];
         question.UserSelectedOption = option;
         switch (question.CorrectOption) {
             case 'A':
@@ -162,6 +166,7 @@ function showAnswer(index, option) {
             case 'D':
                 $(".choice-answer:eq(3)").css("background-color", "green");
                 break;
+
         }
 
         /**

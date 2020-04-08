@@ -205,3 +205,5 @@ LinkedIn: <a href="https://www.linkedin.com/in/simendaehlin/">Click for LinkedIn
 
 * Stack Overflow
 
+* Javascript & jQuery by Jon Duckett Book
+

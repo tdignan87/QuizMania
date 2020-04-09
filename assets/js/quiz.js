@@ -179,6 +179,8 @@ function showAnswer(index, option) {
                 $(".choice-answer:eq(3)").css("background-color", "green");
                 break;
         }
+
+
         /**
          * if correctOption in API doesnt match user input background color will go red
          * 
@@ -214,6 +216,7 @@ function navigateQuestion(index) {
     }
 }
 
+/** Loader  */
 document.onreadystatechange = function() {
     if (document.readyState !== "complete") {
         document.querySelector(
@@ -227,3 +230,5 @@ document.onreadystatechange = function() {
             "body").style.visibility = "visible";
     }
 }
+
+function showAnswer(index, option) {}

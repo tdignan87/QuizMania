@@ -14,8 +14,6 @@ window.onload = function() {
 };
 
 
-
-
 /** Fetches the API Categories if successful connection to API. Simen gave me this part of the code
  * 
  */
@@ -149,8 +147,8 @@ function populateQuestion(index) {
         $("#available-answers").append(optionD);
 
         if (index < allQuestions.length - 1) {
-            $('#available-answers').append("<div class='col-sm'><input type='button' id='next-btn' value='Next Question' onclick=\"navigateQuestion(" + index + ")\" /></div>");
-
+            $('#nxt-question-btn').empty("<div class='col-sm'><input type='button' id='next-btn' value='Next Question' onclick=\"navigateQuestion(" + index + ")\" /></div>");
+            $('#nxt-question-btn').append("<div class='col-sm'><input type='button' id='next-btn' value='Next Question' onclick=\"navigateQuestion(" + index + ")\" /></div>");
         }
 
         /** Shows the question currently on versus total questions selected */

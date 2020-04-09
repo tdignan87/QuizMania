@@ -7,9 +7,19 @@ let allQuestions = [];
 let userScore = 0;
 
 
+window.onload = function() {
+    $("#question_grid").css({ display: "none" });
+    $("#score_grid").css({ display: "none" });
+
+};
+
+
+
+
 /** Fetches the API Categories if successful connection to API. Simen gave me this part of the code
  * 
  */
+
 $(document).ready(function generateCategories() {
     fetch(`https://opentdb.com/api_category.php`)
         .then(res => res.json())
@@ -43,7 +53,8 @@ $("#play-submit-btn").click(function() {
 
         getQuestions();
     } else {
-        document.getElementById("main-status").style.display = "block";
+
+
     }
 
 
@@ -54,6 +65,7 @@ $("#success-btn").click(function() {
     localStorage.setItem("userScore", userScore);
     alert("Score saved as " + localStorage.getItem("userScore") + "!");
     window.location.replace("index.html");
+    document.getElementById("main-status").style.display = "none";
 });
 
 
@@ -139,15 +151,11 @@ function populateQuestion(index) {
         if (index < allQuestions.length - 1) {
             $('#available-answers').append("<div class='col-sm'><input type='button' id='next-btn' value='Next Question' onclick=\"navigateQuestion(" + index + ")\" /></div>");
 
-
-
         }
 
         document.getElementById("questionCount").innerText = `Question:${index + 1}/${allQuestions.length}`;
     }
 }
-
-
 
 function showAnswer(index, option) {
     if (index >= 0 && index < allQuestions.length) {
@@ -167,14 +175,12 @@ function showAnswer(index, option) {
             case 'D':
                 $(".choice-answer:eq(3)").css("background-color", "green");
                 break;
-
         }
 
         /**
          * if correctOption in API doesnt match user input background color will go red
          * 
          */
-
         if (question.CorrectOption != question.UserSelectedOption) {
             switch (question.UserSelectedOption) {
                 case 'A':
@@ -196,7 +202,6 @@ function showAnswer(index, option) {
         }
     }
 }
-
 /**
  * Gets next question and displays it to user
  */
@@ -205,8 +210,4 @@ function navigateQuestion(index) {
     if (index >= 0 && index < allQuestions.length) {
         populateQuestion(index + 1);
     }
-}
-
-function startAgain() {
-
 }

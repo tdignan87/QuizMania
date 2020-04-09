@@ -10,9 +10,9 @@ let userScore = 0;
 window.onload = function() {
     $("#question_grid").css({ display: "none" });
     $("#score_grid").css({ display: "none" });
+    $("#main-status").css({ display: "none" });
 
 };
-
 
 /** Fetches the API Categories if successful connection to API. Simen gave me this part of the code
  * 

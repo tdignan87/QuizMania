@@ -45,11 +45,11 @@ $("#play-submit-btn").click(function() {
         category = $("#dropdown-choices-category option:selected").val();
         difficulty = $("#dropdown-choices-difficulty option:selected").text();
         questions = $("#dropdown-choices-questions option:selected").text();
-        document.getElementById("question_grid").style.display = "block";
-        document.getElementById("score_grid").style.display = "block";
-        document.getElementById("options-container-choices").style.display = "none";
-        document.getElementById("jumbo-picture-main").style.display = "none";
-        document.getElementById("play-submit-btn").style.display = "none";
+        $("#score_grid").css({ display: "block" })
+        $("#question_grid").css({ display: "block" })
+        $("#options-container-choices").css({ display: "none" })
+        $("#jumbo-picture-main").css({ display: "none" })
+        $("#play-submit-btn").css({ display: "none" })
 
         getQuestions();
     } else {

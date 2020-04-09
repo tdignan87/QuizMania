@@ -65,7 +65,7 @@ $("#success-btn").click(function() {
     localStorage.setItem("userScore", userScore);
     alert("Score saved as " + localStorage.getItem("userScore") + "!");
     window.location.replace("index.html");
-    document.getElementById("main-status").style.display = "none";
+    $("#main-status").css({ display: "none" });
 });
 
 
@@ -75,7 +75,7 @@ function getQuestions() {
         .then(response => response.json())
         .then(rawData => {
             generateQuestionsAnswers(rawData);
-            console.log(rawData.results);
+
 
         })
         .catch(error => console.log(error));
@@ -153,6 +153,7 @@ function populateQuestion(index) {
 
         }
 
+        /** Shows the question currently on versus total questions selected */
         document.getElementById("questionCount").innerText = `Question:${index + 1}/${allQuestions.length}`;
     }
 }

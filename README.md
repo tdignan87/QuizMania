@@ -96,7 +96,7 @@ I use bootstrap to style my website with a responsive design. This means it was 
 
 ##### Background:
 
-I chose a simple dark orange background for the entire web application.
+I chose a simple orange background for the entire web application.
 
 ## Wireframes:
 I built the wireframes for this project using Balsamiq mockups. I did a basic design for Mobile/Tablets and then a web application prior to designing the UI. I found using Balsamiq very useful as it helped me to structurally arrange the elements on my page.

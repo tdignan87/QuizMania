@@ -41,7 +41,7 @@ $(document).ready(function generateCategories() {
  * Will show depending on what items are selected.
  */
 $("#play-submit-btn").click(function() {
-    if (($(`#dropdown-choices-difficulty option:selected`).index() > 0) && ($(`#dropdown-choices-category option:selected`).index() > 0) && ($(`#dropdown-choices-questions option:selected`).index() > 0)) {
+    if (($("#dropdown-choices-difficulty option:selected").index() > 0) && ($("#dropdown-choices-category option:selected").index() > 0) && ($("#dropdown-choices-questions option:selected").index() > 0)) {
         category = $("#dropdown-choices-category option:selected").val();
         difficulty = $("#dropdown-choices-difficulty option:selected").text();
         questions = $("#dropdown-choices-questions option:selected").text();
@@ -54,9 +54,7 @@ $("#play-submit-btn").click(function() {
         getQuestions();
     } else {
 
-
     }
-
 
 });
 
@@ -68,7 +66,6 @@ $("#success-btn").click(function() {
     $("#main-status").css({ display: "none" });
 });
 
-
 /** Retrieve API and convert response data into JSON format. Any errors are logged to console */
 function getQuestions() {
     fetch(`https://opentdb.com/api.php?amount=${questions}&category=${category}&difficulty=${difficulty}&type=multiple`)
@@ -76,12 +73,13 @@ function getQuestions() {
         .then(rawData => {
             generateQuestionsAnswers(rawData);
 
-
         })
         .catch(error => console.log(error));
 }
 
-/** create options and answers array using the API's correct_answer and incorrect_answers. Data index is stored. Selected value is null until value is selected.  */
+/** create options and answers array using the API's correct_answer and incorrect_answers. Data index is stored. Selected value is null until value is selected. Data is pushed
+ * in an Array allQuestions. 
+ */
 
 function generateQuestionsAnswers(data) {
     $.each(data.results, function(index, item) {
@@ -121,6 +119,7 @@ function generateQuestionsAnswers(data) {
         question.UserSelectedOption = '';
         question.Enabled = true;
         allQuestions.push(question);
+
     });
     populateQuestion(0);
 }
@@ -149,13 +148,16 @@ function populateQuestion(index) {
         $("#available-answers").append(optionD);
 
         if (index < allQuestions.length - 1) {
-            $('#nxt-question-btn').empty("<div class='col-sm'><input type='button' id='next-btn' value='Next Question' onclick=\"navigateQuestion(" + index + ")\" /></div>");
-            $('#nxt-question-btn').append("<div class='col-sm'><input type='button' id='next-btn' value='Next Question' onclick=\"navigateQuestion(" + index + ")\" /></div>");
+            $("#available-answers").append("<div class='col-sm'><input type='button' id='next-btn' value='Next Question' onclick=\"navigateQuestion(" + index + ")\" /></div>");
         }
+
+
 
         /** Shows the question currently on versus total questions selected */
         document.getElementById("questionCount").innerText = `Question:${index + 1}/${allQuestions.length}`;
     }
+
+
 }
 
 function showAnswer(index, option) {
@@ -177,7 +179,6 @@ function showAnswer(index, option) {
                 $(".choice-answer:eq(3)").css("background-color", "green");
                 break;
         }
-
         /**
          * if correctOption in API doesnt match user input background color will go red
          * 

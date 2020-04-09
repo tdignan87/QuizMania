@@ -12,6 +12,7 @@ window.onload = function() {
     $("#score_grid").css({ display: "none" });
     $("#main-status").css({ display: "none" });
 
+
 };
 
 /** Fetches the API Categories if successful connection to API. Simen gave me this part of the code
@@ -152,7 +153,6 @@ function populateQuestion(index) {
         }
 
 
-
         /** Shows the question currently on versus total questions selected */
         document.getElementById("questionCount").innerText = `Question:${index + 1}/${allQuestions.length}`;
     }
@@ -211,5 +211,19 @@ function showAnswer(index, option) {
 function navigateQuestion(index) {
     if (index >= 0 && index < allQuestions.length) {
         populateQuestion(index + 1);
+    }
+}
+
+document.onreadystatechange = function() {
+    if (document.readyState !== "complete") {
+        document.querySelector(
+            "body").style.visibility = "hidden";
+        document.querySelector(
+            "#loader").style.visibility = "visible";
+    } else {
+        document.querySelector(
+            "#loader").style.display = "none";
+        document.querySelector(
+            "body").style.visibility = "visible";
     }
 }

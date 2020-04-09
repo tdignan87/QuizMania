@@ -142,7 +142,7 @@ This is the first time i have written any software using data from a API. I ensu
 ### Overall Features:
 
 <strong>Site Responsiveness:</strong>
-* Fully responsive and mobile friendly is a requirement for this prodject so i used Bootstrap as the HTML framework. I used chrome developer tools for testing the different break points. 
+* Fully responsive and mobile friendly is a requirement for this project so i used Bootstrap as the HTML framework. I used chrome developer tools for testing the different break points. 
 
 * <strong>Implementation:</strong> Using live server browser in VS code allowed me to work on my project in a practical way alongside the developer tools for testing different things.
 

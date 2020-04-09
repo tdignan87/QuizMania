@@ -177,8 +177,8 @@ This is the first time i have written any software using data from a API. I ensu
 
 ### Known Bugs
 
-* TypeError: canot read propery 'length' of undefined at JS:41 at Array.map(<anonymous>) at generateQuestionsAnswers
-* API key with values for the dropdown options is not working. For testing and getting the application running i have left the default key in for now.
+* Rarely the API wont load the data into the questions and answers. Seems to happen at Politics Category. 
+
 
 
 ## Deployment:

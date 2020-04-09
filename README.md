@@ -149,6 +149,13 @@ This is the first time i have written any software using data from a API. I ensu
 
 *<strong>Interactive:</strong> Using JS to show and hide specific parts of the page when the user is ready to begin the quiz. This will keep everything on one page when in mobile design. This was checked using chrome developer tools.
 
+
+### Future Features:
+
+* When game is completed i would like the ability for the user to enter there name and then save the data to local storage. The user can then view the last top 10 scores on the page when playing alongside friends.
+* A loading spinner when the page is first rendered.
+
+
 ## Bugs During Development:
 
 ### Bug:
@@ -179,6 +186,8 @@ This is the first time i have written any software using data from a API. I ensu
 
 * Rarely the API wont load the data into the questions and answers. Seems to happen at Politics Category. 
 
+#### Workarounds:
+Added IF statement that removes politics as a category option.
 
 
 ## Deployment:

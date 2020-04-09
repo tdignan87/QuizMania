@@ -60,14 +60,13 @@ The goal of this project is to create a simple to use trivia quiz game for kids 
 
 * Navigate the website using the navbar to go to different areas on the page.
 * Select difficulty & number of questions and site will adjust accordingly.
-* Site will display my score and add it to the top scores.
-* Pop out nav appears when on tablet or mobile device.
 * Form works correctly for submitting ideas to the owner.
 * Answer buttons will change colours if wrong or correct answer is selected.
+* Quiz will let me know what answers are incorrect.
 
 #### Expectations:
 
-* Site to generate random questions and give three possible answers.
+* Site to generate random questions and give four possible answers.
 * Site to allow user to select difficulty.
 * Can click answers and site will respond with correct color for wrong (red) or green (correct).
 * Fully responsive design for all devices.

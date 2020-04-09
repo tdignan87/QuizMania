@@ -23,7 +23,9 @@ $(document).ready(function generateCategories() {
         .then(res => res.json())
         .then(data => {
             data.trivia_categories.forEach(category => {
-                $("#dropdown-choices-category").append(`<option value="${category.id}">${category.name}</option>`);
+                if (category.name != "politics") {
+                    $("#dropdown-choices-category").append(`<option value="${category.id}">${category.name}</option>`);
+                }
             });
         });
     $.each(noOfQuestions, function(val, text) {

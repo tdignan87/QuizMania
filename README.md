@@ -176,10 +176,7 @@ Solution: Added catch statement and notice on the form to display to user that s
 
 ### Known Bugs
 
-* Rarely the API wont load the data into the questions and answers. Seems to happen at Politics Category. 
-
-#### Workarounds:
-Added IF statement that removes politics as a category option.
+* Rarely the API wont load the data into the questions and answers. Seems to happen at several categories. I suspect issue with API as no errors i can find when debugging.
 
 
 ## Deployment:
@@ -193,6 +190,17 @@ QuizMania was developed using VS code, using git and github to host the reposito
 * Opened command palette (Ctrl+Shift+P) and copied in my remote repository URL
 * Did a small change then pushed to remote repository
 * Checked remote repository to check it was successfully pulling in the changes.
+
+### Running QuizMania locally
+
+Cloning Quizmania from Github:
+
+* Navigate to 'https://github.com/tdignan87/QuizMania'.
+* Click the green "Clone or Download" button.
+* Copy the URL in the dropdown box.
+* Using your favorite IDE open up your preferred terminal.
+* Navigate to your desired file location.
+* Copy the following code and input into your terminal to clone QuizMania.
 
 ## Closing Notes:
 Creating this project has taught me a lot about how to use API data to display information on a webpage. Working with Javascript and jQuery has been good experience for me as i only have basic experience in C# desktop development. In the future i would like to extend this quiz to be able to show top scores to the user.

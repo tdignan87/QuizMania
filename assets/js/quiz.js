@@ -60,7 +60,7 @@ $("#play-submit-btn").click(function() {
         $("#jumbo-picture-main").css({ display: "none" })
         $("#play-submit-btn").css({ display: "none" })
         $("#main-status").css({ display: "none" })
-        $("#next-btn").css({ display: "block", "text-align": "center" });
+        $("#next-btn").css({ display: "block" });
 
         getQuestions();
     } else {

@@ -16,7 +16,7 @@ window.onload = function() {
     $("#question_grid").css({ display: "none" });
     $("#score_grid").css({ display: "none" });
     $("#main-status").css({ display: "none" });
-    $("#next-btn").css({ display: "none" });
+    $("#next-btn").css({ display: "none", "text-align": "center" });
     $("#api-status").css({ display: "none" });
     fetch(`https://opentdb.com/api_category.php`)
         .then(res => res.json())
@@ -60,7 +60,7 @@ $("#play-submit-btn").click(function() {
         $("#jumbo-picture-main").css({ display: "none" })
         $("#play-submit-btn").css({ display: "none" })
         $("#main-status").css({ display: "none" })
-        $("#next-btn").css({ display: "block" }, )
+        $("#next-btn").css({ display: "block", "text-align": "center" });
 
         getQuestions();
     } else {

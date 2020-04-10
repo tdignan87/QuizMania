@@ -83,8 +83,11 @@ function getQuestions() {
             generateQuestionsAnswers(rawData);
 
         })
-        .catch(error => console.log(error),
-            //     $("#api-status").css({ display: "block" }),
+        .catch(error => {
+
+                console.log(error)
+                $("#api-status").css({ display: "block" })
+            }
 
         );
 

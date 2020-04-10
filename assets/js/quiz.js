@@ -6,13 +6,12 @@ let questions = null;
 let allQuestions = [];
 let userScore = 0;
 let questionTotal = document.getElementById("questionCount");
-let categoryChoices = $("#dropdown-choices-category option:selected").val();
-
+let categoryChoices = $("#dropdown-choices-category option:selected").val()
+let choiceAnswers = $(".choice-answer");
 
 /** 
  * Fetches the API Categories if successful connection to API. Simen gave me this part of the code.
  */
-
 window.onload = function() {
     $("#question_grid").css({ display: "none" });
     $("#score_grid").css({ display: "none" });
@@ -36,7 +35,6 @@ window.onload = function() {
     $.each(difficultySetting, function(val, text) {
         $('#dropdown-choices-difficulty').append($(`<option>${text}</option>`));
     });
-
 };
 
 /*
@@ -45,11 +43,10 @@ window.onload = function() {
  */
 $("#play-submit-btn").click(function() {
     if (($("#dropdown-choices-difficulty option:selected").index() > 0) && ($("#dropdown-choices-category option:selected").index() > 0) && ($("#dropdown-choices-questions option:selected").index() > 0)) {
-        category = categoryChoices;
+        category = $("#dropdown-choices-category option:selected").val();
         difficulty = $("#dropdown-choices-difficulty option:selected").text();
         questions = $("#dropdown-choices-questions option:selected").text();
-        $("#score_grid").css({ display: "block" })
-        $("#question_grid").css({ display: "block" })
+        $(".quiz-page").css({ display: "block" })
         $("#options-container-choices").css({ display: "none" })
         $("#jumbo-picture-main").css({ display: "none" })
         $("#play-submit-btn").css({ display: "none" })
@@ -59,9 +56,7 @@ $("#play-submit-btn").click(function() {
     } else {
         $("#main-status").css({ display: "block" })
     }
-
 });
-
 /*
  * click function for play submit button. Once pressed the score is saved to local storage 
  */
@@ -157,9 +152,15 @@ function populateQuestion(index) {
         let optionD = "<div class='col-sm'><p class='choice-options'>D</p><p class='choice-answer' id='answer-opt' onclick=\"showAnswer(" + index + ", 'D')\">" + question.OptionD + "</p></div>";
         $("#available-answers").append(optionD);
 
-        if (index < allQuestions.length - 1) {
-            $("#available-answers").append("<div class='col-sm'><input type='button' id='next-btn' value='Next Question' onclick=\"navigateQuestion(" + index + ")\" /></div>");
-        }
+
+        $("#next-btn").click(function() {
+            if (index < allQuestions.length - 1) {
+                (navigateQuestion(index));
+            }
+            if (allQuestions == Math.max) {
+                console.log("max met");
+            }
+        });
 
         /*
          *  Shows the question currently on versus total questions selected
@@ -167,12 +168,10 @@ function populateQuestion(index) {
         questionTotal.innerText = `Question:${index + 1}/${allQuestions.length}`;
     }
 
-
 }
 
 function showAnswer(index, option) {
     if (index >= 0 && index < allQuestions.length) {
-        ("+index +") + navigateQuestion()
         let question = allQuestions[index];
         question.UserSelectedOption = option;
         switch (question.CorrectOption) {
@@ -189,7 +188,6 @@ function showAnswer(index, option) {
                 $(".choice-answer:eq(3)").css("background-color", "green");
                 break;
         }
-
         /**
          * if correctOption in API doesnt match user input background color will go red
          */
@@ -223,7 +221,6 @@ function navigateQuestion(index) {
         populateQuestion(index + 1);
     }
 }
-
 /*
  * Loader 
  */

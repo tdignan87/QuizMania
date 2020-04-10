@@ -14,14 +14,14 @@
     <div class="container">
         <!-- Jumbotron Section-->
         <div class="jumbotron">
-            <div class="jumbo-picture-display" id="jumbo-picture-main">
+            <div class="jumbo-picture-display quiz-page" id="jumbo-picture-main">
                 <h1 class="display-4" id="jumbo-title">Welcome to QuizMania</h1>
                 <p class="lead" id="jumbo-p">The trivia quiz game.</p>
             </div>
         </div>
         <!-- Options menu for Quiz Criteria-->
         <section class="container">
-            <div class="container-fluid" id="options-container-choices">
+            <div class="container-fluid quiz-page" id="options-container-choices">
                 <div id="criteria" class="criteria-section">
                     <div class="dropdown">
                         <h2 class="select-difficulty">Please Select Difficulty First!</h2>
@@ -56,7 +56,7 @@
     </div>
     <!-- main quiz section container of project.-->
     <section class="container-fluid" id="quiz-container">
-        <div class="container" id="question_grid">
+        <div class="container quiz-page" id="question_grid">
             <h4 id="questionCount" class="question-count">
                 <h4>Question:</h4>
             </h4>
@@ -69,10 +69,16 @@
 
     </section>
 
+    <div class="next-button">
+        <div class='col-sm'><input type='button' id='next-btn' value='Next Question'>
+        </div>
+    </div>
+
+
 
     <section class="container-fluid" id="score-container">
         <!-- Questions Grid Bootstrap equal grid Row-->
-        <div class="container" id="score_grid">
+        <div class="container quiz-page" id="score_grid">
             <h2 id="score-main">Your Score Is!</h2>
             <div class="row">
                 <div class="col-sm">

@@ -84,7 +84,7 @@ I chose the font <a href="https://fonts.google.com/specimen/Bubblegum+Sans">Bubb
 
 I checked online at other trivia games and came across a variety of bright coloured websites and dark and dull websites. I decided to go with bright and vibrant colours as they are more appealing to kids as well as adults.
 
-* Background Colours: #c1502e<strong> Dark orange</strong>. I Chose this as the primary colour as it looks like it will blend well with the other colours.
+* Background Colours: #FFA500<strong> Dark orange</strong>. I Chose this as the primary colour as it looks like it will blend well with the other colours.
 * Navigation Colour: #fed8b1<strong> Light Orange</strong>. I chose this secondary colour for my navbar and controls as it blends well with the dark orange.
 * Container Colours: #fed8b1<strong> Light Orange</strong>. I chose this colour for my sections as it blends well with the dark orange background.
 * Dropdown Menu Items: #fed8b1<strong> Light Orange</strong>. I chose this colour as it blends well with the background.

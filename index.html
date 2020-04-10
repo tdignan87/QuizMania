@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>QuizMania|The Quiz Game</title>
@@ -21,7 +20,7 @@
             </div>
         </div>
         <!-- Options menu for Quiz Criteria-->
-        <div class="container">
+        <section class="container">
             <div class="container-fluid" id="options-container-choices">
                 <div id="criteria" class="criteria-section">
                     <div class="dropdown">
@@ -48,7 +47,7 @@
                 </div>
 
             </div>
-        </div>
+        </section>
         <button type="button" class="btn btn-warning btn-lg" id="play-submit-btn">Click To Play!</button>
 
     </div>
@@ -56,7 +55,7 @@
         <div id="main-status">Oops! Please Select All Options First!</div>
     </div>
     <!-- main quiz section container of project.-->
-    <div class="container-fluid" id="quiz-container">
+    <section class="container-fluid" id="quiz-container">
         <div class="container" id="question_grid">
             <h4 id="questionCount" class="question-count">
                 <h4>Question:</h4>
@@ -68,10 +67,10 @@
 
         </div>
 
-    </div>
+    </section>
 
 
-    <div class="container-fluid" id="score-container">
+    <section class="container-fluid" id="score-container">
         <!-- Questions Grid Bootstrap equal grid Row-->
         <div class="container" id="score_grid">
             <h2 id="score-main">Your Score Is!</h2>
@@ -85,7 +84,7 @@
         </div>
 
 
-    </div>
+    </section>
 
 
     <script type="text/javascript " src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js "></script>

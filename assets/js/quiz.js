@@ -230,5 +230,3 @@ document.onreadystatechange = function() {
             "body").style.visibility = "visible";
     }
 }
-
-function showAnswer(index, option) {}

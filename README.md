@@ -158,29 +158,21 @@ This is the first time i have written any software using data from a API. I ensu
 
 ## Bugs During Development:
 
-### Bug:
+### Bug 1 - Option categories from API Array not loading in the application:
 
-* I could not load the choices category in the categories options dropdown. Console was logging the data from API ok but results were not showing in the dropdown.
+Solution:  I was not calling the category in the  function so my dropdown was not loading the API data. The category function was being called which loads the API data.
 
-#### Fix:
+### Bug 2 - Available answers not combining properly across the four answer choices:
 
-* I was not calling the category in the  function so my dropdown was not loading the API data. The category function was being called which loads the API data.
+Solution: <p> tags were remaining in HTML so the JS append was not populating the data correctly. The template literals should also have contained a +1 for incrementing in the Array.
 
-### Bug:
+### Bug 3 - If statement on the play button submit was only working for one of the if statements not not all the nested statements:
 
-* Available answers is not combining properly across my four answer choices. 
+Solution: I changed the || operator to the && operator which means all conditions in the if statements must be true. The || operator means if only one condition is true.
 
-#### Fix:
+### Bug 4 - API was down and site would not move on. No warning for user that the site isn't working.
 
-* <p> tags were remaining in HTML so the JS append was not populating the data correctly. The template literals should also have contained a +1 for incrementing in the Array.
-
-### Bug:
-
-* If statement on the play button submit was only working for one of the if statements and not all the nested statements. 
-
-#### Fix: 
-
-* I changed the || operator to the && operator which means all conditions in the if statements must be true. The || operator means if only one condition is true.
+Solution: Added catch statement and notice on the form to display to user that service isnt working and to try again later.
 
 ### Known Bugs
 

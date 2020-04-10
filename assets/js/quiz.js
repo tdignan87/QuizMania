@@ -84,7 +84,7 @@ function getQuestions() {
 
         })
         .catch(error => console.log(error),
-            $("#api-status").css({ display: "block" }),
+            //     $("#api-status").css({ display: "block" }),
 
         );
 

@@ -122,10 +122,11 @@ You can view the wireframes here:
 
 ### Tools & Libraries:
 
-* jQuery
-* Git
-* Bootstrap
-* OpenTrivia API
+* jQuery:  <a href="https://jquery.com/"> Click here for jQuery</a>
+* Git:      <a href="https://github.com/"> Click here for Github</a>
+* Bootstrap:<a href="https://getbootstrap.com/"> Click here for Bootstrap</a>
+* OpenTrivia API: <a href="https://opentdb.com/"> Click here for OpenTriviaDB</a>
+* Google Fonts: <a href="https://fonts.google.com/"> Click here for Google Fonts</a>
 
 ## Testing:
 

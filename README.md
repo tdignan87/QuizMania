@@ -102,7 +102,7 @@ I chose a simple orange background for the entire web application.
 I built the wireframes for this project using Balsamiq mockups. I did a basic design for Mobile/Tablets and then a web application prior to designing the UI. I found using Balsamiq very useful as it helped me to structurally arrange the elements on my page.
 
 You can view the wireframes here:
- <a href="https://github.com/tdignan87/QMWireframes/">Click here for Wireframes</a>
+ <a href="https://github.com/tdignan87/QuizMania/tree/master/Wireframes">Click here for Wireframes</a>
 
 ## Features:
 

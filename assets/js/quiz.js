@@ -5,21 +5,18 @@ let difficulty = null;
 let questions = null;
 let allQuestions = [];
 let userScore = 0;
+let questionTotal = document.getElementById("questionCount");
+let categoryChoices = $("#dropdown-choices-category option:selected").val();
 
+
+/** 
+ * Fetches the API Categories if successful connection to API. Simen gave me this part of the code.
+ */
 
 window.onload = function() {
     $("#question_grid").css({ display: "none" });
     $("#score_grid").css({ display: "none" });
     $("#main-status").css({ display: "none" });
-
-
-};
-
-/** Fetches the API Categories if successful connection to API. Simen gave me this part of the code
- * 
- */
-
-$(document).ready(function generateCategories() {
     fetch(`https://opentdb.com/api_category.php`)
         .then(res => res.json())
         .then(data => {
@@ -28,7 +25,10 @@ $(document).ready(function generateCategories() {
                     $("#dropdown-choices-category").append(`<option value="${category.id}">${category.name}</option>`);
                 }
             });
-        });
+        })
+        .catch(error => console.log(error));
+    $("#main-status").html("Unable to retrieve questions at the minute. Please try again later");
+
     $.each(noOfQuestions, function(val, text) {
         $('#dropdown-choices-questions').append($(`<option>${text}</option>`));
     });
@@ -36,14 +36,16 @@ $(document).ready(function generateCategories() {
     $.each(difficultySetting, function(val, text) {
         $('#dropdown-choices-difficulty').append($(`<option>${text}</option>`));
     });
-});
 
-/** Play submit function IF statements to ensure criteria is selected before game will allow to play. All options must be selected before questions will be generated. DOM items 
+};
+
+/*
+ * Play submit function IF statements to ensure criteria is selected before game will allow to play. All options must be selected before questions will be generated. DOM items 
  * Will show depending on what items are selected.
  */
 $("#play-submit-btn").click(function() {
     if (($("#dropdown-choices-difficulty option:selected").index() > 0) && ($("#dropdown-choices-category option:selected").index() > 0) && ($("#dropdown-choices-questions option:selected").index() > 0)) {
-        category = $("#dropdown-choices-category option:selected").val();
+        category = categoryChoices;
         difficulty = $("#dropdown-choices-difficulty option:selected").text();
         questions = $("#dropdown-choices-questions option:selected").text();
         $("#score_grid").css({ display: "block" })
@@ -51,15 +53,18 @@ $("#play-submit-btn").click(function() {
         $("#options-container-choices").css({ display: "none" })
         $("#jumbo-picture-main").css({ display: "none" })
         $("#play-submit-btn").css({ display: "none" })
+        $("#main-status").css({ display: "none" })
 
         getQuestions();
     } else {
-
+        $("#main-status").css({ display: "block" })
     }
 
 });
 
-/** click function for play submit button. Once pressed the score is saved to local storage */
+/*
+ * click function for play submit button. Once pressed the score is saved to local storage 
+ */
 $("#success-btn").click(function() {
     localStorage.setItem("userScore", userScore);
     alert("Score saved as " + localStorage.getItem("userScore") + "!");
@@ -67,7 +72,9 @@ $("#success-btn").click(function() {
     $("#main-status").css({ display: "none" });
 });
 
-/** Retrieve API and convert response data into JSON format. Any errors are logged to console */
+/** 
+ * Retrieve API and convert response data into JSON format. Any errors are logged to console
+ */
 function getQuestions() {
     fetch(`https://opentdb.com/api.php?amount=${questions}&category=${category}&difficulty=${difficulty}&type=multiple`)
         .then(response => response.json())
@@ -76,9 +83,12 @@ function getQuestions() {
 
         })
         .catch(error => console.log(error));
+    $("#main-status").html("Unable to retrieve questions at the minute. Please try again later");
+
 }
 
-/** create options and answers array using the API's correct_answer and incorrect_answers. Data index is stored. Selected value is null until value is selected. Data is pushed
+/** 
+ * create options and answers array using the API's correct_answer and incorrect_answers. Data index is stored. Selected value is null until value is selected. Data is pushed
  * in an Array allQuestions. 
  */
 
@@ -126,7 +136,6 @@ function generateQuestionsAnswers(data) {
 }
 /**
  * Take populated question and insert into the DOM.
- * 
  */
 function populateQuestion(index) {
     if (index >= 0 && index < allQuestions.length) {
@@ -152,9 +161,10 @@ function populateQuestion(index) {
             $("#available-answers").append("<div class='col-sm'><input type='button' id='next-btn' value='Next Question' onclick=\"navigateQuestion(" + index + ")\" /></div>");
         }
 
-
-        /** Shows the question currently on versus total questions selected */
-        document.getElementById("questionCount").innerText = `Question:${index + 1}/${allQuestions.length}`;
+        /*
+         *  Shows the question currently on versus total questions selected
+         */
+        questionTotal.innerText = `Question:${index + 1}/${allQuestions.length}`;
     }
 
 
@@ -180,10 +190,8 @@ function showAnswer(index, option) {
                 break;
         }
 
-
         /**
          * if correctOption in API doesnt match user input background color will go red
-         * 
          */
         if (question.CorrectOption != question.UserSelectedOption) {
             switch (question.UserSelectedOption) {
@@ -216,7 +224,9 @@ function navigateQuestion(index) {
     }
 }
 
-/** Loader  */
+/*
+ * Loader 
+ */
 document.onreadystatechange = function() {
     if (document.readyState !== "complete") {
         document.querySelector(

@@ -16,6 +16,8 @@ window.onload = function() {
     $("#question_grid").css({ display: "none" });
     $("#score_grid").css({ display: "none" });
     $("#main-status").css({ display: "none" });
+    $("#next-btn").css({ display: "none" });
+    $("#api-status").css({ display: "none" });
     fetch(`https://opentdb.com/api_category.php`)
         .then(res => res.json())
         .then(data => {
@@ -25,8 +27,10 @@ window.onload = function() {
                 }
             });
         })
-        .catch(error => console.log(error));
-    $("#main-status").html("Unable to retrieve questions at the minute. Please try again later");
+        .catch(error => console.log(error),
+
+        );
+
 
     $.each(noOfQuestions, function(val, text) {
         $('#dropdown-choices-questions').append($(`<option>${text}</option>`));
@@ -48,9 +52,11 @@ $("#play-submit-btn").click(function() {
         questions = $("#dropdown-choices-questions option:selected").text();
         $(".quiz-page").css({ display: "block" })
         $("#options-container-choices").css({ display: "none" })
+        $("#options-container-choices").css({ display: "none" })
         $("#jumbo-picture-main").css({ display: "none" })
         $("#play-submit-btn").css({ display: "none" })
         $("#main-status").css({ display: "none" })
+        $("#next-btn").css({ display: "block" }, )
 
         getQuestions();
     } else {
@@ -77,8 +83,10 @@ function getQuestions() {
             generateQuestionsAnswers(rawData);
 
         })
-        .catch(error => console.log(error));
-    $("#main-status").html("Unable to retrieve questions at the minute. Please try again later");
+        .catch(error => console.log(error),
+            $("#api-status").css({ display: "block" }),
+
+        );
 
 }
 
@@ -157,8 +165,8 @@ function populateQuestion(index) {
             if (index < allQuestions.length - 1) {
                 (navigateQuestion(index));
             }
-            if (allQuestions == Math.max) {
-                console.log("max met");
+            if (index + 1 == allQuestions.length) {
+                $("#next-btn").css({ display: "none" })
             }
         });
 
@@ -167,7 +175,6 @@ function populateQuestion(index) {
          */
         questionTotal.innerText = `Question:${index + 1}/${allQuestions.length}`;
     }
-
 }
 
 function showAnswer(index, option) {

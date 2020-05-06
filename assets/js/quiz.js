@@ -1,4 +1,4 @@
-let noOfQuestions = [10, 20, 30];
+let noOfQuestions = [5, 10, 15];
 let difficultySetting = ["easy", "medium", "hard"];
 let category = null;
 let difficulty = null;
@@ -86,6 +86,7 @@ function getQuestions() {
     fetch(`https://opentdb.com/api.php?amount=${questions}&category=${category}&difficulty=${difficulty}&type=multiple`)
         .then(response => response.json())
         .then(rawData => {
+
             generateQuestionsAnswers(rawData);
 
         })

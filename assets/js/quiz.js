@@ -70,14 +70,6 @@ function getQuestions() {
     .then(response => response.json())
         .then(rawData => {
 
-            generateQuestionsAnswers(rawData);
-            console.log(rawData);
-            if (rawData && rawData.length == 0) {
-                alert("Oopps.. Something went wrong. Please select different choices");
-            } else {
-                console.log("all OK");
-            }
-
         })
         .catch(error => {
 

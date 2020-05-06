@@ -1,4 +1,4 @@
-let noOfQuestions = [5, 10, 15];
+let noOfQuestions = [10, 20, 30];
 let difficultySetting = ["easy", "medium", "hard"];
 let category = null;
 let difficulty = null;
@@ -18,22 +18,6 @@ window.onload = function() {
     $("#main-status").css({ display: "none" });
     $("#next-btn").hide();
     $("#api-status").css({ display: "none" });
-    fetch(`https://opentdb.com/api_category.php`)
-        .then(res => res.json())
-        .then(data => {
-            data.trivia_categories.forEach(category => {
-                if (category.name != "politics") {
-                    $("#dropdown-choices-category").append(`<option value="${category.id}">${category.name}</option>`);
-                }
-            });
-        })
-        .catch(error => {
-
-                console.log(error)
-                $("#api-status").css({ display: "block" })
-            }
-
-        );
 
 
     $.each(noOfQuestions, function(val, text) {
@@ -50,7 +34,7 @@ window.onload = function() {
  * Will show depending on what items are selected.
  */
 $("#play-submit-btn").click(function() {
-    if (($("#dropdown-choices-difficulty option:selected").index() > 0) && ($("#dropdown-choices-category option:selected").index() > 0) && ($("#dropdown-choices-questions option:selected").index() > 0)) {
+    if (($("#dropdown-choices-difficulty option:selected").index() > 0) && ($("#dropdown-choices-questions option:selected").index() > 0)) {
         category = $("#dropdown-choices-category option:selected").val();
         difficulty = $("#dropdown-choices-difficulty option:selected").text();
         questions = $("#dropdown-choices-questions option:selected").text();
@@ -61,8 +45,6 @@ $("#play-submit-btn").click(function() {
         $("#play-submit-btn").css({ display: "none" })
         $("#main-status").css({ display: "none" })
         $("#next-btn").show();
-
-
 
         getQuestions();
     } else {
@@ -83,11 +65,18 @@ $("#success-btn").click(function() {
  * Retrieve API and convert response data into JSON format. Any errors are logged to console
  */
 function getQuestions() {
-    fetch(`https://opentdb.com/api.php?amount=${questions}&category=${category}&difficulty=${difficulty}&type=multiple`)
-        .then(response => response.json())
+    fetch(`https://opentdb.com/api.php?amount=${questions}&category=9&difficulty=${difficulty}&type=multiple`)
+
+    .then(response => response.json())
         .then(rawData => {
 
             generateQuestionsAnswers(rawData);
+            console.log(rawData);
+            if (rawData && rawData.length == 0) {
+                alert("Oopps.. Something went wrong. Please select different choices");
+            } else {
+                console.log("all OK");
+            }
 
         })
         .catch(error => {
@@ -97,9 +86,7 @@ function getQuestions() {
             }
 
         );
-
 }
-
 /** 
  * create options and answers array using the API's correct_answer and incorrect_answers. Data index is stored. Selected value is null until value is selected. Data is pushed
  * in an Array allQuestions. 

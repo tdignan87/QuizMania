@@ -176,7 +176,7 @@ Solution: Added catch statement and notice on the form to display to user that s
 
 ### Known Bugs
 
-* The API is not randomly not loading values, I tested with the hardcoded URL and its not working across different categories, questions and difficulty. I have added a catch statement to catch any errors.
+* I had categories loading into the API as choice option but the API is broken on too many of them. I decided to remove categories.
 
 
 ## Deployment:

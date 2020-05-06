@@ -176,7 +176,7 @@ Solution: Added catch statement and notice on the form to display to user that s
 
 ### Known Bugs
 
-* The API is not loading with 30 questions. I took the API key directly from the OpenTrivia and indeed its not working. I have limited the questions to 15 to prevent this error.
+* The API is not randomly not loading values, I tested with the hardcoded URL and its not working across different categories, questions and difficulty. I have added a catch statement to catch any errors.
 
 
 ## Deployment:

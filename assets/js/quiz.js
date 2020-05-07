@@ -1,4 +1,4 @@
-let noOfQuestions = [10, 20, 30];
+let noOfQuestions = [5, 10, 15];
 let difficultySetting = ["easy", "medium", "hard"];
 let difficulty = null;
 let questions = null;

@@ -1,12 +1,10 @@
 let noOfQuestions = [10, 20, 30];
 let difficultySetting = ["easy", "medium", "hard"];
-let category = null;
 let difficulty = null;
 let questions = null;
 let allQuestions = [];
 let userScore = 0;
 let questionTotal = document.getElementById("questionCount");
-let categoryChoices = $("#dropdown-choices-category option:selected").val()
 let choiceAnswers = $(".choice-answer");
 
 /** 
@@ -35,7 +33,6 @@ window.onload = function() {
  */
 $("#play-submit-btn").click(function() {
     if (($("#dropdown-choices-difficulty option:selected").index() > 0) && ($("#dropdown-choices-questions option:selected").index() > 0)) {
-        category = $("#dropdown-choices-category option:selected").val();
         difficulty = $("#dropdown-choices-difficulty option:selected").text();
         questions = $("#dropdown-choices-questions option:selected").text();
         $(".quiz-page").css({ display: "block" })
@@ -45,6 +42,8 @@ $("#play-submit-btn").click(function() {
         $("#play-submit-btn").css({ display: "none" })
         $("#main-status").css({ display: "none" })
         $("#next-btn").show();
+
+
 
         getQuestions();
     } else {
@@ -66,9 +65,9 @@ $("#success-btn").click(function() {
  */
 function getQuestions() {
     fetch(`https://opentdb.com/api.php?amount=${questions}&category=9&difficulty=${difficulty}&type=multiple`)
-
-    .then(response => response.json())
+        .then(response => response.json())
         .then(rawData => {
+            generateQuestionsAnswers(rawData);
 
         })
         .catch(error => {
@@ -78,7 +77,9 @@ function getQuestions() {
             }
 
         );
+
 }
+
 /** 
  * create options and answers array using the API's correct_answer and incorrect_answers. Data index is stored. Selected value is null until value is selected. Data is pushed
  * in an Array allQuestions. 
